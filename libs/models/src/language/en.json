@@ -1,0 +1,21 @@
+{
+  "messages": {
+    "login": "Login",
+    "register": "Register",
+    "home": "Home",
+    "ok": "OK",
+    "email": "Email",
+    "password": "Password",
+    "passwordAgain": "Confirm Password",
+    "name": "Name",
+    "surname": "Surname",
+    "dontHaveAccount": "You don't have an account?",
+    "alreadyRegistered": "Already Registered ?",
+    "registerNow": "Register now!",
+    "enterCredentials": "Enter your credentials to access your account",
+    "credentials": "Credentials",
+    "invalidEmail": "Invalid E-mail!",
+    "invalidPassword": "Invalid Password!",
+    "passwordsNotMatch": "Passwords does not match!"
+  }
+}

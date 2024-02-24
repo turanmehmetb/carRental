@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom", "es2018.promise"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@carRental/models": ["libs/models/src/index.ts"],
+      "@carRental/utils": ["libs/utils/src/index.ts"]
+    },
+    "strictPropertyInitialization": false,
+    "noUnusedLocals": false,
+    "noPropertyAccessFromIndexSignature": false
+  },
+  "exclude": ["node_modules", "tmp"]
+}

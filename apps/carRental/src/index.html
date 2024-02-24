@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv=”Content-Type” content=”text/html; charset=UTF8”/>
+    <title>CarRental</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,nofollow" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body class="bg-lightbg-100 dark:bg-darkbg-100 h-auto">
+    <script>
+      const theme = localStorage.getItem('theme') || 'light';
+      document.documentElement.className = theme;
+    </script>
+    <carRental-root></carRental-root>
+  </body>
+</html>

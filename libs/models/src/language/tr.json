@@ -1,0 +1,21 @@
+{
+  "messages": {
+    "login": "Giriş Yap",
+    "register": "Kayıt Ol",
+    "home": "Anasayfa",
+    "ok": "OK",
+    "email": "E-posta",
+    "password": "Şifre",
+    "passwordAgain": "Şifreyi Onayla",
+    "name": "İsim",
+    "surname": "Soyisim",
+    "dontHaveAccount": "Hesabınız yok mu?",
+    "alreadyRegistered": "Zaten kaydınız var mı?",
+    "registerNow": " Hemen kaydolun!",
+    "enterCredentials": "Hesabınıza erişmek için giriş bilgilerinizi girin",
+    "credentials": "Giriş Bilgileri",
+    "invalidEmail": "Geçersiz E-posta!",
+    "invalidPassword": "Geçersiz Şifre!",
+    "passwordsNotMatch": "Şifreler eşleşmiyor!"
+  }
+}

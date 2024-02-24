@@ -1,0 +1,22 @@
+version: '3.3'
+
+services: 
+  carRental:
+    image: edufile
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 80:8080
+    volumes:
+      - /home/ubuntu/carRental/logs:/carRental/logs
+    depends_on:
+       - mongo
+    environment:
+      NODE_ENV: production
+  mongo:
+    image: mongo
+    restart: always
+    volumes:
+      - /home/ubuntu/carRental/db:/data/db

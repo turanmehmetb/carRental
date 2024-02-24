@@ -1,0 +1,113 @@
+{
+  "name": "carRental",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/carRental/src",
+  "prefix": "carRental",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/carRental",
+        "index": "apps/carRental/src/index.html",
+        "main": "apps/carRental/src/main.ts",
+        "polyfills": "apps/carRental/src/polyfills.ts",
+        "tsConfig": "apps/carRental/tsconfig.app.json",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "libs/models/src/language",
+            "output": "/assets/i18n"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/assets/",
+            "output": "./assets/"
+          },
+          {
+            "glob": "favicon.ico",
+            "input": "./",
+            "output": "./"
+          }
+        ],
+        "styles": [
+          "node_modules/primeicons/primeicons.css",
+          "node_modules/primeng/resources/primeng.min.css",
+          "node_modules/font-awesome/css/font-awesome.css"
+        ],
+        "scripts": ["node_modules/jquery/dist/jquery.min.js"]
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "5mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/carRental/src/environments/environment.ts",
+              "with": "apps/carRental/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "carRental:build:production"
+        },
+        "development": {
+          "browserTarget": "carRental:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "browserTarget": "project:build",
+        "host": "0.0.0.0",
+        "proxyConfig": "apps/carRental/proxy.conf.json"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "carRental:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/carRental/src/**/*.ts", "apps/carRental/src/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/carRental"],
+      "options": {
+        "jestConfig": "apps/carRental/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,1323 @@
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 100;
+    src: local(""),
+    url("../fonts/poppins/Poppins-Thin.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 100;
+    src: local(""),
+    url("../fonts/poppins/Poppins-ThinItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 200;
+    src: local(""),
+    url("../fonts/poppins/Poppins-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 200;
+    src: local(""),
+    url("../fonts/poppins/Poppins-ExtraLightItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 300;
+    src: local(""),
+    url("../fonts/poppins/Poppins-Light.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 300;
+    src: local(""),
+    url("../fonts/poppins/Poppins-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+    url("../fonts/poppins/Poppins-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 400;
+    src: local(""),
+    url("../fonts/poppins/Poppins-Italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    src: local(""),
+    url("../fonts/poppins/Poppins-Medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 500;
+    src: local("Poppins-MediumItalic"),
+    url("../fonts/poppins/Poppins-MediumItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    src: local(""),
+    url("../fonts/poppins/Poppins-SemiBold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 600;
+    src: local(""),
+    url("../fonts/poppins/Poppins-SemiBoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    src: local(""),
+    url("../fonts/poppins/Poppins-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 700;
+    src: local(""),
+    url("../fonts/poppins/Poppins-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 800;
+    src: local(""),
+    url("../fonts/poppins/Poppins-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 800;
+    src: local(""),
+    url("../fonts/poppins/Poppins-ExtraBoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 900;
+    src: local(""),
+    url("../fonts/poppins/Poppins-Black.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 900;
+    src: local(""),
+    url("../fonts/poppins/Poppins-BlackItalic.ttf") format("truetype");
+}
+
+
+
+@font-face {
+    font-family: 'Moniqa Black Cond Display';
+    src: url('../fonts/moniqa/Moniqa-BlackCondensedDisplay.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Black Cond Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-BlackCondItaHeading.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Black Display';
+    src: url('../fonts/moniqa/Moniqa-BlackDisplay.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Black Cond Ita Display';
+    src: url('../fonts/moniqa/Moniqa-BlackCondItaDisplay.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Black Cond Heading';
+    src: url('../fonts/moniqa/Moniqa-BlackCondensedHeading.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Black Cond Paragraph';
+    src: url('../fonts/moniqa/Moniqa-BlackCondParagraph.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Black Cond Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-BlackCondItaParagraph.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Black Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-BlackItalicParagraph.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Black Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-BlackItalicHeading.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Black Narrow Heading';
+    src: url('../fonts/moniqa/Moniqa-BlackNarrowHeading.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Black Heading';
+    src: url('../fonts/moniqa/Moniqa-BlackHeading.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Black Narrow Display';
+    src: url('../fonts/moniqa/Moniqa-BlackNarrowDisplay.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Black Ita Display';
+    src: url('../fonts/moniqa/Moniqa-BlackItalicDisplay.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Cond Heading';
+    src: url('../fonts/moniqa/Moniqa-BoldCondensedHeading.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Blk Nr It Paragraph';
+    src: url('../fonts/moniqa/Moniqa-BlkNrItParagraph.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Black Narrow Paragraph';
+    src: url('../fonts/moniqa/Moniqa-BlackNarrowParagraph.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Black Paragraph';
+    src: url('../fonts/moniqa/Moniqa-BlackParagraph.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Black Narrow Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-BlackNarrowItaHeading.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Black Narrow Ita Display';
+    src: url('../fonts/moniqa/Moniqa-BlackNarrowItaDisplay.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Cond Display';
+    src: url('../fonts/moniqa/Moniqa-BoldCondensedDisplay.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Display';
+    src: url('../fonts/moniqa/Moniqa-BoldDisplay.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Cond Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-BoldCondItaParagraph.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Heading';
+    src: url('../fonts/moniqa/Moniqa-BoldHeading.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Cond Ita Display';
+    src: url('../fonts/moniqa/Moniqa-BoldCondItaDisplay.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Cond Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-BoldCondItaHeading.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Cond Paragraph';
+    src: url('../fonts/moniqa/Moniqa-BoldCondensedParagraph.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-BoldItalicHeading.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-BoldItalicParagraph.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Ita Display';
+    src: url('../fonts/moniqa/Moniqa-BoldItalicDisplay.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Narrow Display';
+    src: url('../fonts/moniqa/Moniqa-BoldNarrowDisplay.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Narrow Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-BoldNarrowItaHeading.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Narrow Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-BoldNarrowItaParagraph.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Cond Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-CondensedItalicHeading.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Cond Display';
+    src: url('../fonts/moniqa/Moniqa-CondensedDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Cond Ita Display';
+    src: url('../fonts/moniqa/Moniqa-CondensedItalicDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Narrow Paragraph';
+    src: url('../fonts/moniqa/Moniqa-BoldNarrowParagraph.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Cond Heading';
+    src: url('../fonts/moniqa/Moniqa-CondensedHeading.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Paragraph';
+    src: url('../fonts/moniqa/Moniqa-BoldParagraph.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Cond Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-CondItaParagraph.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Cond Paragraph';
+    src: url('../fonts/moniqa/Moniqa-CondensedParagraph.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtBd Cond Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-ExtBdCondItaHeading.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtBd Cond Display';
+    src: url('../fonts/moniqa/Moniqa-ExtBdCondDisplay.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtBd Cond Heading';
+    src: url('../fonts/moniqa/Moniqa-ExtBdCondHeading.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Display';
+    src: url('../fonts/moniqa/Moniqa-Display.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtBd Cond Ita Display';
+    src: url('../fonts/moniqa/Moniqa-ExtBdCondItaDisplay.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtBd Cond Paragraph';
+    src: url('../fonts/moniqa/Moniqa-ExtBdCondParagraph.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtBd Cond Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-ExtBdCondItaParagraph.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtBd Narrow Ita Display';
+    src: url('../fonts/moniqa/Moniqa-ExtBdNarrowItaDisplay.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtBd Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-ExtBdItaParagraph.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtLt Cond Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-ExtLtCondItaHeading.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtLt Cond Display';
+    src: url('../fonts/moniqa/Moniqa-ExtLtCondDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtLt Cond Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-ExtLtCondItaParagraph.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtLt Cond Heading';
+    src: url('../fonts/moniqa/Moniqa-ExtLtCondHeading.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtLt Cond Paragraph';
+    src: url('../fonts/moniqa/Moniqa-ExtLtCondParagraph.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtLt Cond Ita Display';
+    src: url('../fonts/moniqa/Moniqa-ExtLtCondItaDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtBd Narrow Paragraph';
+    src: url('../fonts/moniqa/Moniqa-ExtBdNarrowParagraph.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtBd Narrow Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-ExtBdNarrowItaHeading.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtLt Ita Display';
+    src: url('../fonts/moniqa/Moniqa-ExtLtItaDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtLt Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-ExtLtItaHeading.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtLt Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-ExtLtItaParagraph.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtBd Display';
+    src: url('../fonts/moniqa/Moniqa-ExtraBoldDisplay.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtBd Heading';
+    src: url('../fonts/moniqa/Moniqa-ExtraBoldHeading.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtLt Narrow Heading';
+    src: url('../fonts/moniqa/Moniqa-ExtLtNarrowHeading.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtLt Narrow Ita Display';
+    src: url('../fonts/moniqa/Moniqa-ExtLtNarrowItaDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtLt Narrow Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-ExtLtNarrowItaHeading.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtLt Narrow Display';
+    src: url('../fonts/moniqa/Moniqa-ExtLtNarrowDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtLt Narrow Paragraph';
+    src: url('../fonts/moniqa/Moniqa-ExtLtNarrowParagraph.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtBd Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-ExtraBoldItalicHeading.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtBd Ita Display';
+    src: url('../fonts/moniqa/Moniqa-ExtraBoldItalicDisplay.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtBd Narrow Heading';
+    src: url('../fonts/moniqa/Moniqa-ExtraBoldNarrowHeading.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtBd Paragraph';
+    src: url('../fonts/moniqa/Moniqa-ExtraBoldParagraph.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtBd Narrow Display';
+    src: url('../fonts/moniqa/Moniqa-ExtraBoldNarrowDisplay.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtLt Display';
+    src: url('../fonts/moniqa/Moniqa-ExtraLightDisplay.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-ItalicParagraph.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtLt Paragraph';
+    src: url('../fonts/moniqa/Moniqa-ExtraLightParagraph.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Ita Display';
+    src: url('../fonts/moniqa/Moniqa-ItalicDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa ExtLt Heading';
+    src: url('../fonts/moniqa/Moniqa-ExtraLightHeading.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-ItalicHeading.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Heading';
+    src: url('../fonts/moniqa/Moniqa-Heading.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Light Cond Display';
+    src: url('../fonts/moniqa/Moniqa-LightCondensedDisplay.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Light Cond Paragraph';
+    src: url('../fonts/moniqa/Moniqa-LightCondParagraph.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Light Cond Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-LightCondItaHeading.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Light Cond Heading';
+    src: url('../fonts/moniqa/Moniqa-LightCondensedHeading.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Light Cond Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-LightCondItaParagraph.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Light Cond Ita Display';
+    src: url('../fonts/moniqa/Moniqa-LightCondItaDisplay.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Light Display';
+    src: url('../fonts/moniqa/Moniqa-LightDisplay.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Light Ita Display';
+    src: url('../fonts/moniqa/Moniqa-LightItalicDisplay.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Light Heading';
+    src: url('../fonts/moniqa/Moniqa-LightHeading.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Light Ita Display';
+    src: url('../fonts/moniqa/Moniqa-LightItalicDisplay.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Light Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-LightItalicHeading.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Light Narrow Ita Display';
+    src: url('../fonts/moniqa/Moniqa-LightNarrowItaDisplay.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Light Paragraph';
+    src: url('../fonts/moniqa/Moniqa-LightParagraph.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Light Narrow Heading';
+    src: url('../fonts/moniqa/Moniqa-LightNarrowHeading.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Light Narrow Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-LightNarrowItaHeading.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Light Narrow Display';
+    src: url('../fonts/moniqa/Moniqa-LightNarrowDisplay.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Light Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-LightItalicParagraph.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Light Narrow Paragraph';
+    src: url('../fonts/moniqa/Moniqa-LightNarrowParagraph.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Med Cond Ita Display';
+    src: url('../fonts/moniqa/Moniqa-MedCondItaDisplay.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Med Cond Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-MedCondItaHeading.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Med Cond Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-MedCondItaParagraph.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Lt Nr It Paragraph';
+    src: url('../fonts/moniqa/Moniqa-LtNrItParagraph.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Med Cond Paragraph';
+    src: url('../fonts/moniqa/Moniqa-MedCondParagraph.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Med Cond Display';
+    src: url('../fonts/moniqa/Moniqa-MediumCondensedDisplay.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Med Cond Heading';
+    src: url('../fonts/moniqa/Moniqa-MediumCondensedHeading.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Med Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-MediumItalicHeading.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Med Heading';
+    src: url('../fonts/moniqa/Moniqa-MediumHeading.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Med Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-MediumItalicParagraph.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Med Display';
+    src: url('../fonts/moniqa/Moniqa-MediumDisplay.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Med Ita Display';
+    src: url('../fonts/moniqa/Moniqa-MediumItalicDisplay.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Med Paragraph';
+    src: url('../fonts/moniqa/Moniqa-MediumParagraph.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Med Narrow Ita Display';
+    src: url('../fonts/moniqa/Moniqa-MedNarrowItaDisplay.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Med Narrow Paragraph';
+    src: url('../fonts/moniqa/Moniqa-MediumNarrowParagraph.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Med Narrow Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-MedNarrowItaHeading.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Med Narrow Heading';
+    src: url('../fonts/moniqa/Moniqa-MediumNarrowHeading.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Med Narrow Display';
+    src: url('../fonts/moniqa/Moniqa-MediumNarrowDisplay.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Med Narrow Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-MedNarrowItaParagraph.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Narrow Display';
+    src: url('../fonts/moniqa/Moniqa-NarrowDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Narrow Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-NarrowItalicParagraph.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Paragraph';
+    src: url('../fonts/moniqa/Moniqa-Paragraph.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Narrow Paragraph';
+    src: url('../fonts/moniqa/Moniqa-NarrowParagraph.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Narrow Ita Display';
+    src: url('../fonts/moniqa/Moniqa-NarrowItalicDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Narrow Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-NarrowItalicHeading.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Narrow Heading';
+    src: url('../fonts/moniqa/Moniqa-NarrowHeading.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa SemBd Cond Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-SemBdCondItaParagraph.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa SemBd Cond Heading';
+    src: url('../fonts/moniqa/Moniqa-SemBdCondHeading.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa SemBd Cond Ita Display';
+    src: url('../fonts/moniqa/Moniqa-SemBdCondItaDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa SemBd Cond Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-SemBdCondItaHeading.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa SemBd Cond Display';
+    src: url('../fonts/moniqa/Moniqa-SemBdCondDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa SemBd Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-SemBdItaParagraph.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa SemBd Cond Paragraph';
+    src: url('../fonts/moniqa/Moniqa-SemBdCondParagraph.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa SemBd Heading';
+    src: url('../fonts/moniqa/Moniqa-SemiBoldHeading.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa SemBd Display';
+    src: url('../fonts/moniqa/Moniqa-SemiBoldDisplay.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa SemBd Narrow Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-SemBdNarrowItaHeading.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa SemBd Narrow Paragraph';
+    src: url('../fonts/moniqa/Moniqa-SemBdNarrowParagraph.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa SemBd Ita Display';
+    src: url('../fonts/moniqa/Moniqa-SemiBoldItalicDisplay.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa SemBd Narrow Ita Display';
+    src: url('../fonts/moniqa/Moniqa-SemBdNarrowItaDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa SemBd Narrow Display';
+    src: url('../fonts/moniqa/Moniqa-SemiBoldNarrowDisplay.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa SemBd Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-SemiBoldItalicHeading.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Cond Display';
+    src: url('../fonts/moniqa/Moniqa-ThinCondensedDisplay.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Cond Heading';
+    src: url('../fonts/moniqa/Moniqa-ThinCondensedHeading.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa SemBd Paragraph';
+    src: url('../fonts/moniqa/Moniqa-SemiBoldParagraph.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa SmBd Nr It Paragraph';
+    src: url('../fonts/moniqa/Moniqa-SmBdNrItParagraph.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa SemBd Narrow Heading';
+    src: url('../fonts/moniqa/Moniqa-SemiBoldNarrowHeading.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Cond Ita Display';
+    src: url('../fonts/moniqa/Moniqa-ThinCondItaDisplay.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Cond Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-ThinCondItaHeading.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Cond Paragraph';
+    src: url('../fonts/moniqa/Moniqa-ThinCondensedParagraph.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Cond Ita Display';
+    src: url('../fonts/moniqa/Moniqa-ThinCondItaDisplay.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Heading';
+    src: url('../fonts/moniqa/Moniqa-ThinHeading.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Ita Display';
+    src: url('../fonts/moniqa/Moniqa-ThinItalicDisplay.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-ThinItalicHeading.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Cond Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-ThinCondItaParagraph.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Cond Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-ThinCondItaHeading.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Display';
+    src: url('../fonts/moniqa/Moniqa-ThinDisplay.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Ita Paragraph';
+    src: url('../fonts/moniqa/Moniqa-ThinItalicParagraph.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Narrow Ita Heading';
+    src: url('../fonts/moniqa/Moniqa-ThinNarrowItaHeading.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Th Nr It Paragraph';
+    src: url('../fonts/moniqa/Moniqa-ThinNarrowItaParagraph.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Narrow Heading';
+    src: url('../fonts/moniqa/Moniqa-ThinNarrowHeading.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Narrow Paragraph';
+    src: url('../fonts/moniqa/Moniqa-ThinNarrowParagraph.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Narrow Display';
+    src: url('../fonts/moniqa/Moniqa-ThinNarrowDisplay.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Narrow Ita Display';
+    src: url('../fonts/moniqa/Moniqa-ThinNarrowItaDisplay.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa XLt Nr It Paragraph';
+    src: url('../fonts/moniqa/Moniqa-XLtNrItParagraph.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Moniqa Thin Paragraph';
+    src: url('../fonts/moniqa/Moniqa-ThinParagraph.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moniqa XBd Nr It Paragraph';
+    src: url('../fonts/moniqa/Moniqa-XBdNrItParagraph.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+
+@font-face {
+    font-family: 'COBAISSI';
+    src: url('../fonts/cobaissi/COBAISSI.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Montreau';
+    src: url('../fonts/montreau/Montreau-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'The Woodlands';
+    src: url('../fonts/woodlands/TheWoodlands-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Ocean Six';
+    src: url('../fonts/ocean6/OCEAN_6_(Brushed Black Edition).ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Elianto';
+    src: url('../fonts/elianto/Elianto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

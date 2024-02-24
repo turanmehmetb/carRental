@@ -1,0 +1,335 @@
+.css-1msrf2r-Global * {
+    background-color: var(--payment-bg-color) !important;
+    color: var(--payment-text-color) !important;
+}
+.css-1msrf2r-Global a {
+    color: var(--blue-800) !important;
+}
+.e1xekicq1 {
+    display: none !important;
+}
+#iyz-tablist {
+    background-color: var(--payment-bg-color) !important;
+    padding: 0 !important;
+    border: none !important;
+}
+#iyz-tablist .css-1scvr02-Tab-Tab,
+#iyz-tablist .css-2wz26a-Tab-Tab,
+#iyz-tablist .css-blpuo2-Tab-Tab {
+    background-color: var(--payment-bg-color) !important;
+    border: none !important;
+}
+#iyz-tablist .css-1scvr02-Tab-Tab:after,
+#iyz-tablist .css-2wz26a-Tab-Tab:after,
+#iyz-tablist .css-blpuo2-Tab-Tab::after {
+    /* display: none !important; */
+    /* border-bottom: .1rem solid var(--blue-900) !important; */
+    background-color: var(--blue-850) !important;
+    height: 5px !important;
+}
+
+.css-11judmh-Body input {
+    background-color: var(--dropdown-bg-color) !important;
+}
+#iyzipay-checkout-form .css-1orv556-Input,
+#iyzipay-checkout-form .css-1h5j4ld-StyledInputMask {
+    border: 2px solid var(--inputtext-border-color) !important;
+    border-radius: 0 !important;
+    color: var(--payment-text-color) !important;
+    padding: 0px 12px 0px 45px !important;
+}
+#iyzipay-checkout-form .css-1orv556-Input:hover,
+#iyzipay-checkout-form .css-1h5j4ld-StyledInputMask:hover {
+    border-color: var(--inputtext-border-color-hover) !important;
+}
+#iyzipay-checkout-form .css-1orv556-Input:focus,
+#iyzipay-checkout-form .css-1h5j4ld-StyledInputMask:focus {
+    border-color: var(--inputtext-border-color-focus) !important;
+}
+
+#iyzipay-checkout-form .css-mra3h-Input,
+#iyzipay-checkout-form .css-eexr0c-StyledInputMask,
+#iyzipay-checkout-form .css-eexr0c-StyledInputMask {
+    border: 2px solid var(--p-invalid-color) !important;
+    border-radius: 0 !important;
+    padding: 0px 12px 0px 45px !important;
+}
+#iyzipay-checkout-form .css-mra3h-Input:hover {
+    border-color: var(--p-invalid-color) !important;
+}
+#iyzipay-checkout-form .css-mra3h-Input:focus {
+    border-color: var(--p-invalid-color) !important;
+}
+
+#iyzipay-checkout-form .css-1gau9co-InputHolder-InputHolder-InputHolder,
+#iyzipay-checkout-form .css-1fpty0o-InputHolder,
+#iyzipay-checkout-form .css-1xhf40u-InputHolder-InputHolder,
+#iyzipay-checkout-form .css-r9u786-InputHolder-InputHolder {
+    box-shadow: none !important;
+}
+
+#iyzipay-checkout-form .css-r9u786-InputHolder-InputHolder {
+    box-shadow: none;
+}
+
+
+#iyzipay-checkout-form .iyz-input-holder {
+    margin-bottom: .5rem !important;
+}
+#iyzipay-checkout-form .css-hzsxta-InputHolder-InputHolder-InputHolder,
+#iyzipay-checkout-form .css-1u40dsv-InputHolder,
+#iyzipay-checkout-form .css-1imxwec-InputHolder-InputHolder,
+#iyzipay-checkout-form .css-19q56ts-InputHolder-InputHolder {
+    box-shadow: none !important;
+}
+#iyzipay-checkout-form .css-hzsxta-InputHolder-InputHolder-InputHolder:focus-within,
+#iyzipay-checkout-form .css-1u40dsv-InputHolder:focus-within,
+#iyzipay-checkout-form .css-1imxwec-InputHolder-InputHolder:focus-within,
+#iyzipay-checkout-form .css-19q56ts-InputHolder-InputHolder:focus-within {
+    box-shadow: none !important;
+}
+
+#iyzipay-checkout-form .css-1imxwec-InputHolder-InputHolder {
+    padding-right: .5rem;
+    background-color: var(--payment-bg-color) !important;
+}
+
+#iyzipay-checkout-form .css-19q56ts-InputHolder-InputHolder {
+    padding-left: .5rem;
+}
+
+.css-1wxz9jq-IconWrapper,
+.css-1wxz9jq-IconWrapper svg {
+    background-color: var(--payment-secondary-bg-color) !important;
+}
+
+#iyzipay-checkout-form .css-y9ue2r-IconWrapper {
+    display: none !important;
+}
+
+#iyzipay-checkout-form .css-1stjzuc-LabelWrapper,
+#iyzipay-checkout-form .css-160yrbf-SaveCardPermission,
+#iyzipay-checkout-form .css-1fq3mss-Wrapper,
+#iyzipay-checkout-form .css-6eiscf-SaveCardInfo {
+    background-color: var(--payment-bg-color) !important;
+}
+
+#iyzipay-checkout-form .css-t3i4nu-CheckboxItem {
+    background-color: var(--checkbox-bg-color) !important;
+    border-color: var(--checkbox-border-color) !important;
+    border-radius: 0 !important;
+}
+#iyzipay-checkout-form .css-t3i4nu-CheckboxItem:hover {
+    /* background-color: var(--checkbox-bg-color-hover) !important; */
+    border-color: var(--checkbox-border-color-hover) !important;
+}
+#iyzipay-checkout-form .css-100upqt-Check svg{
+    background-color: var(--checkbox-bg-color) !important;
+    color: var(--checkbox-icon-color) !important;
+}
+#iyzipay-checkout-form .css-14eef6g-CheckboxInput {
+    border-radius: 0 !important;
+    border: 2px solid var(--checkbox-border-color) !important;
+    background-color: var(--payment-secondary-bg-color) !important;
+}
+#iyzipay-checkout-form .css-100upqt-Check {
+    background-color: var(--checkbox-bg-color-active) !important;
+    border-radius: 0 !important;
+}
+#iyzipay-checkout-form .css-1q7gc44-KvkkInfoWrapper {
+    border-bottom: 1px solid var(--payment-border-color) !important;
+}
+
+#iyzipay-checkout-form .css-18rrrlb-Button-Button,
+#iyzipay-checkout-form .css-18rrrlb-Button-Button span {
+    background-color: var(--default-button-bg-color) !important;
+    color: var(--default-button-text-color) !important;
+    transition: none !important;
+    border-radius: 0 !important;
+}
+#iyzipay-checkout-form .css-18rrrlb-Button-Button:hover,
+#iyzipay-checkout-form .css-18rrrlb-Button-Button:hover span {
+    background-color: var(--default-button-bg-color-hover) !important;
+    color: var(--default-button-text-color-hover) !important;
+}
+#iyzipay-checkout-form .css-18rrrlb-Button-Button:active,
+#iyzipay-checkout-form .css-18rrrlb-Button-Button:active span {
+    background-color: var(--default-button-bg-color-active) !important;
+    color: var(--default-button-text-color-active) !important;
+}
+
+#iyzipay-checkout-form .css-tyng9c-CreditCardsHolder {
+    background-color: var(--payment-bg-color) !important;
+}
+
+#iyzipay-checkout-form .css-278jjq-InstallmentsButton {
+    background-color: var(--payment-bg-color) !important;
+}
+
+#iyzipay-checkout-form .css-1yu5mva-Wrapper {
+    background-color: var(--payment-bg-color) !important;
+}
+
+#iyzipay-checkout-form .css-14v71i5-Popup-Box {
+    background-color: var(--payment-bg-color) !important;
+}
+#iyzipay-checkout-form .css-solclf-Table {
+    background-color: var(--payment-bg-color) !important;
+}
+
+#iyzipay-checkout-form .css-gnul4c-Td {
+    background-color: var(--payment-bg-color) !important;
+    border: 1px solid var(--payment-border-color) !important;
+}
+
+#iyzipay-checkout-form .css-1hlfm7z-Td,
+#iyzipay-checkout-form .css-3od14w-Td,
+#iyzipay-checkout-form .css-1420ezs-Td,
+#iyzipay-checkout-form .css-zmgpwi-Td,
+#iyzipay-checkout-form .css-1bpcr9-Td,
+#iyzipay-checkout-form .css-jwr7zd-Td,
+#iyzipay-checkout-form .css-1sz7ops-Td {
+    color: var(--gray-10) !important;
+    background: var(--payment-bg-color) !important;
+    border: 1px solid var(--payment-border-color) !important;
+}
+#iyzipay-checkout-form .css-m1acf7-Td,
+#iyzipay-checkout-form .css-12bjbn7-Td,
+#iyzipay-checkout-form .css-2p7zd1-Td,
+#iyzipay-checkout-form .css-16s6y5v-Td,
+#iyzipay-checkout-form .css-1vcdw69-Td,
+#iyzipay-checkout-form .css-1oci3x7-Td,
+#iyzipay-checkout-form .css-12jg2ru-Td {
+    color: var(--gray-10) !important;
+    background: var(--payment-bg-color) !important;
+    border: 1px solid var(--payment-border-color) !important;
+}
+
+#iyzipay-checkout-form .css-jwr7zd {
+    color: var(--gray-10) !important;
+}
+
+#iyzipay-checkout-form .css-solclf-Table :nth-child(1) :nth-child(1) :nth-child(2) {
+    background: rgb(226, 182, 49) !important;
+    color: var(--gray-38) !important;
+    font-weight: 700 !important;
+}
+#iyzipay-checkout-form .css-solclf-Table :nth-child(2) :nth-child(1) :nth-child(2) {
+    background: rgb(255, 109, 109) !important;
+    color: var(--gray-38) !important;
+    font-weight: 700 !important;
+}
+#iyzipay-checkout-form .css-solclf-Table :nth-child(3) :nth-child(1) :nth-child(2) {
+    background: rgb(71, 146, 121) !important;
+    color: var(--gray-38) !important;
+    font-weight: 700 !important;
+}
+#iyzipay-checkout-form .css-solclf-Table :nth-child(4) :nth-child(1) :nth-child(2) {
+    background: rgb(45, 95, 194) !important;
+    color: var(--gray-38) !important;
+    font-weight: 700 !important;
+}
+#iyzipay-checkout-form .css-solclf-Table :nth-child(5) :nth-child(1) :nth-child(2) {
+    background: rgb(245, 34, 149) !important;
+    color: var(--gray-38) !important;
+    font-weight: 700 !important;
+}
+#iyzipay-checkout-form .css-solclf-Table :nth-child(6) :nth-child(1) :nth-child(2) {
+    background: rgb(0, 203, 235) !important;
+    color: var(--gray-38) !important;
+    font-weight: 700 !important;
+}
+#iyzipay-checkout-form .css-solclf-Table :nth-child(7) :nth-child(1) :nth-child(2) {
+    background: rgb(111, 107, 153) !important;
+    color: var(--gray-38) !important;
+    font-weight: 700 !important;
+}
+
+/* #iyzipay-checkout-form .eb5245n3 :nth-child(2).eb5245n3 {
+    background: rgb(226, 182, 49) !important;
+}
+#iyzipay-checkout-form .css-ak7epo-Tr :nth-child(2).eb5245n4 {
+    background: rgb(247, 201, 197) !important;
+} */
+
+#iyzipay-checkout-form .css-1g6kado-Container {
+    background: var(--payment-bg-color) !important;
+}
+
+#iyzipay-checkout-form .css-18a2pbu-SelectButton-SelectButton {
+    background: var(--payment-bg-color) !important;
+}
+
+#iyzipay-checkout-form .css-154l2ns-RadioItem {
+    background: var(--payment-bg-color) !important;
+    display: none !important;
+}
+
+#iyzipay-checkout-form .css-1c6pm4t-RadioInput:checked + .eltfla61 {
+    background: var(--payment-bg-color) !important;
+    border-color: var(--payment-border-color) !important;
+}
+#iyzipay-checkout-form .css-6kny55-Check svg {
+    color: var(--gray-10) !important;
+}
+
+#iyzipay-checkout-form .css-1klha2j-Item-Item {
+    background-color: var(--payment-secondary-bg-color) !important;
+}
+
+#iyzipay-checkout-form .css-1klha2j-Item-Item .css-finwos-Column {
+    background-color: transparent !important;
+}
+#iyzipay-checkout-form .css-1klha2j-Item-Item .css-1g38wvf-Column {
+    background-color: transparent !important;
+}
+#iyzipay-checkout-form .css-22ad6z-InstallmentTotalPriceText {
+    background-color: transparent !important;
+}
+#iyzipay-checkout-form .css-1caquw8-InstallmentFranctionDigit {
+    background-color: transparent !important;
+}
+
+#iyzipay-checkout-form .css-mzlro4-InstallmentPrice {
+    background-color: transparent !important;
+    color: var(--payment-text-color) !important;
+}
+
+#iyzipay-checkout-form .css-d0a2ii-Item {
+    border-color: var(--payment-border-color) !important;
+}
+
+#iyzipay-checkout-form .css-1klha2j-Item-Item {
+    border-color: var(--payment-border-color) !important;
+}
+
+#iyzipay-checkout-form .css-pza3ah-Installment {
+    background-color: transparent !important;
+}
+#iyzipay-checkout-form .css-pza3ah-Installment :nth-child(2) {
+    background-color: transparent !important;
+}
+#iyzipay-checkout-form .css-b0gfqh-InstallmentOptionText {
+    background-color: transparent !important;
+}
+#iyzipay-checkout-form .css-1bsqpb0-InstallmentCross {
+    background-color: transparent !important;
+}
+#iyzipay-checkout-form  .css-8vdg6c-InstallmentNumber {
+    background-color: transparent !important;
+}
+
+#iyzipay-checkout-form .css-10s63hi-Wrapper {
+    border-color: var(--payment-border-color) !important;
+    border-radius: 0 !important;
+}
+
+.css-1m6hwym-Close-CloseWrapper path {
+    fill: var(--text-button-text-color) !important;
+}
+.css-1m6hwym-Close-CloseWrapper:hover path {
+    fill: var(--text-button-text-color-hover) !important;
+}
+.css-1m6hwym-Close-CloseWrapper:active path {
+    fill: var(--text-button-text-color-active) !important;
+}

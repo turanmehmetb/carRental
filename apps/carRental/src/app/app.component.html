@@ -1,0 +1,120 @@
+<!-- class="bg-gray-34 dark:bg-gray-3 h-full" -->
+<div class="">
+  <!-- styleClass="custom-toast" -->
+  <p-toast key="toastKey" position="bottom-right"></p-toast>
+
+  <p-blockUI [blocked]="loadingService.isLoading">
+    <div *ngIf="loadingService.withSpinner" class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </p-blockUI>
+
+  <p-scrollTop [threshold]="200"></p-scrollTop>
+  <!-- 2xl:px-20 xl:px-14 lg:px-10 md:px-6 sm:px-2 px-2  -->
+  <nav id="navbar" 
+    class="
+      flex 
+      bg-gray-32 dark:bg-gray-2 
+      flex-none
+      min-h-[5rem] w-[100vw] max-w-full
+      z-30
+      absolute top-0 left-0
+      transition-[top] duration-700 px-4
+      shadow-custom-1 shadow-gray-20 dark:shadow-none
+      items-center
+    "
+  >
+    <div class="flex xl:w-[70%] lg:w-[80%] md:w-[90%] sm:w-[100%]  m-auto">
+      <div class="grow self-center flex">
+        <h1 class="text-5xl font-bold px-5 text-lighttext-100 dark:text-darktext-100 font-alt tracking-widest">Car Rental</h1>
+      </div>
+      <div class="shrink-0 self-center hidden md:flex min-h-[5rem] mr-4">
+
+      </div>
+      <div class="shrink-0 self-center md:hidden flex mr-4">
+          <button 
+            id="burger-button-wrapper"
+            name="menu-button" aria-label="menu-button"
+            class="flex justify-center border-none burger-button-wrapper-responsive bg-transparent"
+            (click)="burgerButtonClickHandler($event)"
+          >
+            <div id="navbar-burger-button">
+              <span class="absolute left-1/2 block"></span>
+              <span class="absolute left-1/2 block"></span>
+            </div>
+          </button>
+      </div>
+      <ng-container *ngIf="studentLoggedIn || instructorLoggedIn">
+        <div class="shrink-0 self-center px-3">
+          <p-avatar 
+            icon="pi pi-user" size="large" shape="circle"
+            [style]="{'border-radius': '50%'}"
+            styleClass="cursor-pointer 
+              bg-lightbg-300 dark:bg-darkbg-200
+              hover:bg-lightbg-400 hover:dark:bg-darkbg-100
+              text-blue-700 dark:text-blue-850 
+            "
+            (click)="avatarOverlayPanel.toggle($event)"
+          ></p-avatar>
+        </div>
+      </ng-container>
+    </div>
+    <div class="flex absolute right-0 mb-14 md:mb-0">
+      <p-selectButton 
+        id="langPreference" name="langPreference"
+        [options]="selectableLangPreferences" (onChange)="onLangPreferenceChanged()" [(ngModel)]="selectedLangPreference" class="self-center"
+        optionLabel="label" optionValue="value" styleClass="p-selectbutton-with-auto-flex-buttons p-selectbutton-alternative-2 px-2"
+      ></p-selectButton>
+      <p-toggleButton 
+        [(ngModel)]="isThemeLight" (onChange)="onThemePreferenceChanged()"
+        [onIcon]="'pi pi-moon'" [offIcon]="'pi pi-sun'" styleClass="px-2" class="self-center"
+      ></p-toggleButton>
+    </div>
+  </nav>
+
+  <p-overlayPanel 
+    #avatarOverlayPanel [dismissable]="true"
+    styleClass="dark:bg-darkbg-300"
+  >
+    <ng-template pTemplate>
+      <div class="flex flex-col">
+
+      </div>
+    </ng-template>
+  </p-overlayPanel>
+  <!-- class="mt-20 w-[75%] ml-[12.5%]" -->
+  <main 
+    class="mt-20 xl:w-[70%] lg:w-[80%] md:w-[90%] sm:w-[100%] m-auto"
+    [ngStyle]="{
+      'visibility': loadingService.isLoading ? 'hidden' : 'visible'
+    }"
+  >
+    <router-outlet></router-outlet>
+  </main>
+
+</div>
+
+<p-confirmDialog #cd key="generalConfirmDialog" styleClass="w-1/2">
+  <!-- <ng-template pTemplate="header">
+      <h1 class="text-lighttext-300 dark:text-darktext-300 align-center text-xl font-semibold">
+          {{ 'messages.' + cd.message | translate }}
+      </h1>
+  </ng-template> -->
+  <ng-template pTemplate="footer">
+      <div class="flex w-full justify-between">
+          <button 
+              pButton icon="pi pi-times" class="p-button-text p-button-danger !mr-2 centered-text-and-icon-button"
+              (click)="cd.reject()" type="button" label="{{'messages.cancel' | translate}}"  
+              name="dont-confirm-button" aria-label="dont-confirm-button"    
+          ></button>
+          <button 
+              pButton icon="pi pi-check" class="p-button-success grow centered-text-and-icon-button"
+              type="button" label="{{'messages.accept' | translate}}"   
+              name="confirm-button" aria-label="confirm-button" (click)="cd.accept()"
+          ></button>
+      </div>
+  </ng-template>
+</p-confirmDialog>

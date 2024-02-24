@@ -1,0 +1,5 @@
+{
+    "name": "e-ducation prod",
+    "apiBaseUrl": "127.0.0.1",
+    "apiBasePort": "80"
+}

@@ -1,0 +1,92 @@
+/* .burger-button-wrapper-responsive {
+    @apply 2xl:w-20 xl:w-16 lg:w-14 md:w-10 sm:w-6 w-14
+}
+
+.burger-button-wrapper-responsive #navbar-burger-button {
+    @apply relative 2xl:w-14 2xl:h-14 xl:w-12 xl:h-12 lg:w-10 lg:h-10 md:w-8 md:h-8 sm:w-8 sm:h-8 w-10 h-10
+}
+
+.burger-button-wrapper-responsive #navbar-burger-button span {
+    @apply w-full 2xl:h-[8%] xl:h-[8%] lg:h-[8%] md:h-[7%] sm:h-[4%] h-[8%]
+} */
+
+#burger-button-wrapper #navbar-burger-button span {
+    transform: translate3d(-50%, 0, 0);
+    transition: opacity .3s cubic-bezier(0.38, 0.005, 0.215, 1),transform .3s cubic-bezier(0.38, 0.005, 0.215, 1);
+    background: var(--text-button-text-color);
+}
+
+#burger-button-wrapper:hover #navbar-burger-button span {
+    background: var(--text-button-text-color-hover);
+}
+
+/* #burger-button-wrapper:focus #navbar-burger-button span {
+    background: var(--text-button-text-color);
+} */
+
+#burger-button-wrapper:active #navbar-burger-button span {
+    background: var(--text-button-text-color-active);
+}
+
+#burger-button-wrapper #navbar-burger-button span:nth-child(1) {
+    top: calc(50% - var(--burger-button-radius));
+}
+
+#burger-button-wrapper #navbar-burger-button span:nth-child(2) {
+    top: calc(50% + var(--burger-button-radius));
+}
+
+#burger-button-wrapper #navbar-burger-button.burger-button-active span:nth-child(1) {
+    transform: translate3d(-50%, var(--burger-button-radius), 0) rotate(45deg);
+}
+
+#burger-button-wrapper #navbar-burger-button.burger-button-active span:nth-child(2) {
+    transform: translate3d(-50%, calc(var(--burger-button-radius) * -1), 0) rotate(-45deg);
+}
+
+/* @media only screen and (max-width: 640px) {
+    :root {
+        --burger-button-radius: 6px;
+    }
+}
+@media only screen and (min-width: 640px) {
+    :root {
+        --burger-button-radius: 4px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    :root {
+        --burger-button-radius: 5px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    :root {
+        --burger-button-radius: 6px;
+    }
+}
+@media only screen and (min-width: 1280px) {
+    :root {
+        --burger-button-radius: 7px;
+    }
+}
+@media only screen and (min-width: 1536px) {
+    :root {
+        --burger-button-radius: 8px;
+    }
+} */
+
+:root {
+    --burger-button-radius: 5px;
+}
+
+.burger-button-wrapper-responsive {
+    @apply w-10
+}
+
+.burger-button-wrapper-responsive #navbar-burger-button {
+    @apply relative w-10 h-10
+}
+
+.burger-button-wrapper-responsive #navbar-burger-button span {
+    @apply w-full h-[8%]
+}
