@@ -16,6 +16,13 @@
     "credentials": "Credentials",
     "invalidEmail": "Invalid E-mail!",
     "invalidPassword": "Invalid Password!",
-    "passwordsNotMatch": "Passwords does not match!"
+    "passwordsNotMatch": "Passwords does not match!",
+    "vehicles": "Vehicles",
+    "logout": "Logout",
+    "homeTitle": "Rent a car quickly!",
+    "homeDetail": "Fastest place to rent a car.",
+    "404title": "Sorry!",
+    "404text": "Could not find the page you are looking for..",
+    "goToHome": "Go to Home Page"
   }
 }

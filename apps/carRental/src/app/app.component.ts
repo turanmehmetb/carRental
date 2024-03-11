@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { OverlayPanel } from 'primeng/overlaypanel';
-import { LanguageMessagesService } from './packages/util/languageMessagesService';
 import { Router } from '@angular/router';
 import { SelectItem } from 'primeng/api';
+import { OverlayPanel } from 'primeng/overlaypanel';
 import { LoadingService } from './packages/loading/loading.service';
+import { LanguageMessagesService } from './packages/util/languageMessagesService';
+import { NavbarService } from './packages/util/navbar.service';
 
 @Component({
   selector: 'carRental-root',
@@ -20,19 +21,26 @@ export class AppComponent implements OnInit, AfterViewInit {
   instructorLoggedIn: boolean = false;
   selectableLangPreferences: SelectItem[];
   selectableThemePreferences: SelectItem[];
+  selectedLangPreference: string;
+  selectedThemePreference: string;
   isThemeLight: boolean;
-  selectedLangPreference:string;
   
   constructor(
     private readonly languageMessagesService: LanguageMessagesService,
     public readonly router: Router,
     public readonly loadingService: LoadingService,
-  ) {
-    
+    public readonly navbarService: NavbarService,
+    ){
   }
 
   ngOnInit() {
+
+
+    this.selectedThemePreference = localStorage.getItem('theme') ?? 'en';
+    this.isThemeLight = this.selectedThemePreference === 'light';
     this.languageMessagesService.setLanguage();
+
+    this.selectedLangPreference = localStorage.getItem('locale')!;
 
     this.selectableLangPreferences = [
       { label: 'TR', value: 'tr' },
@@ -43,6 +51,9 @@ export class AppComponent implements OnInit, AfterViewInit {
       { label: this.languageMessagesService.msgjson.darkTheme, value: 'dark' },
     ];
 
+    this.navbarService.initNavbar();
+
+  
   }
 
   ngAfterViewInit(): void {
@@ -85,10 +96,13 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   onThemePreferenceChanged() {
-
+    this.selectedThemePreference = this.isThemeLight ? 'light' : 'dark';
+    localStorage.setItem('theme', this.selectedThemePreference);
+    document.documentElement.className = this.selectedThemePreference;
   }
 
   onRouteChanged() {
+    this.router.navigateByUrl(this.navbarService.selectedNavItemUrl);
     this.menuOverlayPanel.hide();
     this.avatarOverlayPanel.hide();
   }

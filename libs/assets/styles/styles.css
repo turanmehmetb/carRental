@@ -1,0 +1,1539 @@
+@import './fonts.css';
+@import './prime.css';
+@import './components/burger_button.css';
+@import './components/iyzipay_form.css';
+
+@tailwind base;
+
+@layer base {
+    .p-button, button, [type='button'], [type='reset'], [type='submit'] {
+      @apply bg-color-;
+    }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+.bg-color- {
+    background-color: var(--default-button-bg-color);
+}
+
+:root {
+    --gray-0:#000000;
+    --gray-1:#080808;
+    --gray-2:#101010;
+    --gray-3:#181818;
+    --gray-4:#202020;
+    --gray-5:#282828;
+    --gray-6:#303030;
+    --gray-7:#383838;
+    --gray-8:#404040;
+    --gray-9:#484848;
+    --gray-10:#505050;
+    --gray-11:#585858;
+    --gray-12:#606060;
+    --gray-13:#686868;
+    --gray-14:#696969;
+    --gray-15:#707070;
+    --gray-16:#787878;
+    --gray-17:#808080;
+    --gray-18:#888888;
+    --gray-19:#909090;
+    --gray-20:#989898;
+    --gray-21:#A0A0A0;
+    --gray-22:#A8A8A8;
+    --gray-23:#A9A9A9;
+    --gray-24:#B0B0B0;
+    --gray-25:#B8B8B8;
+    --gray-26:#BEBEBE;
+    --gray-27:#C0C0C0;
+    --gray-28:#C8C8C8;
+    --gray-29:#D0D0D0;
+    --gray-30:#D3D3D3;
+    --gray-31:#D8D8D8;
+    --gray-32:#DCDCDC;
+    --gray-33:#E0E0E0;
+    --gray-34:#e8e8e8;
+    --gray-35:#F0F0F0; 
+    --gray-36:#F5F5F5;
+    --gray-37:#F8F8F8;
+    --gray-38:#FFFFFF;
+
+    --red-50: #fee9eb;
+    --red-100: #fbc8ca;
+    --red-200: #e7918c;
+    --red-300: #d96761;
+    --red-400: #df463a;
+    --red-500: #e0331a;
+    --red-600: #d3281b;
+    --red-700: #c21d16;
+    --red-800: #b5140f;
+    --red-900: #a60000;
+
+    --green-50: #e3f6ef;
+    --green-100: #bce9d6;
+    --green-200: #8fdbbd;
+    --green-300: #58cea2;
+    --green-400: #14c38f;
+    --green-500: #00b87a;
+    --green-600: #00a86f;
+    --green-700: #009661;
+    --green-800: #008454;
+    --green-900: #00643d;
+
+    --google-900: #DB4437;
+    --google-850: #E57368;
+    --google-800: #ED9D97;
+
+    --blue-900: #1B4F72;
+    --blue-850: #21618C;
+    --blue-800: #2874A6;
+    --blue-750: #3282B8;
+    --blue-700: #488FB1;
+
+    --primary-font-family: Poppins;
+
+    --sun-200: #FFB200;
+    --sun-100: #FFCB42;
+    --moon-200: #000000;
+    --moon-100: #3E3636;
+}
+
+html.dark:root {
+
+    /* --blue-900: #0F4C75;
+    --blue-850: #22577E;
+    --blue-800: #21618C; */
+
+    --default-button-text-color: var(--gray-28); /* var(--gray-33); */
+    --default-button-text-color-hover: var(--gray-28); /* var(--gray-33); */
+    --default-button-text-color-active: var(--gray-28); /* var(--gray-33); */
+    --default-button-bg-color: var(--blue-800);
+    --default-button-bg-color-hover: var(--blue-850);
+    --default-button-bg-color-active: var(--blue-900);
+
+    --navbar-button-text-color: var(--gray-30);
+    --navbar-button-text-color-hover: var(--gray-30);
+    --navbar-button-text-color-active: var(--gray-30);
+    --navbar-button-border-color: var(--blue-800);
+    --navbar-button-border-color-hover: var(--blue-800);
+    --navbar-button-border-color-active: var(--blue-800);
+
+    --google-button-text-color: var(--gray-28); /* var(--gray-33); */
+    --google-button-text-color-hover: var(--gray-28); /* var(--gray-33); */
+    --google-button-text-color-active: var(--gray-33);
+    --google-button-bg-color: var(--google-900);
+    --google-button-bg-color-hover: var(--google-850);
+    --google-button-bg-color-active: var(--google-900);
+
+    --text-button-text-color: var(--gray-28); /* var(--gray-33); */
+    --text-button-text-color-hover: var(--blue-800);
+    --text-button-text-color-active: var(--blue-900);
+
+    --colored-text-button-text-color: var(--blue-800); /* var(--gray-33); */
+    --colored-text-button-text-color-hover: var(--blue-900);
+    --colored-text-button-text-color-active: var(--blue-800);
+
+    --burger-button-text-color: var(--gray-20);
+    --burger-button-text-color-hover: var(--blue-800);
+    --burger-button-text-color-active: var(--blue-900);
+
+    --link-button-text-color: var(--blue-800);
+    --link-button-text-color-hover: var(--blue-850);
+    --link-button-text-color-focus: var(--blue-850);
+    --link-button-text-color-active: var(--blue-900);
+
+    --box-shadow-color: var(--gray-4);
+
+    --overlaypanel-bg-color: var(--gray-6);
+    --overlaypanel-text-color: var(--gray-26);
+    --overlaypanel-close-icon-bg-color: var(--blue-800);
+    --overlaypanel-close-icon-bg-color-hover: var(--blue-850);
+    --overlaypanel-close-icon-text-color: var(--gray-33);
+    --overlaypanel-close-icon-text-color-hover: var(--gray-33);
+    --overlaypanel-triangle-color: var(--gray-6);
+
+    --inputtext-border-color: transparent;
+    --inputtext-border-color-hover: var(--blue-800);
+    --inputtext-border-color-focus: var(--blue-900);
+    --inputtext-bg-color: var(--gray-6);
+    --inputtext-text-color: var(--gray-26); /* var(--gray-38); */
+    --inputtext-placeholder-text-color: var(--gray-20);
+
+    --p-invalid-color: #9d0050;
+    /* --p-box-shadow: rgba(100, 100, 100, 0.25) 0px -14px 28px, rgba(100, 100, 100, 0.22) 0px -10px 10px; */
+    /* --p-box-shadow: var(--blue-900) 0px 10px 10px, var(--blue-900) 0px 10px 10px; */
+    /* --p-box-shadow: var(--blue-700) 0px 2px 4px 0px, var(--blue-700) 0px 2px 16px 0px; */
+    --p-box-shadow: var(--blue-900) 0px 0px 0px 3px;
+    /* --p-box-shadow: transparent; */
+
+    --dropdown-border-color: transparent;
+    --dropdown-border-color-hover: var(--blue-800);
+    --dropdown-border-color-focus: var(--blue-900);
+    --dropdown-bg-color: var(--gray-6);
+    --dropdown-text-color: var(--gray-38);
+    --dropdown-placeholder-text-color: var(--gray-20);
+    --dropdown-icon-color: var(--gray-26);
+    --dropdown-icon-color-hover: var(--gray-16);
+    --dropdown-panel-bg-color: var(--gray-6);
+    --dropdown-panel-item-bg-color-hover: var(--gray-5);
+    --dropdown-panel-item-bg-color-active: var(--gray-4);
+    --dropdown-panel-item-color: var(--gray-28); /* var(--gray-33); */
+    --dropdown-panel-item-color-hover: var(--gray-28); /* var(--gray-33); */
+    --dropdown-panel-item-color-active: var(--gray-28); /* var(--gray-33); */
+    --dropdown-header-bg-color: var(--gray-5);
+
+    --autocomplete-border-color: transparent;
+    --autocomplete-border-color-hover: var(--blue-800);
+    --autocomplete-border-color-focus: var(--blue-900);
+    --autocomplete-bg-color: var(--gray-6);
+    --autocomplete-text-color: var(--gray-38);
+    --autocomplete-placeholder-text-color: var(--gray-20);
+    --autocomplete-icon-color: var(--gray-26);
+    --autocomplete-icon-color-hover: var(--gray-16);
+    --autocomplete-panel-bg-color: var(--gray-6);
+    --autocomplete-panel-item-bg-color-hover: var(--gray-5);
+    --autocomplete-panel-item-bg-color-active: var(--gray-4);
+    --autocomplete-panel-item-color: var(--gray-28); /* var(--gray-33); */
+    --autocomplete-panel-item-color-hover: var(--gray-28); /* var(--gray-33); */
+    --autocomplete-panel-item-color-active: var(--gray-28); /* var(--gray-33); */
+
+    --treeselect-border-color: transparent;
+    --treeselect-border-color-hover: var(--blue-800);
+    --treeselect-border-color-focus: var(--blue-900);
+    --treeselect-bg-color: var(--gray-6);
+    --treeselect-text-color: var(--gray-38);
+    --treeselect-placeholder-text-color: var(--gray-20);
+    --treeselect-icon-color: var(--gray-26);
+    --treeselect-icon-color-hover: var(--gray-16);
+    --treeselect-panel-bg-color: var(--gray-6);
+    --treeselect-panel-item-bg-color-hover: var(--gray-5);
+    --treeselect-panel-item-bg-color-active: var(--gray-4);
+    --treeselect-panel-item-color: var(--gray-28); /* var(--gray-33); */
+    --treeselect-panel-item-color-hover: var(--gray-28); /* var(--gray-33); */
+    --treeselect-panel-item-color-active: var(--gray-28); /* var(--gray-33); */
+
+    --checkbox-bg-color: transparent;
+    --checkbox-border-color: var(--gray-16);
+    --checkbox-border-color-hover: var(--blue-800);
+    --checkbox-border-color-focus: var(--blue-900);
+    --checkbox-bg-color-hover: var(--blue-800);
+    --checkbox-bg-color-active: var(--blue-900);
+    --checkbox-label-color: var(--gray-20);
+    --checkbox-label-color-hover: var(--blue-800);
+    --checkbox-label-color-active: var(--blue-900);
+    --checkbox-icon-color: var(--gray-26);
+
+    --multiselect-border-color: transparent;
+    --multiselect-border-color-hover: var(--blue-800);
+    --multiselect-border-color-focus: var(--blue-900);
+    --multiselect-bg-color: var(--gray-6);
+    --multiselect-placeholder-text-color: var(--gray-20);
+    --multiselect-icon-color: var(--gray-26);
+    --multiselect-icon-color-hover: var(--gray-16);
+    --multiselect-panel-bg-color: var(--gray-6);
+    --multiselect-panel-item-bg-color-hover: var(--gray-5);
+    --multiselect-panel-item-bg-color-active: var(--gray-4);
+    --multiselect-panel-item-color: var(--gray-28); /* var(--gray-33); */
+    --multiselect-panel-item-color-hover: var(--gray-28); /* var(--gray-33); */
+    --multiselect-panel-item-color-active: var(--gray-28); /* var(--gray-33); */
+    --multiselect-input-bg-color: var(--gray-7);
+
+    --scrollbar-track-color: var(--gray-10);
+    --scrollbar-thumb-color: var(--gray-20);
+
+    --datepicker-bg-color: var(--gray-6);
+    --datepicker-text-color: var(--gray-38);
+    --datepicker-header-bg-color: var(--gray-7);
+    --datepicker-header-text-color: var(--gray-38);
+    --datepicker-inline-border-color: var(--gray-8);
+    --datepicker-icon-color: var(--gray-26);
+    --datepicker-icon-color-hover: var(--gray-16);
+    --timepicker-icon-color: var(--gray-26);
+    --timepicker-icon-color-hover: var(--gray-16);
+    --datepicker-link-color: var(--gray-38);
+    --datepicker-link-color-hover: var(--blue-800);
+    --datepicker-item-bg-color-hover: var(--blue-850);
+    --datepicker-item-bg-color-active: var(--blue-900);
+    --datepicker-item-color: var(--gray-28); /* var(--gray-33); */
+    --datepicker-item-color-hover: var(--gray-28); /* var(--gray-33); */
+    --datepicker-item-color-active: var(--gray-28); /* var(--gray-33); */
+    --datepicker-border-color: var(--gray-28); /* var(--gray-33); */
+    --datepicker-today-border-color: var(--gray-16);
+    --datepicker-today-border-color-active: var(--gray-16);
+
+    --inputswitch-slider-bg-color: var(--gray-6);
+    --inputswitch-slider-bg-color-hover: var(--blue-800);
+    --inputswitch-slider-bg-color-active: var(--blue-900);
+    --inputswitch-slider-square-color: var(--gray-12);
+    --inputswitch-slider-square-color-active: var(--gray-26);
+
+    --knob-value-color: var(--blue-900);
+    --knob-range-color: var(--gray-6);
+    --knob-text-color: var(--gray-33);
+
+    --passwordpanel-bg-color: var(--gray-6);
+    --passwordpanel-text-color: var(--gray-28); /* var(--gray-38); */
+    --passwordpanel-meter-bg-color: var(--gray-16);
+
+    --radiobutton-bg-color: transparent;
+    --radiobutton-bg-color-hover: var(--blue-800);
+    --radiobutton-bg-color-active: var(--blue-900);
+    --radiobutton-border-color: var(--gray-7);
+    --radiobutton-border-color-hover: var(--blue-800);
+    --radiobutton-border-color-active: var(--blue-900);
+    --radiobutton-icon-color: var(--gray-26);
+
+    --rating-icon-color: var(--gray-16);
+    /* --rating-icon-color-hover: var(--blue-800);
+    --rating-icon-color-active: var(--blue-900); */
+    --rating-icon-color-hover: #EC9B3B;
+    --rating-icon-color-active: #F77E21;
+    --rating-cancel-icon-color: #ff5a8f;
+    --rating-cancel-icon-color-hover: #d70057;
+
+    --slider-bg-color: var(--gray-6);
+    --slider-handler-bg-color: var(--gray-26);
+    --slider-handler-bg-color-hover: var(--blue-900);
+    --slider-handler-border-color: var(--gray-20);
+    --slider-handler-border-color-hover: var(--blue-900);
+    --slider-range-bg-color: var(--blue-900);
+
+    --selectbutton-bg-hover: var(--blue-850);
+    --selectbutton-bg-focus: var(--blue-900);
+    --selectbutton-alternative-text-color: var(--gray-30);
+    --selectbutton-alternative-text-color-hover: var(--gray-20);
+    --selectbutton-alternative-text-color-active: var(--blue-700);
+    --selectbutton-alternative-2-text-color: var(--gray-20);
+    --selectbutton-alternative-2-text-color-hover: var(--gray-10);
+    --selectbutton-alternative-2-text-color-active: var(--blue-700);
+
+    --togglebutton-bg-hover: var(--blue-850);
+    --togglebutton-bg-focus: var(--blue-900);
+
+    --dataview-header-bg-color: var(--gray-4);
+    --dataview-header-text-color: var(--gray-28); /* var(--gray-38); */
+    --dataview-footer-bg-color: var(--gray-4);
+    --dataview-footer-text-color: var(--gray-28); /* var(--gray-38); */
+    --dataview-content-bg-color: var(--gray-4); /* var(--gray-7); */
+    --dataview-content-text-color: var(--gray-28); /* var(--gray-38); */
+    --dataview-paginator-bg-color: var(--gray-4);
+    --dataview-paginator-text-color: var(--gray-28); /* var(--gray-38); */
+    --dataview-items-border-color: var(--gray-2);
+
+    --datatable-header-bg-color: var(--gray-6);
+    --datatable-header-text-color: var(--gray-28); /* var(--gray-38); */
+    --datatable-footer-bg-color: var(--gray-4);
+    --datatable-footer-text-color: var(--gray-28); /* var(--gray-38); */
+    --datatable-content-bg-color: var(--gray-4); /* var(--gray-7); */
+    --datatable-content-text-color: var(--gray-28); /* var(--gray-38); */
+    --datatable-paginator-bg-color: var(--gray-4);
+    --datatable-paginator-text-color: var(--gray-28); /* var(--gray-38); */
+    --datatable-items-border-color: var(--gray-5);
+    --datatable-even-item-bg-color: var(--gray-5);
+    --datatable-sort-icon-color: var(--gray-28);
+    --datatable-sort-icon-color-hover: var(--blue-700);
+    --datatable-sort-icon-color-active: var(--blue-800);
+    
+    --orderlist-header-bg-color: var(--gray-4);
+    --orderlist-header-text-color: var(--gray-28); /* var(--gray-38); */
+    --orderlist-filter-container-bg-color: var(--gray-5);
+    --orderlist-content-bg-color: var(--gray-6);
+    --orderlist-content-text-color: var(--gray-28); /* var(--gray-38); */
+    --orderlist-item-bg-color: var(--gray-6);
+    --orderlist-preview-item-bg-color: var(--gray-6);
+    --orderlist-even-item-bg-color: var(--gray-7);
+    --orderlist-item-bg-color-hover: var(--blue-800);
+    --orderlist-item-bg-color-active: var(--blue-900);
+    --orderlist-item-text-color: var(--gray-28); /* var(--gray-38); */
+    --orderlist-preview-item-text-color: var(--gray-28); /* var(--gray-38); */
+    --orderlist-item-text-color-hover: var(--gray-30);
+    --orderlist-item-text-color-active: var(--gray-30);
+    --orderlist-filter-icon-color: var(--gray-10);
+
+    --picklist-header-bg-color: var(--gray-4);
+    --picklist-header-text-color: var(--gray-28); /* var(--gray-38); */
+    --picklist-filter-container-bg-color: var(--gray-5);
+    --picklist-content-bg-color: var(--gray-6);
+    --picklist-content-text-color: var(--gray-28); /* var(--gray-38); */
+    --picklist-item-bg-color: var(--gray-6);
+    --picklist-preview-item-bg-color: var(--gray-6);
+    --picklist-even-item-bg-color: var(--gray-7);
+    --picklist-item-bg-color-hover: var(--blue-800);
+    --picklist-item-bg-color-active: var(--blue-900);
+    --picklist-item-text-color: var(--gray-28); /* var(--gray-38); */
+    --picklist-preview-item-text-color: var(--gray-28); /* var(--gray-38); */
+    --picklist-item-text-color-hover: var(--gray-30);
+    --picklist-item-text-color-active: var(--gray-30);
+    --picklist-filter-icon-color: var(--gray-10);
+
+    --fc-grid-border-color: var(--gray-8);
+    --fc-th-bg-color: var(--gray-4);
+    --fc-th-text-color: var(--gray-30);
+    --fc-th-border-color: var(--gray-8);
+    --fc-td-bg-color: var(--gray-5);
+    --fc-td-bg-color-hover: var(--gray-7);
+    --fc-td-bg-color-active: var(--gray-8);
+    --fc-td-bg-color-disabled: var(--gray-4);
+    --fc-td-text-color: var(--gray-30);
+    --fc-td-text-color-hover: var(--gray-30);
+    --fc-td-text-color-active: var(--gray-30);
+    --fc-navlink-text-color: var(--gray-30); /* var(--blue-800); */
+    --fc-navlink-text-color-hover: var(--gray-30); /* var(--blue-700); */
+    --fc-navlink-bg-color: var(--gray-5); /* var(--gray-4); */
+    --fc-navlink-bg-color-hover:  var(--gray-4);
+    --fc-td-border-color: var(--gray-8);
+    --fc-button-bg-color: var(--blue-800);
+    --fc-button-bg-color-hover: var(--blue-850);
+    --fc-button-bg-color-active: var(--blue-900);
+    --fc-button-text-color: var(--gray-30);
+    --fc-button-text-color-hover: var(--gray-30);
+    --fc-button-text-color-active: var(--gray-30);
+    --fc-event-bg-color: var(--blue-800);
+    --fc-event-text-color: var(--gray-30);
+    --fc-header-bg-color: var(--gray-5);
+    --fc-header-text-color: var(--gray-30);
+    --fc-close-icon-color: var(--gray-30);
+    --fc-content-bg-color: var(--gray-8);
+    --fc-content-text-color: var(--gray-6);
+    --fc-break-event-bg-color: var(--gray-20);
+    --fc-break-event-bg-color-hover: var(--gray-16);
+    --fc-break-event-text-color: var(--gray-30);
+    --fc-booked-already-event-bg-color: #D72323; /* var(--gray-10); */
+    --fc-booked-already-event-text-color: var(--gray-30);
+    --fc-booked-you-event-bg-color: var(--blue-800); /* #801336 */
+    --fc-booked-you-event-text-color: var(--gray-30);
+    --fc-available-event-bg-color: #005555;
+    --fc-available-event-bg-color-hover: #1D5C63;
+    --fc-available-event-text-color: var(--gray-30);
+    --fc-reserved-event-bg-color: var(--gray-10);
+    --fc-reserved-event-text-color: var(--button-white-color);
+
+    --accordion-header-bg-color: var(--gray-5);
+    --accordion-header-text-color: var(--gray-28); /* var(--gray-38); */
+    --accordion-header-bg-color-hover: var(--gray-4);
+    --accordion-header-text-color-hover: var(--gray-28); /* var(--gray-38); */
+    --accordion-header-bg-color-active: var(--gray-5);
+    --accordion-header-text-color-active: var(--gray-28); /* var(--gray-38); */
+    --accordion-content-bg-color: var(--gray-6);
+    --accordion-content-text-color: var(--gray-28); /* var(--gray-38); */
+
+    --card-bg-color: var(--gray-6);
+    --card-text-color: var(--gray-28); /* var(--gray-38); */
+    --card-title-color: var(--gray-28); /* var(--gray-38); */
+    --card-subtitle-color: var(--gray-26);
+    --card-content-color: var(--gray-28); /* var(--gray-38); */
+
+    --divider-content-bg-color: var(--gray-8);
+    --divider-color: var(--gray-8);
+
+    --fieldset-header-bg-color: var(--gray-5);
+    --fieldset-header-bg-color-hover: var(--gray-4);
+    --fieldset-header-text-color: var(--gray-28); /* var(--gray-38); */
+    --fieldset-header-text-color-hover: var(--gray-28); /* var(--gray-38); */
+    --fieldset-content-bg-color: var(--gray-6);
+    --fieldset-content-text-color: var(--gray-28); /* var(--gray-38); */
+    --fieldset-toggler-color: var(--gray-28); /* var(--gray-38); */
+
+    --splitter-bg-color: var(--gray-6);
+    --splitter-text-color: var(--gray-38);
+    --splitter-gutter-bg-color: var(--gray-8);
+    --splitter-gutter-handle-color: var(--gray-10);
+
+    --tabview-header-bg-color: var(--gray-6);
+    --tabview-link-bg-color: var(--blue-800);
+    --tabview-link-bg-color-hover: var(--blue-850);
+    --tabview-link-bg-color-active: var(--blue-900);
+    --tabview-link-text-color: var(--gray-28); /* var(--gray-33); */
+    --tabview-link-text-color-hover: var(--gray-28); /* var(--gray-33); */
+    --tabview-link-text-color-active: var(--gray-28); /* var(--gray-33); */
+    --tabview-panel-bg-color: var(--gray-6);
+    --tabview-panel-text-color: var(--gray-28); /* var(--gray-38); */
+
+    --panel-header-bg-color: var(--gray-5);
+    --panel-header-text-color: var(--gray-28); /* var(--gray-38); */
+    --panel-content-bg-color: var(--gray-6);
+    --panel-content-text-color: var(--gray-28); /* var(--gray-38); */
+    --panel-footer-bg-color: var(--gray-5);
+    --panel-footer-text-color: var(--gray-28); /* var(--gray-38); */
+
+    --toolbar-bg-color: var(--gray-6);
+
+    --dialog-header-bg-color: var(--gray-4);
+    --dialog-header-text-color: var(--gray-30);
+    --dialog-content-bg-color: var(--gray-5);
+    --dialog-content-text-color: var(--gray-30);
+    --dialog-footer-bg-color: var(--gray-4);
+    --dialog-footer-text-color: var(--gray-30);
+    --dialog-icon-color: var(--gray-26);
+    --dialog-icon-color-hover: var(--gray-16);
+
+    --confirmpopup-bg-color: var(--gray-6);
+    --confirmpopup-text-color: var(--gray-28); /* var(--gray-38); */
+    --confirmpopup-content-bg-color: var(--gray-6);
+    --confirmpopup-content-text-color: var(--gray-28); /* var(--gray-38); */
+    --confirmpopup-footer-bg-color: var(--gray-6);
+    --confirmpopup-footer-text-color: var(--gray-28); /* var(--gray-38); */
+    --confirmpopup-footer-text-color: var(--gray-6);
+    --confirmpopup-triangle-color: var(--gray-6);
+
+    --sidebar-bg-color: var(--gray-6);
+    --sidebar-text-color: var(--gray-28); /* var(--gray-38); */
+    --sidebar-icon-color: var(--gray-26);
+    --sidebar-icon-color-hover: var(--gray-16);
+
+    --tooltip-bg-color: var(--gray-6);
+    --tooltip-text-color: var(--gray-28); /* var(--gray-38); */
+    --tooltip-triangle-color: var(--gray-6);
+
+    --fileupload-header-bg-color: var(--gray-5);
+    --fileupload-header-text-color: var(--gray-28); /* var(--gray-38); */
+    --fileupload-content-bg-color: var(--gray-6);
+    --fileupload-content-text-color: var(--gray-28); /* var(--gray-38); */
+    --fileupload-button-bg-color: var(--blue-800);
+    --fileupload-button-bg-color-hover: var(--blue-850);
+    --fileupload-button-bg-color-active: var(--blue-900);
+    --fileupload-button-text-color: var(--gray-28); /* var(--gray-33); */
+    --fileupload-button-text-color-hover: var(--gray-28); /* var(--gray-33); */
+    --fileupload-button-text-color-active: var(--gray-28); /* var(--gray-33); */
+
+    --progressbar-bg-color: var(--gray-20);
+    --progressbar-value-bg-color: var(--gray-10);
+    --progressbar-label-color: var(--gray-28); /* var(--gray-38); */
+
+    --breadcrumb-bg-color: var(--gray-6);
+    --breadcrumb-item-text-color: var(--blue-800);
+    --breadcrumb-icon-color: var(--blue-800);
+    --breadcrumb-chevron-color: var(--gray-20);
+
+    --menu-text-color-1: var(--gray-28); /* var(--gray-34); */
+
+    --menu-bg-color: var(--gray-8);
+    --menu-text-color: var(--menu-text-color-1);
+    --menu-submenu-bg-color: var(--gray-5);
+    --menu-submenu-text-color: var(--menu-text-color-1);
+    --menu-submenu-icon-color: var(--menu-text-color-1);
+    --menu-submenu-icon-color-hover: var(--menu-text-color-1);
+    --menu-item-bg-color-hover: var(--gray-6);
+    --menu-item-text-color: var(--menu-text-color-1);
+    --menu-item-text-color-hover: var(--menu-text-color-1);
+    --menu-icon-color: var(--menu-text-color-1);
+    --menu-icon-color-hover: var(--menu-text-color-1);
+    --menu-menuseperator-color: var(--gray-16);
+
+    --contextmenu-bg-color: var(--gray-8);
+    --contextmenu-text-color: var(--menu-text-color-1);
+    --contextmenu-submenu-bg-color: var(--gray-5);
+    --contextmenu-submenu-text-color: var(--menu-text-color-1);
+    --contextmenu-submenu-icon-color: var(--menu-text-color-1);
+    --contextmenu-submenu-icon-color-hover: var(--menu-text-color-1);
+    --contextmenu-submenu-icon-color-active: var(--menu-text-color-1);
+    --contextmenu-item-bg-color-hover: var(--gray-6);
+    --contextmenu-item-bg-color-active: var(--gray-6);
+    --contextmenu-item-text-color: var(--menu-text-color-1);
+    --contextmenu-item-text-color-hover: var(--menu-text-color-1);
+    --contextmenu-item-text-color-active: var(--menu-text-color-1);
+    --contextmenu-icon-color: var(--menu-text-color-1);
+    --contextmenu-icon-color-hover: var(--menu-text-color-1);
+    --contextmenu-menuseperator-color: var(--gray-16);
+
+    --megamenu-bg-color: var(--gray-8);
+    --megamenu-text-color: var(--menu-text-color-1);
+    --megamenu-submenu-bg-color: var(--gray-5);
+    --megamenu-submenu-text-color: var(--menu-text-color-1);
+    --megamenu-submenu-icon-color: var(--menu-text-color-1);
+    --megamenu-submenu-icon-color-hover: var(--menu-text-color-1);
+    --megamenu-submenu-icon-color-active: var(--menu-text-color-1);
+    --megamenu-item-bg-color-hover: var(--gray-6);
+    --megamenu-item-bg-color-active: var(--gray-6);
+    --megamenu-item-text-color: var(--menu-text-color-1);
+    --megamenu-item-text-color-hover: var(--menu-text-color-1);
+    --megamenu-item-text-color-active: var(--menu-text-color-1);
+    --megamenu-icon-color: var(--menu-text-color-1);
+    --megamenu-icon-color-hover: var(--menu-text-color-1);
+    --megamenu-menuseperator-color: var(--gray-16);
+
+    --menubar-bg-color: var(--gray-8);
+    --menubar-text-color: var(--menu-text-color-1);
+    --menubar-submenu-bg-color: var(--gray-5);
+    --menubar-submenu-text-color: var(--menu-text-color-1);
+    --menubar-submenu-icon-color: var(--menu-text-color-1);
+    --menubar-submenu-icon-color-hover: var(--menu-text-color-1);
+    --menubar-submenu-icon-color-active: var(--menu-text-color-1);
+    --menubar-item-bg-color-hover: var(--gray-6);
+    --menubar-item-bg-color-active: var(--gray-6);
+    --menubar-item-text-color: var(--menu-text-color-1);
+    --menubar-item-text-color-hover: var(--menu-text-color-1);
+    --menubar-item-text-color-active: var(--menu-text-color-1);
+    --menubar-icon-color: var(--menu-text-color-1);
+    --menubar-icon-color-hover: var(--menu-text-color-1);
+    --menubar-icon-color-active: var(--menu-text-color-1);
+    --menubar-menuseperator-color: var(--gray-16);
+
+    --panelmenu-bg-color: var(--gray-8);
+    --panelmenu-text-color: var(--menu-text-color-1);
+    --panelmenu-submenu-bg-color: var(--gray-6);
+    --panelmenu-submenu-text-color: var(--menu-text-color-1);
+    --panelmenu-submenu-icon-color: var(--menu-text-color-1);
+    --panelmenu-submenu-icon-color-hover: var(--menu-text-color-1);
+    --panelmenu-submenu-icon-color-active: var(--menu-text-color-1);
+    --panelmenu-item-bg-color-hover: var(--gray-5);
+    --panelmenu-item-bg-color-active: var(--gray-5);
+    --panelmenu-item-text-color: var(--menu-text-color-1);
+    --panelmenu-item-text-color-hover: var(--menu-text-color-1);
+    --panelmenu-item-text-color-active: var(--menu-text-color-1);
+    --panelmenu-icon-color: var(--menu-text-color-1);
+    --panelmenu-icon-color-hover: var(--menu-text-color-1);
+    --panelmenu-icon-color-active: var(--menu-text-color-1);
+    --panelmenu-menuseperator-color: var(--gray-16);
+
+    --slidemenu-bg-color: var(--gray-8);
+    --slidemenu-text-color: var(--menu-text-color-1);
+    --slidemenu-submenu-bg-color: var(--gray-5);
+    --slidemenu-submenu-text-color: var(--menu-text-color-1);
+    --slidemenu-submenu-icon-color: var(--menu-text-color-1);
+    --slidemenu-submenu-icon-color-hover: var(--menu-text-color-1);
+    --slidemenu-submenu-icon-color-active: var(--menu-text-color-1);
+    --slidemenu-item-bg-color-hover: var(--gray-6);
+    --slidemenu-item-bg-color-active: var(--gray-6);
+    --slidemenu-item-text-color: var(--menu-text-color-1);
+    --slidemenu-item-text-color-hover: var(--menu-text-color-1);
+    --slidemenu-item-text-color-active: var(--menu-text-color-1);
+    --slidemenu-icon-color: var(--menu-text-color-1);
+    --slidemenu-icon-color-hover: var(--menu-text-color-1);
+    --slidemenu-icon-color-active: var(--menu-text-color-1);
+    --slidemenu-menuseperator-color: var(--gray-16);
+
+    --tieredmenu-bg-color: var(--gray-8);
+    --tieredmenu-text-color: var(--menu-text-color-1);
+    --tieredmenu-submenu-bg-color: var(--gray-5);
+    --tieredmenu-submenu-text-color: var(--menu-text-color-1);
+    --tieredmenu-submenu-icon-color: var(--menu-text-color-1);
+    --tieredmenu-submenu-icon-color-hover: var(--menu-text-color-1);
+    --tieredmenu-submenu-icon-color-active: var(--menu-text-color-1);
+    --tieredmenu-item-bg-color-hover: var(--gray-6); 
+    --tieredmenu-item-bg-color-active: var(--gray-6);
+    --tieredmenu-item-text-color: var(--menu-text-color-1);
+    --tieredmenu-item-text-color-hover: var(--menu-text-color-1);
+    --tieredmenu-item-text-color-active: var(--menu-text-color-1);
+    --tieredmenu-icon-color: var(--menu-text-color-1);
+    --tieredmenu-icon-color-hover: var(--menu-text-color-1);
+    --tieredmenu-icon-color-active: var(--menu-text-color-1);
+    --tieredmenu-menuseperator-color: var(--gray-16);
+
+    --steps-bg-color: var(--gray-8);
+    --steps-bg-color-active: var(--blue-800);
+    --steps-text-color: var(--menu-text-color-1);
+    --steps-text-color-active: var(--blue-800);
+    --steps-number-color: var(--menu-text-color-1);
+    --steps-number-color-active: var(--gray-30);
+    --steps-line-color: var(--gray-16);
+
+    --tabmenu-header-bg-color: var(--gray-5);
+    --tabmenu-link-bg-color: var(--blue-800);
+    --tabmenu-link-bg-color-hover: var(--blue-850);
+    --tabmenu-link-bg-color-active: var(--blue-900);
+    --tabmenu-link-text-color: var(--gray-28); /* var(--gray-33); */
+    --tabmenu-link-text-color-hover: var(--gray-28); /* var(--gray-33); */
+    --tabmenu-link-text-color-active: var(--gray-28); /* var(--gray-33); */
+    --tabmenu-panel-bg-color: var(--gray-6);
+    --tabmenu-panel-text-color: var(--gray-28); /* var(--gray-38); */
+
+    --message-text-and-icon-color: var(--gray-30); /* var(--gray-33); */
+    --custom-message-bg-color: var(--gray-6);
+    --custom-message-icon-color: var(--gray-30);
+
+    --primary-info-color: #0F4C75;
+    --secondary-info-color: #BBE1FA;
+    --primary-success-color: #1C7947; /* #00909E */
+    --secondary-success-color: #BBDED6; /* #BBDED6 */
+    --primary-warning-color: #F76E11;
+    --secondary-warning-color: #FFBC80;
+    --primary-error-color: #EA5455;
+    --secondary-error-color: #F67280;
+
+    
+    /* --primary-button-success-color: #62D2A2;
+    --secondary-button-success-color: #1FAB89;
+    --ternary-button-success-color: #1C7947;
+    --primary-button-danger-color: #FF8C8C;
+    --secondary-button-danger-color: #FF5D5D;
+    --ternary-button-danger-color: #E84545; */
+
+    --primary-button-success-color: var(--green-700);
+    --secondary-button-success-color: var(--green-800);
+    --ternary-button-success-color: var(--green-900);
+    --primary-button-danger-color: var(--red-500);
+    --secondary-button-danger-color: var(--red-600);
+    --ternary-button-danger-color: var(--red-700);
+    
+    --carousel-bg-color: var(--gray-6);
+    --carousel-text-color: var(--gray-28); /* var(--gray-33); */
+    --carousel-icon-color: var(--gray-26);
+    --carousel-icon-color-hover: var(--gray-16);
+    --carousel-step-button-bg-color: var(--gray-16);
+    --carousel-step-button-bg-color-hover: var(--blue-800);
+    --carousel-step-button-bg-color-active: var(--blue-900);
+
+    --galleria-bg-color: var(--gray-4);
+    --galleria-thumbnail-container-bg-color: var(--gray-5);
+    --galleria-icon-color: var(--gray-26);
+    --galleria-icon-color-hover: var(--gray-16);
+
+    --avatar-bg-color: var(--gray-8);
+    --avatar-avatargroup-border-color: var(--gray-16);
+
+    --chip-bg-color: var(--gray-5);
+    --chip-text-color: var(--gray-30);
+
+    --scrolltop-bg-color: var(--gray-5);
+    --scrolltop-bg-color-hover: var(--gray-4);
+    --scrolltop-icon-color: var(--gray-26);
+
+    --skeleton-bg-color: var(--gray-6);
+    --skeleton-bg-color-after-1: var(--gray-6);
+    --skeleton-bg-color-after-2: var(--gray-8);
+    --skeleton-bg-color-after-3: var(--gray-6);
+
+    --timeline-eventmarker-bg-color: var(--blue-800);
+    --timeline-eventconnector-color: var(--gray-20);
+
+    --paginator-bg-color: var(--gray-5);
+    --paginator-text-color: var(--gray-28); /* var(--gray-38); */
+
+    --horizontal-line-color: var(--gray-20);
+
+    --button-white-color: var(--gray-30); /* var(--gray-38); */
+    --button-white-color-hover: var(--gray-26);
+    --button-white-color-active: var(--gray-22);
+
+    --payment-bg-color: var(--gray-5);
+    --payment-secondary-bg-color: var(--gray-10); /* 20 light */
+    --payment-text-color: var(--gray-28);
+    --payment-border-color: var(--gray-10);
+
+    --custom-overlay-border-color: transparent;
+    --custom-overlay-border-color-hover: var(--blue-800);
+    --custom-overlay-border-color-focus: var(--blue-900);
+    --custom-overlay-bg-color: var(--gray-6);
+    --custom-overlay-text-color: var(--gray-38);
+    --custom-overlay-placeholder-text-color: var(--gray-20);
+    --custom-overlay-icon-color: var(--gray-26);
+    --custom-overlay-icon-color-hover: var(--gray-16);
+    --custom-overlay-panel-bg-color: var(--gray-8);
+    --custom-overlay-panel-item-bg-color-hover: var(--gray-6);
+    --custom-overlay-panel-item-bg-color-active: var(--gray-4);
+    --custom-overlay-panel-item-color: var(--gray-28); /* var(--gray-33); */
+    --custom-overlay-panel-item-color-hover: var(--gray-28); /* var(--gray-33); */
+    --custom-overlay-panel-item-color-active: var(--gray-28); /* var(--gray-33); */
+
+    --loading-spinner-dots-color: var(--blue-700);
+}
+
+html:not(.dark):root {
+
+    --default-button-text-color: var(--gray-33);
+    --default-button-text-color-hover: var(--gray-33);
+    --default-button-text-color-active: var(--gray-33);
+    --default-button-bg-color: var(--blue-800);
+    --default-button-bg-color-hover: var(--blue-850);
+    --default-button-bg-color-active: var(--blue-900);
+
+    --navbar-button-text-color: var(--gray-10);
+    --navbar-button-text-color-hover: var(--gray-10);
+    --navbar-button-text-color-active: var(--gray-10);
+    --navbar-button-border-color: var(--blue-800);
+    --navbar-button-border-color-hover: var(--blue-800);
+    --navbar-button-border-color-active: var(--blue-800);
+
+    --google-button-text-color: var(--gray-33);
+    --google-button-text-color-hover: var(--gray-33);
+    --google-button-text-color-active: var(--gray-33);
+    --google-button-bg-color: var(--google-900);
+    --google-button-bg-color-hover: var(--google-850);
+    --google-button-bg-color-active: var(--google-900);
+
+    --text-button-text-color: var(--gray-6);
+    --text-button-text-color-hover: var(--blue-700);
+    --text-button-text-color-active: var(--blue-800);
+
+    --colored-text-button-text-color: var(--blue-700); /* var(--gray-33); */
+    --colored-text-button-text-color-hover: var(--blue-800);
+    --colored-text-button-text-color-active: var(--blue-700);
+
+    --burger-button-text-color: var(--gray-10);
+    --burger-button-text-color-hover: var(--blue-700);
+    --burger-button-text-color-active: var(--blue-800);
+
+    --link-button-text-color: var(--blue-700);
+    --link-button-text-color-hover: var(--blue-900);
+    --link-button-text-color-focus: var(--blue-900);
+    --link-button-text-color-active: var(--blue-800);
+
+    --box-shadow-color: var(--gray-16);
+
+    --overlaypanel-bg-color: var(--gray-33);
+    --overlaypanel-text-color: var(--gray-6);
+    --overlaypanel-close-icon-bg-color: var(--blue-800);
+    --overlaypanel-close-icon-bg-color-hover: var(--blue-850);
+    --overlaypanel-close-icon-text-color: var(--gray-33);
+    --overlaypanel-close-icon-text-color-hover: var(--gray-33);
+    --overlaypanel-triangle-color: var(--gray-33);
+
+    --inputtext-border-color: transparent;
+    --inputtext-border-color-hover: var(--blue-800);
+    --inputtext-border-color-focus: var(--blue-900);
+    --inputtext-bg-color: var(--gray-33);
+    --inputtext-text-color: var(--gray-6);
+    --inputtext-placeholder-text-color: var(--gray-20);
+
+    --p-invalid-color: #c20055;
+    --p-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+    --dropdown-border-color: transparent;
+    --dropdown-border-color-hover: var(--blue-800);
+    --dropdown-border-color-focus: var(--blue-900);
+    --dropdown-bg-color: var(--gray-33);
+    --dropdown-text-color: var(--gray-6);
+    --dropdown-placeholder-text-color: var(--gray-20);
+    --dropdown-icon-color: var(--gray-20);
+    --dropdown-icon-color-hover: var(--gray-5);
+    --dropdown-panel-bg-color: var(--gray-32);
+    --dropdown-panel-item-bg-color-hover: var(--gray-30);
+    --dropdown-panel-item-bg-color-active: var(--gray-28);
+    --dropdown-panel-item-color: var(--gray-6);
+    --dropdown-panel-item-color-hover: var(--gray-6);
+    --dropdown-panel-item-color-active: var(--gray-6);
+    --dropdown-header-bg-color: var(--gray-30);
+
+    --autocomplete-border-color: transparent;
+    --autocomplete-border-color-hover: var(--blue-800);
+    --autocomplete-border-color-focus: var(--blue-900);
+    --autocomplete-bg-color: var(--gray-33);
+    --autocomplete-text-color: var(--gray-6);
+    --autocomplete-placeholder-text-color: var(--gray-20);
+    --autocomplete-icon-color: var(--gray-20);
+    --autocomplete-icon-color-hover: var(--gray-5);
+    --autocomplete-panel-bg-color: var(--gray-32);
+    --autocomplete-panel-item-bg-color-hover: var(--gray-30);
+    --autocomplete-panel-item-bg-color-active: var(--gray-28);
+    --autocomplete-panel-item-color: var(--gray-6);
+    --autocomplete-panel-item-color-hover: var(--gray-6);
+    --autocomplete-panel-item-color-active: var(--gray-6);
+
+    --treeselect-border-color: transparent;
+    --treeselect-border-color-hover: var(--blue-800);
+    --treeselect-border-color-focus: var(--blue-900);
+    --treeselect-bg-color: var(--gray-33);
+    --treeselect-placeholder-text-color: var(--gray-20);
+    --treeselect-icon-color: var(--gray-20);
+    --treeselect-icon-color-hover: var(--gray-5);
+    --treeselect-panel-bg-color: var(--gray-33);
+    --treeselect-panel-item-bg-color-hover: var(--gray-30);
+    --treeselect-panel-item-bg-color-active: var(--gray-27);
+    --treeselect-panel-item-color: var(--gray-6);
+    --treeselect-panel-item-color-hover: var(--gray-6);
+    --treeselect-panel-item-color-active: var(--gray-6);
+
+    --checkbox-bg-color: transparent;
+    --checkbox-border-color: var(--gray-26);
+    --checkbox-border-color-hover: var(--blue-800);
+    --checkbox-border-color-focus: var(--blue-900);
+    --checkbox-bg-color-hover: var(--blue-800);
+    --checkbox-bg-color-active: var(--blue-900);
+    --checkbox-label-color: var(--gray-20);
+    --checkbox-label-color-hover: var(--blue-800);
+    --checkbox-label-color-active: var(--blue-900);
+    --checkbox-icon-color: var(--gray-33);
+
+    --multiselect-border-color: transparent;
+    --multiselect-border-color-hover: var(--blue-800);
+    --multiselect-border-color-focus: var(--blue-900);
+    --multiselect-bg-color: var(--gray-33);
+    --multiselect-placeholder-text-color: var(--gray-20);
+    --multiselect-icon-color: var(--gray-20);
+    --multiselect-icon-color-hover: var(--gray-5);
+    --multiselect-panel-bg-color: var(--gray-32);
+    --multiselect-panel-item-bg-color-hover: var(--gray-30);
+    --multiselect-panel-item-bg-color-active: var(--gray-28);
+    --multiselect-panel-item-color: var(--gray-6);
+    --multiselect-panel-item-color-hover: var(--gray-6);
+    --multiselect-panel-item-color-active: var(--gray-6);
+    --multiselect-input-bg-color: var(--gray-30);
+
+    --scrollbar-track-color: var(--gray-20);
+    --scrollbar-thumb-color: var(--gray-10);
+
+    --datepicker-bg-color: var(--gray-33);
+    --datepicker-text-color: var(--gray-6);
+    --datepicker-header-bg-color: var(--gray-30);
+    --datepicker-header-text-color: var(--gray-6);
+    --datepicker-inline-border-color: var(--gray-26);
+    --datepicker-icon-color: var(--gray-20);
+    --datepicker-icon-color-hover: var(--gray-6);
+    --timepicker-icon-color: var(--gray-20);
+    --timepicker-icon-color-hover: var(--gray-6);
+    --datepicker-link-color: var(--gray-6);
+    --datepicker-link-color-hover: var(--blue-800);
+    --datepicker-item-bg-color-hover: var(--blue-800);
+    --datepicker-item-bg-color-active: var(--blue-900);
+    --datepicker-item-color: var(--gray-33);
+    --datepicker-item-color-hover: var(--gray-33);
+    --datepicker-item-color-active: var(--gray-33);
+    --datepicker-border-color: var(--gray-20);
+    --datepicker-today-border-color: var(--gray-20);
+    --datepicker-today-border-color-active: var(--gray-20);
+
+    --inputswitch-slider-bg-color: var(--gray-33);
+    --inputswitch-slider-bg-color-hover: var(--blue-800);
+    --inputswitch-slider-bg-color-active: var(--blue-900);
+    --inputswitch-slider-square-color: var(--gray-30);
+    --inputswitch-slider-square-color-active: var(--gray-33);
+
+    --knob-value-color: var(--blue-900);
+    --knob-range-color: var(--gray-33);
+    --knob-text-color: var(--gray-6);
+    
+    --passwordpanel-bg-color: var(--gray-33);
+    --passwordpanel-text-color: var(--gray-6);
+    --passwordpanel-meter-bg-color: var(--gray-30);
+
+    --radiobutton-bg-color: transparent;
+    --radiobutton-bg-color-hover: var(--blue-800);
+    --radiobutton-bg-color-active: var(--blue-900);
+    --radiobutton-border-color: var(--gray-26);
+    --radiobutton-border-color-hover: var(--blue-800);
+    --radiobutton-border-color-active: var(--blue-900);
+    --radiobutton-icon-color: var(--gray-33);
+
+    --rating-icon-color: var(--gray-26);
+    /* --rating-icon-color-hover: var(--blue-800);
+    --rating-icon-color-active: var(--blue-900); */
+    --rating-icon-color-hover: #EC9B3B;
+    --rating-icon-color-active: #F77E21;
+    --rating-cancel-icon-color: #ff5a8f;
+    --rating-cancel-icon-color-hover: #d70057;
+
+    --slider-bg-color: var(--gray-26);
+    --slider-handler-bg-color: var(--gray-33);
+    --slider-handler-bg-color-hover: var(--blue-900);
+    --slider-handler-border-color: var(--gray-20);
+    --slider-handler-border-color-hover: var(--blue-900);
+    --slider-range-bg-color: var(--blue-900);
+
+    --selectbutton-bg-hover: var(--blue-850);
+    --selectbutton-bg-focus: var(--blue-900);
+    --selectbutton-alternative-text-color: var(--gray-20);
+    --selectbutton-alternative-text-color-hover: var(--gray-10);
+    --selectbutton-alternative-text-color-active: var(--blue-700);
+    --selectbutton-alternative-2-text-color: var(--gray-20);
+    --selectbutton-alternative-2-text-color-hover: var(--gray-10);
+    --selectbutton-alternative-2-text-color-active: var(--blue-700);
+    
+    --togglebutton-bg-hover: var(--blue-850);
+    --togglebutton-bg-focus: var(--blue-900);
+
+    --dataview-header-bg-color: var(--gray-33);
+    --dataview-header-text-color: var(--gray-6);
+    --dataview-footer-bg-color: var(--gray-33);
+    --dataview-footer-text-color: var(--gray-6);
+    --dataview-content-bg-color: var(--gray-33); /* var(--gray-34); */
+    --dataview-content-text-color: var(--gray-6);
+    --dataview-paginator-bg-color: var(--gray-33);
+    --dataview-paginator-text-color: var(--gray-6);
+    --dataview-items-border-color: var(--gray-30);
+
+    --datatable-header-bg-color: var(--gray-30);
+    --datatable-header-text-color: var(--gray-6);
+    --datatable-footer-bg-color: var(--gray-33);
+    --datatable-footer-text-color: var(--gray-6);
+    --datatable-content-bg-color: var(--gray-33); /* var(--gray-34); */
+    --datatable-content-text-color: var(--gray-6);
+    --datatable-paginator-bg-color: var(--gray-33);
+    --datatable-paginator-text-color: var(--gray-6);
+    --datatable-items-border-color: var(--gray-30);
+    --datatable-even-item-bg-color: var(--gray-31);
+    --datatable-sort-icon-color: var(--gray-6);
+    --datatable-sort-icon-color-hover: var(--blue-700);
+    --datatable-sort-icon-color-active: var(--blue-800);
+
+    --orderlist-header-bg-color: var(--gray-28);
+    --orderlist-header-text-color: var(--gray-6);
+    --orderlist-filter-container-bg-color: var(--gray-30);
+    --orderlist-content-bg-color: var(--gray-37);
+    --orderlist-content-text-color: var(--gray-6);
+    --orderlist-item-bg-color: var(--gray-37);
+    --orderlist-preview-item-bg-color: var(--gray-37);
+    --orderlist-even-item-bg-color: var(--gray-35);
+    --orderlist-item-bg-color-hover: var(--blue-700);
+    --orderlist-item-bg-color-active: var(--blue-800);
+    --orderlist-item-text-color: var(--gray-6);
+    --orderlist-preview-item-text-color: var(--gray-6);
+    --orderlist-item-text-color-hover: var(--gray-30);
+    --orderlist-item-text-color-active: var(--gray-30);
+    --orderlist-filter-icon-color: var(--gray-20);
+
+    --picklist-header-bg-color: var(--gray-28);
+    --picklist-header-text-color: var(--gray-6);
+    --picklist-filter-container-bg-color: var(--gray-30);
+    --picklist-content-bg-color: var(--gray-37);
+    --picklist-content-text-color: var(--gray-6);
+    --picklist-item-bg-color: var(--gray-37);
+    --picklist-preview-item-bg-color: var(--gray-37);
+    --picklist-even-item-bg-color: var(--gray-35);
+    --picklist-item-bg-color-hover: var(--blue-700);
+    --picklist-item-bg-color-active: var(--blue-800);
+    --picklist-item-text-color: var(--gray-6);
+    --picklist-preview-item-text-color: var(--gray-6);
+    --picklist-item-text-color-hover: var(--gray-30);
+    --picklist-item-text-color-active: var(--gray-30);
+    --picklist-filter-icon-color: var(--gray-20);
+
+    --fc-grid-border-color: var(--gray-28);
+    --fc-th-bg-color: var(--gray-33);
+    --fc-th-text-color: var(--gray-6);
+    --fc-th-border-color: var(--gray-28);
+    --fc-td-bg-color: var(--gray-34);
+    --fc-td-bg-color-hover: var(--gray-32);
+    --fc-td-bg-color-active: var(--gray-33);
+    --fc-td-bg-color-disabled: var(--gray-33);
+    --fc-td-text-color: var(--gray-6);
+    --fc-td-text-color-hover: var(--gray-6);
+    --fc-td-text-color-active: var(--gray-6);
+    --fc-navlink-text-color: var(--gray-6); /* var(--blue-700); */
+    --fc-navlink-text-color-hover: var(--gray-6); /* var(--blue-900); */
+    --fc-navlink-bg-color: var(--gray-34); /* var(--blue-750); */
+    --fc-navlink-bg-color-hover: var(--gray-33);
+    --fc-td-border-color: var(--gray-28);
+    --fc-button-bg-color: var(--blue-800);
+    --fc-button-bg-color-hover: var(--blue-850);
+    --fc-button-bg-color-active: var(--blue-900);
+    --fc-button-text-color: var(--gray-33);
+    --fc-button-text-color-hover: var(--gray-33);
+    --fc-button-text-color-active: var(--gray-33);
+    --fc-event-bg-color: var(--blue-800);
+    --fc-event-text-color: var(--gray-33);
+    --fc-header-bg-color: var(--gray-28);
+    --fc-header-text-color: var(--gray-6);
+    --fc-close-icon-color: var(--gray-6);
+    --fc-content-bg-color: var(--gray-37);
+    --fc-content-text-color: var(--gray-6);
+    --fc-break-event-bg-color: var(--gray-20);
+    --fc-break-event-bg-color-hover: var(--gray-16);
+    --fc-break-event-text-color: var(--gray-30);
+    --fc-booked-already-event-bg-color: #EA5455; /* var(--gray-20); */
+    --fc-booked-already-event-text-color: var(--gray-30);
+    --fc-booked-you-event-bg-color: var(--blue-800); /* #EA5455 */
+    --fc-booked-you-event-text-color: var(--gray-30);
+    --fc-available-event-bg-color: #446A46; /* #446A46 */
+    --fc-available-event-bg-color-hover: #52734D;
+    --fc-available-event-text-color: var(--gray-30);
+    --fc-reserved-event-bg-color: var(--gray-10);
+    --fc-reserved-event-text-color: var(--button-white-color);
+    --accordion-header-bg-color: var(--gray-33);
+    --accordion-header-text-color: var(--gray-6);
+    --accordion-header-bg-color-hover: var(--gray-30);
+    --accordion-header-text-color-hover: var(--gray-6);
+    --accordion-header-bg-color-active: var(--gray-33);
+    --accordion-header-text-color-active: var(--gray-6);
+    --accordion-content-bg-color: var(--gray-37);
+    --accordion-content-text-color: var(--gray-6);
+
+    --card-bg-color: var(--gray-33);
+    --card-text-color: var(--gray-6);
+    --card-title-color: var(--gray-6);
+    --card-subtitle-color: var(--gray-16);
+    --card-content-color: var(--gray-6);
+
+    --divider-content-bg-color: var(--gray-30);
+    --divider-color: var(--gray-30);
+
+    --fieldset-header-bg-color: var(--gray-33);
+    --fieldset-header-bg-color-hover: var(--gray-30);
+    --fieldset-header-text-color: var(--gray-6);
+    --fieldset-header-text-color-hover: var(--gray-6);
+    --fieldset-content-bg-color: var(--gray-37);
+    --fieldset-content-text-color: var(--gray-6);
+    --fieldset-toggler-color: var(--gray-6);
+
+    --splitter-bg-color: var(--gray-33);
+    --splitter-text-color: var(--gray-6);
+    --splitter-gutter-bg-color: var(--gray-26);
+    --splitter-gutter-handle-color: var(--gray-16);
+
+    --tabview-header-bg-color: var(--gray-33);
+    --tabview-link-bg-color: var(--blue-800);
+    --tabview-link-bg-color-hover: var(--blue-850);
+    --tabview-link-bg-color-active: var(--blue-900);
+    --tabview-link-text-color: var(--gray-33);
+    --tabview-link-text-color-hover: var(--gray-33);
+    --tabview-link-text-color-active: var(--gray-33);
+    --tabview-panel-bg-color: var(--gray-37);
+    --tabview-panel-text-color: var(--gray-6);
+
+    --panel-header-bg-color: var(--gray-33);
+    --panel-header-text-color: var(--gray-6);
+    --panel-content-bg-color: var(--gray-35);
+    --panel-content-text-color: var(--gray-6);
+    --panel-footer-bg-color: var(--gray-33);
+    --panel-footer-text-color: var(--gray-6);
+
+    --toolbar-bg-color: var(--gray-33);
+
+    --dialog-header-bg-color: var(--gray-28);
+    --dialog-header-text-color: var(--gray-6);
+    --dialog-content-bg-color: var(--gray-30);
+    --dialog-content-text-color: var(--gray-6);
+    --dialog-footer-bg-color: var(--gray-28);
+    --dialog-footer-text-color: var(--gray-6);
+    --dialog-icon-color: var(--gray-20);
+    --dialog-icon-color-hover: var(--gray-6);
+
+    --confirmpopup-bg-color: var(--gray-33);
+    --confirmpopup-text-color: var(--gray-6);
+    --confirmpopup-content-bg-color: var(--gray-33);
+    --confirmpopup-content-text-color: var(--gray-6);
+    --confirmpopup-footer-bg-color: var(--gray-33);
+    --confirmpopup-footer-text-color: var(--gray-33);
+    --confirmpopup-triangle-color: var(--gray-33);
+
+    --sidebar-bg-color: var(--gray-33);
+    --sidebar-text-color: var(--gray-6);
+    --sidebar-icon-color: var(--gray-20);
+    --sidebar-icon-color-hover: var(--gray-6);
+
+    --tooltip-bg-color: var(--gray-30);
+    --tooltip-text-color: var(--gray-6);
+    --tooltip-triangle-color: var(--gray-30);
+
+    --fileupload-header-bg-color: var(--gray-30);
+    --fileupload-header-text-color: var(--gray-6);
+    --fileupload-content-bg-color: var(--gray-33);
+    --fileupload-content-text-color: var(--gray-6);
+    --fileupload-button-bg-color: var(--blue-800);
+    --fileupload-button-bg-color-hover: var(--blue-850);
+    --fileupload-button-bg-color-active: var(--blue-900);
+    --fileupload-button-text-color: var(--gray-33);
+    --fileupload-button-text-color-hover: var(--gray-33);
+    --fileupload-button-text-color-active: var(--gray-33);
+
+    --progressbar-bg-color: var(--gray-26);
+    --progressbar-value-bg-color: var(--gray-20);
+    --progressbar-label-color: var(--gray-33);
+
+    --breadcrumb-bg-color: var(--gray-33);
+    --breadcrumb-item-text-color: var(--blue-800);
+    --breadcrumb-icon-color: var(--blue-800);
+    --breadcrumb-chevron-color: var(--gray-10);
+
+    --menu-text-color-1: var(--gray-6);
+
+    --menu-bg-color: var(--gray-30);
+    --menu-text-color: var(--menu-text-color-1);
+    --menu-submenu-bg-color: var(--gray-24);
+    --menu-submenu-text-color: var(--menu-text-color-1);
+    --menu-submenu-icon-color: var(--menu-text-color-1);
+    --menu-submenu-icon-color-hover: var(--menu-text-color-1);
+    --menu-item-bg-color-hover: var(--gray-27); 
+    --menu-item-text-color: var(--menu-text-color-1);
+    --menu-item-text-color-hover: var(--menu-text-color-1);
+    --menu-icon-color: var(--menu-text-color-1);
+    --menu-icon-color-hover: var(--menu-text-color-1);
+    --menu-menuseperator-color: var(--gray-22);
+
+    --contextmenu-bg-color: var(--gray-30);
+    --contextmenu-text-color: var(--menu-text-color-1);
+    --contextmenu-submenu-bg-color: var(--gray-24);
+    --contextmenu-submenu-text-color: var(--menu-text-color-1);
+    --contextmenu-submenu-icon-color: var(--menu-text-color-1);
+    --contextmenu-submenu-icon-color-hover: var(--menu-text-color-1);
+    --contextmenu-submenu-icon-color-active: var(--menu-text-color-1);
+    --contextmenu-item-bg-color-hover: var(--gray-27); 
+    --contextmenu-item-bg-color-active: var(--gray-27); 
+    --contextmenu-item-text-color: var(--menu-text-color-1);
+    --contextmenu-item-text-color-hover: var(--menu-text-color-1);
+    --contextmenu-item-text-color-active: var(--menu-text-color-1);
+    --contextmenu-icon-color: var(--menu-text-color-1);
+    --contextmenu-icon-color-hover: var(--menu-text-color-1);
+    --contextmenu-icon-color-active: var(--menu-text-color-1);
+    --contextmenu-menuseperator-color: var(--gray-22);
+
+    --megamenu-bg-color: var(--gray-30);
+    --megamenu-text-color: var(--menu-text-color-1);
+    --megamenu-submenu-bg-color: var(--gray-24);
+    --megamenu-submenu-text-color: var(--menu-text-color-1);
+    --megamenu-submenu-icon-color: var(--menu-text-color-1);
+    --megamenu-submenu-icon-color-hover: var(--menu-text-color-1);
+    --megamenu-submenu-icon-color-active: var(--menu-text-color-1);
+    --megamenu-item-bg-color-hover: var(--gray-27); 
+    --megamenu-item-bg-color-active: var(--gray-27); 
+    --megamenu-item-text-color: var(--menu-text-color-1);
+    --megamenu-item-text-color-hover: var(--menu-text-color-1);
+    --megamenu-item-text-color-active: var(--menu-text-color-1);
+    --megamenu-icon-color: var(--menu-text-color-1);
+    --megamenu-icon-color-hover: var(--menu-text-color-1);
+    --megamenu-icon-color-active: var(--menu-text-color-1);
+    --megamenu-menuseperator-color: var(--gray-22);
+
+    --menubar-bg-color: var(--gray-30);
+    --menubar-text-color: var(--menu-text-color-1);
+    --menubar-submenu-bg-color: var(--gray-24);
+    --menubar-submenu-text-color: var(--menu-text-color-1);
+    --menubar-submenu-icon-color: var(--menu-text-color-1);
+    --menubar-submenu-icon-color-hover: var(--menu-text-color-1);
+    --menubar-submenu-icon-color-active: var(--menu-text-color-1);
+    --menubar-item-bg-color-hover: var(--gray-27); 
+    --menubar-item-bg-color-active: var(--gray-27); 
+    --menubar-item-text-color: var(--menu-text-color-1);
+    --menubar-item-text-color-hover: var(--menu-text-color-1);
+    --menubar-item-text-color-active: var(--menu-text-color-1);
+    --menubar-icon-color: var(--menu-text-color-1);
+    --menubar-icon-color-hover: var(--menu-text-color-1);
+    --menubar-icon-color-active: var(--menu-text-color-1);
+    --menubar-menuseperator-color: var(--gray-22);
+
+    --panelmenu-bg-color: var(--gray-30);
+    --panelmenu-text-color: var(--menu-text-color-1);
+    --panelmenu-submenu-bg-color: var(--gray-27);
+    --panelmenu-submenu-text-color: var(--menu-text-color-1);
+    --panelmenu-submenu-icon-color: var(--menu-text-color-1);
+    --panelmenu-submenu-icon-color-hover: var(--menu-text-color-1);
+    --panelmenu-submenu-icon-color-active: var(--menu-text-color-1);
+    --panelmenu-item-bg-color-hover: var(--gray-24); 
+    --panelmenu-item-bg-color-active: var(--gray-24); 
+    --panelmenu-item-text-color: var(--menu-text-color-1);
+    --panelmenu-item-text-color-hover: var(--menu-text-color-1);
+    --panelmenu-item-text-color-active: var(--menu-text-color-1);
+    --panelmenu-icon-color: var(--menu-text-color-1);
+    --panelmenu-icon-color-hover: var(--menu-text-color-1);
+    --panelmenu-icon-color-active: var(--menu-text-color-1);
+    --panelmenu-menuseperator-color: var(--gray-22);
+
+    --slidemenu-bg-color: var(--gray-30);
+    --slidemenu-text-color: var(--menu-text-color-1);
+    --slidemenu-submenu-bg-color: var(--gray-24);
+    --slidemenu-submenu-text-color: var(--menu-text-color-1);
+    --slidemenu-submenu-icon-color: var(--menu-text-color-1);
+    --slidemenu-submenu-icon-color-hover: var(--menu-text-color-1);
+    --slidemenu-submenu-icon-color-active: var(--menu-text-color-1);
+    --slidemenu-item-bg-color-hover: var(--gray-27); 
+    --slidemenu-item-bg-color-active: var(--gray-27); 
+    --slidemenu-item-text-color: var(--menu-text-color-1);
+    --slidemenu-item-text-color-hover: var(--menu-text-color-1);
+    --slidemenu-item-text-color-active: var(--menu-text-color-1);
+    --slidemenu-icon-color: var(--menu-text-color-1);
+    --slidemenu-icon-color-hover: var(--menu-text-color-1);
+    --slidemenu-icon-color-active: var(--menu-text-color-1);
+    --slidemenu-menuseperator-color: var(--gray-22);
+
+    --tieredmenu-bg-color: var(--gray-30);
+    --tieredmenu-text-color: var(--menu-text-color-1);
+    --tieredmenu-submenu-bg-color: var(--gray-24);
+    --tieredmenu-submenu-text-color: var(--menu-text-color-1);
+    --tieredmenu-submenu-icon-color: var(--menu-text-color-1);
+    --tieredmenu-submenu-icon-color-hover: var(--menu-text-color-1);
+    --tieredmenu-submenu-icon-color-active: var(--menu-text-color-1);
+    --tieredmenu-item-bg-color-hover: var(--gray-27); 
+    --tieredmenu-item-bg-color-active: var(--gray-27); 
+    --tieredmenu-item-text-color: var(--menu-text-color-1);
+    --tieredmenu-item-text-color-hover: var(--menu-text-color-1);
+    --tieredmenu-item-text-color-active: var(--menu-text-color-1);
+    --tieredmenu-icon-color: var(--menu-text-color-1);
+    --tieredmenu-icon-color-hover: var(--menu-text-color-1);
+    --tieredmenu-icon-color-active: var(--menu-text-color-1);
+    --tieredmenu-menuseperator-color: var(--gray-22);
+
+    --steps-bg-color: var(--gray-30);
+    --steps-bg-color-active: var(--blue-800);
+    --steps-text-color: var(--menu-text-color-1);
+    --steps-text-color-active: var(--blue-800);
+    --steps-number-color: var(--menu-text-color-1);
+    --steps-number-color-active: var(--gray-30);
+    --steps-line-color: var(--gray-22);
+
+    --tabmenu-header-bg-color: var(--gray-30);
+    --tabmenu-link-bg-color: var(--blue-800);
+    --tabmenu-link-bg-color-hover: var(--blue-850);
+    --tabmenu-link-bg-color-active: var(--blue-900);
+    --tabmenu-link-text-color: var(--gray-33);
+    --tabmenu-link-text-color-hover: var(--gray-33);
+    --tabmenu-link-text-color-active: var(--gray-33);
+    --tabmenu-panel-bg-color: var(--gray-37);
+    --tabmenu-panel-text-color: var(--menu-text-color-1);
+
+    --message-text-and-icon-color: var(--gray-10); /* var(--gray-6) */
+    --custom-message-bg-color: var(--gray-30);
+    --custom-message-icon-color: var(--gray-16);
+
+    --primary-info-color: #BBE1FA;
+    --secondary-info-color: #0F4C75;
+    --primary-success-color: #62D2A2; /* #BBDED6; */
+    --secondary-success-color: #00909E;
+    --primary-warning-color: #FFBC80;
+    --secondary-warning-color: #F76E11;
+    --primary-error-color: #F67280;
+    --secondary-error-color: #EA5455;
+
+    /* --primary-button-success-color: #62D2A2;
+    --secondary-button-success-color: #1FAB89;
+    --ternary-button-success-color: #1C7947;
+    --primary-button-danger-color: #FF8C8C;
+    --secondary-button-danger-color: #FF5D5D;
+    --ternary-button-danger-color: #E84545; */
+
+    --primary-button-success-color: var(--green-600);
+    --secondary-button-success-color: var(--green-700);
+    --ternary-button-success-color: var(--green-800);
+    --primary-button-danger-color: var(--red-400);
+    --secondary-button-danger-color: var(--red-600);
+    --ternary-button-danger-color: var(--red-700);
+
+    --carousel-bg-color: var(--gray-33);
+    --carousel-text-color: var(--gray-6);
+    --carousel-icon-color: var(--gray-20);
+    --carousel-icon-color-hover: var(--gray-6);
+    --carousel-step-button-bg-color: var(--gray-20);
+    --carousel-step-button-bg-color-hover: var(--blue-800);
+    --carousel-step-button-bg-color-active: var(--blue-900);
+
+    --galleria-bg-color: var(--gray-33);
+    --galleria-thumbnail-container-bg-color: var(--gray-6);
+    --galleria-icon-color: var(--gray-20);
+    --galleria-icon-color-hover: var(--gray-30);
+
+    --avatar-bg-color: var(--gray-33);
+    --avatar-avatargroup-border-color: var(--gray-30);
+
+    --chip-bg-color: var(--gray-33);
+    --chip-text-color: var(--gray-6);
+
+    --scrolltop-bg-color: var(--gray-34);
+    --scrolltop-bg-color-hover: var(--gray-32);
+    --scrolltop-icon-color: var(--gray-6);
+
+    --skeleton-bg-color: var(--gray-26);
+    --skeleton-bg-color-after-1: var(--gray-26);
+    --skeleton-bg-color-after-2: var(--gray-28);
+    --skeleton-bg-color-after-3: var(--gray-26);
+
+    --timeline-eventmarker-bg-color: var(--blue-800);
+    --timeline-eventconnector-color: var(--gray-26);
+
+    --paginator-bg-color: var(--gray-33);
+    --paginator-text-color: var(--gray-6);
+
+    --horizontal-line-color: var(--gray-16);
+
+    --button-white-color: var(--gray-33);
+    --button-white-color-hover: var(--gray-30);
+    --button-white-color-active: var(--gray-22);
+
+    --payment-bg-color: var(--gray-30);
+    --payment-secondary-bg-color: var(--gray-28); /* 20 light */
+    --payment-text-color: var(--gray-6);
+    --payment-border-color: var(--gray-20);
+
+    --custom-overlay-border-color: transparent;
+    --custom-overlay-border-color-hover: var(--blue-800);
+    --custom-overlay-border-color-focus: var(--blue-900);
+    --custom-overlay-bg-color: var(--gray-33);
+    --custom-overlay-placeholder-text-color: var(--gray-20);
+    --custom-overlay-icon-color: var(--gray-20);
+    --custom-overlay-icon-color-hover: var(--gray-5);
+    --custom-overlay-panel-bg-color: var(--gray-33);
+    --custom-overlay-panel-item-bg-color-hover: var(--gray-30);
+    --custom-overlay-panel-item-bg-color-active: var(--gray-27);
+    --custom-overlay-panel-item-color: var(--gray-6);
+    --custom-overlay-panel-item-color-hover: var(--gray-6);
+    --custom-overlay-panel-item-color-active: var(--gray-6);
+
+    --loading-spinner-dots-color: var(--blue-700);
+}
+
+body {
+    height: 100vh;
+    font-size: .9rem;
+}
+
+.r-body-text {
+    @apply 2xl:text-lg xl:text-lg lg:text-lg md:text-base sm:text-base text-base
+}
+
+.r-heading-text {
+    @apply 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-xl text-xl
+}
+
+.r-subheading-text {
+    @apply 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-lg text-lg
+}
+
+.r-alt-text {
+    @apply 2xl:text-xl xl:text-xl lg:text-lg md:text-base sm:text-sm text-sm
+}
+
+/* .p-component, .p-component * {
+    transition: .1s background, .1s border, .1s color;
+} */
+
+.p-button-label {
+    /* transition: .1s background, .1s border, .1s color !important; */
+}
+
+
+
+*::-webkit-scrollbar {
+    @apply 2xl:w-2 xl:w-2 lg:w-2 md:w-2 sm:w-1 w-1;
+}
+ 
+*::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-color);
+}
+ 
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+}
+
+.horizontal-line span {
+    display: flex;
+    flex-direction: row;
+    color: var(--horizontal-line-color);
+}
+
+.horizontal-line span:before, .horizontal-line span:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid var(--horizontal-line-color);
+    margin: auto;
+}
+
+.horizontal-line span:before {
+    margin-right: .5rem;
+}
+
+.horizontal-line span:after {
+    margin-left: .5rem;
+}
+
+.horizontal-empty-line {
+    border-style: solid;
+    border-color: var(--horizontal-line-color);
+    border-width: 0px;
+    border-bottom-width: 2px;
+}
+
+.e-card {
+    /* background: #ffffff; */
+    background: var(--card-bg-color);
+    /* color: #3f3f46; */
+    color: var(--card-text-color);
+    /* box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); */
+    /* border-radius: 0.375rem; */
+    /* box-shadow: var(--p-box-shadow); */
+}
+.e-card .e-card-body {
+    padding: 1.25rem;
+}
+.e-card .e-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--card-title-color);
+}
+.e-card .e-card-subtitle {
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    /* color: #71717A; */
+    color: var(--card-subtitle-color);
+}
+.e-card .e-card-content {
+    padding: 1.25rem 0;
+    color: var(--card-content-color);
+}
+.e-card .e-card-footer {
+    padding: 1.25rem 0 0 0;
+}
+
+.shrinked-body-section {
+
+}
+
+.expanded-body-section {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+    border-radius: 0 !important;
+    animation: .4s visible-animation;
+}
+
+@keyframes visible-animation {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--loading-spinner-dots-color);
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+    0% {
+    transform: scale(0);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
+@keyframes lds-ellipsis3 {
+    0% {
+    transform: scale(1);
+    }
+    100% {
+    transform: scale(0);
+    }
+}
+@keyframes lds-ellipsis2 {
+    0% {
+    transform: translate(0, 0);
+    }
+    100% {
+    transform: translate(24px, 0);
+    }
+}
+
+.p-blockui {
+    background-color: transparent !important;
+    z-index: 40;
+}

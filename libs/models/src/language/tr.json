@@ -16,6 +16,13 @@
     "credentials": "Giriş Bilgileri",
     "invalidEmail": "Geçersiz E-posta!",
     "invalidPassword": "Geçersiz Şifre!",
-    "passwordsNotMatch": "Şifreler eşleşmiyor!"
+    "passwordsNotMatch": "Şifreler eşleşmiyor!",
+    "vehicles": "Araçlar",
+    "logout": "Çıkış Yap",
+    "homeTitle": "Hızlıca araç kiralayın!",
+    "homeDetail": "Araç kiralamanın en hızlı noktası.",
+    "404title": "Üzgünüz!",
+    "404text": "Aradığınız sayfa bulunamadı..",
+    "goToHome": "Anasayfaya Git"
   }
 }

@@ -32,7 +32,11 @@
         <h1 class="text-5xl font-bold px-5 text-lighttext-100 dark:text-darktext-100 font-alt tracking-widest">Car Rental</h1>
       </div>
       <div class="shrink-0 self-center hidden md:flex min-h-[5rem] mr-4">
-
+        <p-selectButton 
+          id="navItemOptions" name="navItemOptions"
+          [options]="navbarService.items" (onChange)="onRouteChanged()" [(ngModel)]="navbarService.selectedNavItemUrl" class="self-center"
+          optionLabel="label" optionValue="url" styleClass="p-selectbutton-with-auto-flex-buttons p-selectbutton-alternative-2 px-2"
+        ></p-selectButton>
       </div>
       <div class="shrink-0 self-center md:hidden flex mr-4">
           <button 
@@ -81,7 +85,11 @@
   >
     <ng-template pTemplate>
       <div class="flex flex-col">
-
+        <p-selectButton 
+        id="navItemOptions" name="navItemOptions"
+        [options]="navbarService.items" (onChange)="onRouteChanged()" [(ngModel)]="navbarService.selectedNavItemUrl" class="self-center"
+        optionLabel="label" optionValue="url" styleClass="flex-col p-selectbutton-with-auto-flex-buttons p-selectbutton-alternative-2 py-4 px-6"
+      ></p-selectButton>
       </div>
     </ng-template>
   </p-overlayPanel>
