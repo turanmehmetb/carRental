@@ -2,10 +2,7 @@ version: '3.3'
 
 services: 
   carRental:
-    image: edufile
-    build:
-      context: ./
-      dockerfile: Dockerfile
+    image: mbturan/car-rental:master
     restart: always
     ports:
       - 80:8080
