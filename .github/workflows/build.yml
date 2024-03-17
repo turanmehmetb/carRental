@@ -6,8 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: buildEnv
     steps:
-      - name: Check out the repo and build projects
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
