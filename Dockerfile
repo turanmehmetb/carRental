@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:16-alpine
 WORKDIR /carRental
 COPY  ./dist/apps/ .
 RUN cd ./api && npm install 
