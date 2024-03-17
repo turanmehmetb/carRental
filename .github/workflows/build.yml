@@ -2,7 +2,7 @@ name: CI/CD
 run-name: ${{ github.actor }} pushing new image to Dockerhub 🚀
 on: [push]
 jobs:
-  Build and Push To Registry:
+  BuildAndPushToRegistry:
     runs-on: ubuntu-latest
     environment: buildEnv
     steps:
