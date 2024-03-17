@@ -2,12 +2,18 @@ name: Build Automation
 run-name: ${{ github.actor }} pushing new image to Dockerhub 🚀
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Build and Push To Registry:
     runs-on: ubuntu-latest
     environment: buildEnv
     steps:
-      - name: Check out the repo
+      - name: Check out the repo and build projects
         uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16.14'
+      - run: npx nx build api
+      - run: npx nx build carRental
 
       - name: Log in to Docker Hub
         uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
