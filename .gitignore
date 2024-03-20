@@ -4,3 +4,5 @@ dist
 logs
 .vscode
 .nx
+
+/package-lock.json

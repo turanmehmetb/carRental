@@ -1,8 +1,8 @@
-import { keyValueSetter } from "libs/utils/src/keyValueSetter";
-import { BaseModel } from "../base.model";
+import {keyValueSetter} from '@carRental/utils';
+
+import {BaseModel} from '../base.model';
 
 export class User extends BaseModel {
-
     userId: string;
     email: string;
     password: string;
@@ -12,7 +12,6 @@ export class User extends BaseModel {
 
     constructor(entity?: User) {
         super();
-        if(entity)
-            keyValueSetter(this, entity);
+        if (entity) keyValueSetter(this, entity);
     }
 }

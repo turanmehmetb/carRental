@@ -1,13 +1,12 @@
-import { User } from "@carRental/models";
-import { Body, Controller, Post } from "@nestjs/common";
-import { BaseController } from "../base/base.controller";
-import { UserService } from "./user.service";
+import {User} from '@carRental/models';
+import {Body, Controller, Post} from '@nestjs/common';
+
+import {BaseController} from '../base/base.controller';
+import {UserService} from './user.service';
 
 @Controller('/user')
 export class UserController extends BaseController<User> {
-    constructor(
-        private readonly userService: UserService
-    ) {
+    constructor(private readonly userService: UserService) {
         super(userService);
     }
 
