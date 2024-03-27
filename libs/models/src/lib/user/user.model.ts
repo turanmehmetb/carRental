@@ -1,6 +1,6 @@
 
 import { keyValueSetter } from 'libs/utils/src/keyValueSetter';
-import {BaseModel} from '../base.model';
+import { BaseModel } from '../base.model';
 
 export class User extends BaseModel {
     userId: string;
