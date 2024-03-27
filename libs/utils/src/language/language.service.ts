@@ -1,5 +1,4 @@
-const enjson = require('@carRental/models');
-const trjson = require('@carRental/models');
+import { enjson, trjson } from "libs/models/src/language/language";
 
 export class LanguageService {
     getMessages(lang: string): {messages: {[key: string]: string}} {
