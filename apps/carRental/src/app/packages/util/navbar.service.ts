@@ -20,6 +20,7 @@ export class NavbarService {
 
     initNavbar() {
         this.items = [
+            { label: this.languageMessagesService.msgjson.home, url: '/' },
             { label: this.languageMessagesService.msgjson.vehicles, url: '/vehicles' },
         ];
 

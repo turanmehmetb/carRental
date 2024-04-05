@@ -22,6 +22,7 @@ import { AuthInterceptor } from './packages/auth/auth.interceptor';
 import { _404Component } from './packages/components/404/404.component';
 import { ErrorInterceptor } from './packages/error/error.interceptor';
 import { LoadingInterceptor } from './packages/loading/loading.interceptor';
+import { VehiclesComponent } from './packages/components/vehicles/vehicles.component';
 
 export function configurationServiceInitializerFactory(configurationService: ConfigService): Function {
   // a lambda is required here, otherwise `this` won't work inside ConfigurationService::load
@@ -36,6 +37,7 @@ export function LanguageFactory(): string {
   declarations: [
     AppComponent,
     HomeComponent,
+    VehiclesComponent,
     _404Component,
   ],
   imports: [

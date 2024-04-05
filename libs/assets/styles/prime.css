@@ -3254,6 +3254,7 @@ p-treeselect.ng-invalid.ng-dirty > .p-treeselect {
     background-color: var(--dataview-items-border-color);
 }
 .p-dataview.p-dataview-grid .p-dataview-content > .p-grid {
+    display: flex;
     gap: .25rem;
     background-color: var(--dataview-items-border-color);
 }

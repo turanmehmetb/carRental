@@ -23,6 +23,17 @@
     "homeDetail": "Araç kiralamanın en hızlı noktası.",
     "404title": "Üzgünüz!",
     "404text": "Aradığınız sayfa bulunamadı..",
-    "goToHome": "Anasayfaya Git"
+    "goToHome": "Anasayfaya Git",
+    "auto": "Otomatik",
+    "manual": "Manuel",
+    "transmission": "Vites",
+    "diesel": "Dizel",
+    "petrol": "Benzin",
+    "hybrid": "Hibrid",
+    "gasoline": "LPG",
+    "electricity": "Elektrik",
+    "car": "Araba",
+    "motorcycle": "Motorsiklet",
+    "people": "Kişi"
   }
 }

@@ -1,4 +1,4 @@
-import {Vehicle} from '@carRental/models';
+import {FuelType, Vehicle, VehicleType} from '@carRental/models';
 // vehicle.schema.ts
 import {Prop, Schema} from '@nestjs/mongoose';
 
@@ -6,15 +6,23 @@ import {BaseSchema} from '../base/base.schema';
 
 @Schema({versionKey: false})
 export class VehicleSchema extends BaseSchema implements Vehicle {
+    @Prop({ type: String, enum: VehicleType })
+    type: VehicleType;
+    @Prop({ type: String, enum: FuelType })
+    fuelType: FuelType;
     @Prop()
-    make: string;
-
+    transmissionType: 'manual' | 'auto';
     @Prop()
-    model: string;
-
+    color: string;
     @Prop()
-    year: number;
+    brandName: string;
+    @Prop()
+    modelName: string;
+    @Prop()
+    modelYear: number;
+    @Prop()
+    people: number;
+    @Prop()
+    imgPath: string;
 
-    @Prop({default: 'available'}) // Available, rented, maintenance, etc.
-    status: string;
 }

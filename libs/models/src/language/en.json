@@ -23,6 +23,17 @@
     "homeDetail": "Fastest place to rent a car.",
     "404title": "Sorry!",
     "404text": "Could not find the page you are looking for..",
-    "goToHome": "Go to Home Page"
+    "goToHome": "Go to Home Page",
+    "auto": "Automatic",
+    "manual": "Manual",
+    "transmission": "Transmission",
+    "diesel": "Diesel",
+    "petrol": "Petrol",
+    "hybrid": "Hybrid",
+    "gasoline": "Gasoline",
+    "electricity": "Electricity",
+    "car": "Car",
+    "motorcycle": "Motorcycle",
+    "people": "People"
   }
 }
