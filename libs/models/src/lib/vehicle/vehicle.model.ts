@@ -1,5 +1,4 @@
 
-import { keyValueSetter } from 'libs/utils/src/keyValueSetter';
 import { BaseModel } from '../base.model';
 
 export class Vehicle extends BaseModel {
@@ -12,11 +11,6 @@ export class Vehicle extends BaseModel {
     modelYear: number;
     people: number;
     imgPath: string;
-
-    constructor(entity?: Vehicle) {
-        super();
-        if (entity) keyValueSetter(this, entity);
-    }
 }
 
 export enum VehicleType {
