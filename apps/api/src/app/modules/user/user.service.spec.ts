@@ -10,14 +10,34 @@ describe('UserService', () => {
     let mockUserModel;
 
     beforeEach(async () => {
+        function MockModel(dto) {
+            return {
+                ...dto,
+                _id: 'some-new-id',
+                save: jest.fn().mockResolvedValue(dto),
+            };
+        }
+
         mockUserModel = {
             find: jest.fn().mockReturnThis(),
+            findOne: jest.fn().mockReturnThis(),
+            constructor: MockModel,
             count: jest.fn(() => ({
                 where: jest.fn().mockReturnThis(),
                 exec: jest.fn().mockResolvedValue(1),
             })),
-            // Mocking count to return an object that has a where method, which itself returns an object that has an exec method
+            exec: jest.fn().mockResolvedValueOnce([]), // Default mock to return an empty array
+            where: jest.fn().mockReturnThis(),
+            save: jest.fn().mockImplementation(function () {
+                return Promise.resolve(this);
+            }),
+            create: jest.fn().mockImplementation((createDto) => {
+                return Promise.resolve(createDto); // Simulate successful save operation
+            }),
         };
+
+        mockUserModel.constructor = MockModel;
+        mockUserModel.constructor.prototype.save = jest.fn();
 
         const module: TestingModule = await Test.createTestingModule({
             providers: [
@@ -28,9 +48,9 @@ describe('UserService', () => {
                 },
                 {
                     provide: User.name,
-                    useValue: {}, // Assuming LoggerService does not need specific mocking
+                    useValue: {},
                 },
-                ConfigService, // Mock if necessary
+                ConfigService,
             ],
         }).compile();
 
@@ -68,16 +88,41 @@ describe('UserService', () => {
 
     describe('countWithFilter', () => {
         it('should return the count of users based on the provided filter', async () => {
-            // Assuming count().where().exec() pattern is being tested,
-            // no changes are needed here if the mock setup is adjusted as above.
             const baseQuery = {name: 'John2'};
             const result = await service.countWithFilter(baseQuery);
             expect(result).toEqual(1);
-            expect(mockUserModel.count).toHaveBeenCalled(); // This checks if count was called
-            // If you need to assert that where was called with the correct query,
-            // you might need to add more detailed assertions depending on how detailed your mocks are.
+            expect(mockUserModel.count).toHaveBeenCalled();
         });
     });
 
-    // Add more tests for other methods as needed
+    describe('findByStatus', () => {
+        it('should return a single user based on the provided ID and status', async () => {
+            const user = {
+                _id: '65f255dce31f2b189ab4e466',
+                userId: '4',
+                email: 'user@example.com',
+                password: 'securePassword',
+                name: 'John',
+                surname: 'Doe',
+                phone: '1234567890',
+                userDetails: 'testing',
+                db: 1,
+            };
+
+            mockUserModel.findOne = jest.fn().mockReturnValue({
+                where: jest.fn().mockReturnThis(),
+                exec: jest.fn().mockResolvedValue(user),
+            });
+
+            const userId = '65f255dce31f2b189ab4e466';
+            const result = await service.findByStatus(userId);
+
+            expect(result).toEqual(user);
+            expect(mockUserModel.findOne).toHaveBeenCalledWith();
+            expect(mockUserModel.findOne().where).toHaveBeenCalledWith({
+                _id: userId,
+                db: 1,
+            });
+        });
+    });
 });
