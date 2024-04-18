@@ -14,8 +14,8 @@ import { VehicleModule } from './modules/vehicle/vehicle.module';
 
 @Module({
     imports: [
-        //MongooseModule.forRoot('mongodb://mongo/CarRentalSystem'),
-        MongooseModule.forRoot('mongodb://127.0.0.1:27017/CarRentalSystem'),
+        MongooseModule.forRoot('mongodb://mongo/CarRentalSystem'),
+        // MongooseModule.forRoot('mongodb://127.0.0.1:27017/CarRentalSystem'),
         ConfigModule.forRoot({
             envFilePath: `${__dirname}/assets/config/env/${
                 process.env['NODE' + '_ENV']
