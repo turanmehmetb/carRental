@@ -8,10 +8,12 @@ import { WinstonModule } from 'nest-winston';
 import { UserSchema } from './user.schema';
 import { UserService } from './user.service';
 import { UserController } from './user.controller';
+import { AuthModule } from './authentication/jwt.module';
 @Module({
     imports: [
       MongooseModule.forFeature([ { name: User.name, collection: 'User', schema: SchemaFactory.createForClass(UserSchema) } ]),
       PassportModule,
+      AuthModule,
       ConfigModule
     ],
     controllers: [UserController],

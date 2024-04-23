@@ -11,6 +11,7 @@ import {HttpExceptionFilter} from './error/httpExceptionFilter';
 import {LoggerMiddleware} from './middleware/logger.middleware';
 import {UserModule} from './modules/user/user.module';
 import {VehicleModule} from './modules/vehicle/vehicle.module';
+import { JwtStrategy } from './modules/user/authentication/jwt.strategy';
 
 @Module({
     imports: [
@@ -30,6 +31,7 @@ import {VehicleModule} from './modules/vehicle/vehicle.module';
     ],
     controllers: [],
     providers: [
+        JwtStrategy,
         {
             provide: APP_FILTER,
             useClass: HttpExceptionFilter,
