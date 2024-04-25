@@ -1,5 +1,6 @@
 import {User} from '@carRental/models';
 import {ConfigService} from '@nestjs/config';
+import {JwtService} from '@nestjs/jwt';
 import {getModelToken} from '@nestjs/mongoose';
 import {Test, TestingModule} from '@nestjs/testing';
 
@@ -8,6 +9,7 @@ import {UserService} from './user.service';
 describe('UserService', () => {
     let service: UserService;
     let mockUserModel;
+    let mockJwtService;
 
     beforeEach(async () => {
         function MockModel(dto) {
@@ -39,6 +41,10 @@ describe('UserService', () => {
         mockUserModel.constructor = MockModel;
         mockUserModel.constructor.prototype.save = jest.fn();
 
+        mockJwtService = {
+            signAsync: jest.fn().mockResolvedValue('mockedToken'),
+        };
+
         const module: TestingModule = await Test.createTestingModule({
             providers: [
                 UserService,
@@ -49,6 +55,10 @@ describe('UserService', () => {
                 {
                     provide: User.name,
                     useValue: {},
+                },
+                {
+                    provide: JwtService,
+                    useValue: mockJwtService,
                 },
                 ConfigService,
             ],
