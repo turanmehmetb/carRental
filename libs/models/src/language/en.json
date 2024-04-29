@@ -34,6 +34,17 @@
     "electricity": "Electricity",
     "car": "Car",
     "motorcycle": "Motorcycle",
-    "people": "People"
+    "people": "People",
+    "loginDescription": "Sign in to the best car rental world!",
+    "userInfo": "User Information",
+    "strong": "Strong",
+    "enterPassword": "Enter Password",
+    "weak": "Weak",
+    "medium": "Medium",
+    "oneLowercase": "One lower case",
+    "oneUppercase": "One upper case",
+    "oneNumeric": "One numeric",
+    "minCharacter": "Minimum Character",
+    "maxCharacter": "Maximum Character"
   }
 }

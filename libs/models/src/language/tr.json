@@ -34,6 +34,17 @@
     "electricity": "Elektrik",
     "car": "Araba",
     "motorcycle": "Motorsiklet",
-    "people": "Kişi"
+    "people": "Kişi",
+    "loginDescription": "En iyi araç kiralama dünyasına giriş yapın!",
+    "userInfo": "Kullanıcı Bilgileri",
+    "strong": "Güçlü",
+    "enterPassword": "Parolanı Gir",
+    "weak": "Zayıf",
+    "medium": "Orta",
+    "oneLowercase": "Bir küçük harf",
+    "oneUppercase": "Bir büyük harf",
+    "oneNumeric": "Bir sayısal",
+    "minCharacter": "Minimum Karakter",
+    "maxCharacter": "Maksimum Karakter"
   }
 }

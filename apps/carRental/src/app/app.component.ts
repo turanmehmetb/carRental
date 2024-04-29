@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { SelectItem } from 'primeng/api';
 import { OverlayPanel } from 'primeng/overlaypanel';
+import { UserService } from './packages/components/user/service/user.service';
 import { LoadingService } from './packages/loading/loading.service';
 import { LanguageMessagesService } from './packages/util/languageMessagesService';
 import { NavbarService } from './packages/util/navbar.service';
@@ -13,12 +14,9 @@ import { NavbarService } from './packages/util/navbar.service';
 })
 export class AppComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('menuOverlayPanel')
-  menuOverlayPanel: OverlayPanel;
   @ViewChild('avatarOverlayPanel')
   avatarOverlayPanel: OverlayPanel;
-  studentLoggedIn: boolean = false;
-  instructorLoggedIn: boolean = false;
+  loggedIn: boolean = false;
   selectableLangPreferences: SelectItem[];
   selectableThemePreferences: SelectItem[];
   selectedLangPreference: string;
@@ -30,6 +28,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     public readonly router: Router,
     public readonly loadingService: LoadingService,
     public readonly navbarService: NavbarService,
+    public readonly userService: UserService,
     ){
   }
 
@@ -52,7 +51,9 @@ export class AppComponent implements OnInit, AfterViewInit {
     ];
 
     this.navbarService.initNavbar();
-
+    this.userService.loginState.subscribe((val =>{ 
+      this.loggedIn = val;
+  }));
   
   }
 
@@ -74,10 +75,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     const btn = (document.getElementById('navbar-burger-button') as HTMLElement);
     if (btn.classList.contains('burger-button-active')) {
       btn.classList.remove('burger-button-active')
-      this.menuOverlayPanel.hide();
     } else {
       btn.classList.add('burger-button-active')
-      this.menuOverlayPanel.show(e);
     }
   }
 
@@ -103,7 +102,6 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   onRouteChanged() {
     this.router.navigateByUrl(this.navbarService.selectedNavItemUrl);
-    this.menuOverlayPanel.hide();
     this.avatarOverlayPanel.hide();
   }
   

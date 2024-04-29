@@ -1,0 +1,164 @@
+<div 
+    class="
+        p-4 
+        flex lg:flex-row flex-col
+        overflow-auto lg:justify-evenly
+    "
+    style="height: calc(100vh - 5rem)"
+>
+    <div 
+        class="
+            lg:py-0 md:py-10 sm:py-8 py-6
+            self-center items-center flex justify-center
+            lg:basis-1/2
+        "
+    >
+        <main 
+            class="
+                w-full
+                px-4 sm:px-6 lg:px-8
+            "
+        >
+            <h1 
+                class="
+                    text-lighttext-200 dark:text-darktext-200
+                    r-heading-text
+                    sm:text-center lg:text-left
+                    font-semibold
+                "
+            >
+                {{'messages.loginDescription' | translate}}
+            </h1>
+        </main>
+    </div>
+
+    <div 
+        class="
+            lg:basis-1/2
+            short:basis-2/3
+        "
+    >
+        <div
+            class="
+                w-full h-full
+                flex flex-wrap lg:flex-row flex-col
+                justify-center items-center 
+            "
+        >
+            <div
+                class="
+                    lg:w-full md:w-[80%] sm:w-[90%] w-[90%]   
+                "
+            >
+
+                <div 
+                    class="
+                        flex flex-col 
+                        shadow-md shadow-gray-30 dark:shadow-none
+                        px-6 sm:px-6 md:px-8 lg:px-10 
+                        bg-lightbg-200
+                        dark:bg-darkbg-200
+                        text-lighttext-100 dark:text-darktext-100
+                    "
+                >
+
+                    <div class="flex justify-center items-center">
+                        <div class="inline-flex items-center font-medium text-center mt-3 short:my-0 short:mt-2">
+                            <span class="text-lighttext-200 dark:text-darktext-200">{{'messages.alreadyRegistered' | translate}}</span>
+                            <button pButton class="ml-2 p-button-link" type="button" label="{{'messages.login' | translate}}" (click)="onLogin()"></button>
+                        </div>
+                    </div>
+
+                    <form (ngSubmit)="onSubmit()" #form="ngForm">
+                        <div class="my-4">
+                            <div class="flex flex-col mb-4">
+                                <div class="text-xl font-semibold">{{'messages.userInfo' | translate}}</div>
+                                <div class="horizontal-empty-line w-full !border-gray-26 dark:!border-gray-16"></div>
+                                <div class="mt-6 mb-2">
+                                    <span class="w-full p-float-label">
+                                        <input class="w-full bg-lightbg-300 dark:bg-darkbg-300" pInputText nameValidator name="name" id="float-name" type="text" [(ngModel)]="user.name" required #name="ngModel">
+                                        <label for="float-name">{{'messages.name' | translate}}</label>
+                                    </span>
+                                </div>
+                                <div class="my-3">
+                                    <span class="w-full p-float-label">
+                                        <input class="w-full bg-lightbg-300 dark:bg-darkbg-300" pInputText nameValidator name="surname" id="float-surname" type="text" [(ngModel)]="user.surname" required>
+                                        <label for="float-surname">{{'messages.surname' | translate}}</label>
+                                    </span>
+                                </div>
+                                <div class="my-3">
+                                    <span class="w-full p-float-label">
+                                        <input class="w-full bg-lightbg-300 dark:bg-darkbg-300" pInputText name="email" id="float-email" aria-describedby="email-help" type="text" [(ngModel)]="user.email" required emailValidator #email="ngModel">
+                                        <label for="float-email">{{'messages.email' | translate}}</label>
+                                    </span>
+                                    <small *ngIf="email.errors?.['emailInvalid']" id="email-help" class="p-error"> {{'messages.invalidEmail' | translate}} </small>
+                                </div>
+
+                                <ng-container>
+
+                                    <div class="my-3">
+                                        <span class="w-full p-float-label">
+                                            <p-password 
+                                                [toggleMask]="true" [(ngModel)]="user.password" name="password" id="float-password" required passwordValidator #password="ngModel"
+                                                [promptLabel]="'messages.enterPassword' | translate" [strongLabel]="'messages.strong' | translate" [mediumLabel]="'messages.medium' | translate"
+                                                [weakLabel]="'messages.weak' | translate" inputStyleClass="bg-lightbg-300 dark:bg-darkbg-300"
+                                            >
+                                                <ng-template pTemplate="header">
+                                                    
+                                                </ng-template>
+                                                <ng-template pTemplate="footer">
+                                                    <p-divider></p-divider>
+                                                    <ul class="pl-2 ml-2 mt-0" style="line-height: 1.5">
+                                                        <li>{{'messages.oneLowercase' | translate }}</li>
+                                                        <li>{{'messages.oneUppercase' | translate }}</li>
+                                                        <li>{{'messages.oneNumeric' | translate }}</li>
+                                                        <li>{{'messages.minCharacter' | translate }}</li>
+                                                        <li>{{'messages.maxCharacter' | translate }}</li>
+                                                    </ul>
+                                                </ng-template>
+                                            </p-password>
+                                            <label for="float-password">{{'messages.password' | translate}}</label>
+                                        </span>
+                                    </div>
+    
+                                    <div class="my-3">
+                                        <span class="w-full p-float-label">
+                                            <p-password 
+                                                [feedback]="false" [toggleMask]="true" [(ngModel)]="passwordConfirm" 
+                                                name="passwordAgain" id="float-passwordAgain" [pattern]="password.value" 
+                                                required #passwordAgain="ngModel" inputStyleClass="bg-lightbg-300 dark:bg-darkbg-300"
+                                            ></p-password>
+                                            <label for="float-password">{{'messages.passwordAgain' | translate}}</label>
+                                        </span>
+                                        <small *ngIf="(password?.dirty || password?.touched)" id="password-help" class="p-error"> 
+                                            <span *ngIf="password.errors?.['passwordInvalid']">
+                                                {{'messages.invalidPassword' | translate}}
+                                            </span>
+                
+                                            <span *ngIf="passwordAgain.errors?.['pattern']">
+                                                {{'messages.passwordsNotMatch' | translate}}
+                                            </span>
+                                        </small>
+                                    </div>
+                                </ng-container>
+                            </div>
+                            
+                            <div class="flex w-full justify-evenly">
+                                <button 
+                                    pButton class="grow"
+                                    type="submit" label="{{'messages.register' | translate}}"
+                                    name="register-button" aria-label="register-button" [disabled]="!form.valid" 
+                                ></button>
+                            </div>
+                            
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

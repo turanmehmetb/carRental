@@ -51,7 +51,7 @@
             </div>
           </button>
       </div>
-      <ng-container *ngIf="studentLoggedIn || instructorLoggedIn">
+      <ng-container *ngIf="loggedIn">
         <div class="shrink-0 self-center px-3">
           <p-avatar 
             icon="pi pi-user" size="large" shape="circle"
@@ -87,7 +87,7 @@
       <div class="flex flex-col">
         <p-selectButton 
         id="navItemOptions" name="navItemOptions"
-        [options]="navbarService.items" (onChange)="onRouteChanged()" [(ngModel)]="navbarService.selectedNavItemUrl" class="self-center"
+        [options]="navbarService.avatarItems" (onChange)="onRouteChanged()" [(ngModel)]="navbarService.selectedNavItemUrl" class="self-center"
         optionLabel="label" optionValue="url" styleClass="flex-col p-selectbutton-with-auto-flex-buttons p-selectbutton-alternative-2 py-4 px-6"
       ></p-selectButton>
       </div>

@@ -1,0 +1,106 @@
+<div 
+    class="
+        p-4 
+        flex lg:flex-row flex-col
+        overflow-auto lg:justify-between
+    "
+    style="min-height: calc(100vh - 5rem)"
+>
+
+<div 
+class="
+    lg:py-0 md:py-10 sm:py-8 py-6
+    self-center items-center flex justify-center
+    lg:basis-1/2"
+>
+    <main 
+        class="
+            w-full
+            px-4 sm:px-6 lg:px-8
+        "
+    >
+        <h1 
+            class="
+                text-lighttext-200 dark:text-darktext-200
+                r-heading-text
+                sm:text-center lg:text-left
+                font-semibold
+            "
+        >
+            {{'messages.loginDescription' | translate}}
+        </h1>
+    </main>
+</div>
+
+<div 
+class="
+    lg:basis-1/2
+    short:basis-2/3
+"
+>
+<div
+    class="
+        w-full h-full
+        flex flex-wrap lg:flex-row flex-col
+        justify-center items-center 
+    "
+>
+<div 
+    class="
+        flex flex-col 
+        shadow-md shadow-gray-30 dark:shadow-none
+        px-6 sm:px-6 md:px-8 lg:px-10 
+        bg-lightbg-200
+        dark:bg-darkbg-200
+    "
+>
+
+    <div class="flex justify-center items-center h-[3rem]">
+        <div class="inline-flex items-center font-medium text-center mt-3 short:my-0 short:mt-2">
+            <span class="text-lighttext-200 dark:text-darktext-200">{{'messages.dontHaveAccount' | translate}}</span>
+            <button pButton class="ml-2 p-button-link" type="button" label="{{'messages.registerNow' | translate}}" (click)="onRegister()"></button>
+        </div>
+    </div>
+
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <div class="py-3">
+            <div class="grid gap-6 grid-cols-1 short:grid-cols-2 mb-4">
+                <div class="sm:col-span-1 col-span-2">
+                    <div>
+                        <span class="w-full p-float-label p-input-icon-left">
+                            <i class="pi pi-at"></i>
+                            <input class="w-full bg-lightbg-300 dark:bg-darkbg-300" pInputText name="email" id="student-email" type="text" [(ngModel)]="user.email" required emailValidator>
+                            <label for="student-email">{{'messages.email' | translate}}</label>
+                        </span>
+                    </div>
+                </div>
+                <!-- todo:: login failure mesajlari -->
+                <div class="sm:col-span-1 col-span-2">
+                    <div>
+                        <span class="w-full p-float-label p-input-icon-left p-input-icon-right">
+                            <i class="pi pi-lock"></i>
+                            <input #floatPassword class="w-full bg-lightbg-300 dark:bg-darkbg-300" pInputText name="password" id="student-password" type="password" [(ngModel)]="user.password" required>
+                            <label for="student-password">{{'messages.password' | translate}}</label>
+                            <i 
+                                class="pi cursor-pointer"
+                                [ngClass]="{
+                                    'pi-eye': floatPassword.type === 'password',
+                                    'pi-eye-slash': floatPassword.type === 'text'
+                                }"
+                                (click)="floatPassword.type === 'password' ? floatPassword.type = 'text' : floatPassword.type = 'password'"
+                            ></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex w-full justify-center">
+                <p-button class="short:mr-4" type="submit" label="{{'messages.login' | translate}}" [disabled]="!form.valid"></p-button>
+            </div>
+        </div>
+    </form>
+
+</div>
+</div>
+</div>
+</div>
+
