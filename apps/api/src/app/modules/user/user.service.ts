@@ -111,4 +111,12 @@ export class UserService extends BaseService<User> {
 
         return query;
     }
+
+    getUserByEmail(email: string): Promise<User> {
+        return this.userModel.findOne().where({email: email, db:1}).exec();
+    }
+
+    getUserByUserId(userId: string): Promise<User> {
+        return this.userModel.findOne().where({userId: userId, db:1}).exec();
+    }
 }

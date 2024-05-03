@@ -45,6 +45,13 @@
     "oneUppercase": "One upper case",
     "oneNumeric": "One numeric",
     "minCharacter": "Minimum Character",
-    "maxCharacter": "Maximum Character"
+    "maxCharacter": "Maximum Character",
+    "profile": "Profile",
+    "newPassword": "New Password",
+    "newPasswordAgain": "Confirm New Password",
+    "passwordChangeSuccesful": "Password Change Successful!",
+    "passwordChangeFailed": "Password Change Failed!",
+    "confirm": "Confirm",
+    "changePassword": "Change Password"
   }
 }

@@ -45,6 +45,13 @@
     "oneUppercase": "Bir büyük harf",
     "oneNumeric": "Bir sayısal",
     "minCharacter": "Minimum Karakter",
-    "maxCharacter": "Maksimum Karakter"
+    "maxCharacter": "Maksimum Karakter",
+    "profile": "Profil",
+    "newPassword": "Yeni Şifre",
+    "newPasswordAgain": "Yeni Şifre Onayla",
+    "passwordChangeSuccesful": "Şifre değiştirme işlemi başarılı!",
+    "passwordChangeFailed": "Şifre değiştirme işlemi hatalı!",
+    "confirm": "Onayla",
+    "changePassword": "Şifre Değiştir"
   }
 }

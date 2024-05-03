@@ -4,6 +4,7 @@ import { HomeComponent } from './packages/components/home/home.component'
 import { VehiclesComponent } from './packages/components/vehicles/vehicles.component'
 import { UserLoginComponent } from './packages/components/user/login/login.component'
 import { UserRegisterComponent } from './packages/components/user/register/register.component'
+import { ProfileComponent } from './packages/components/user/profile/profile.component'
 
 export const appRoutes: Routes = [
     {
@@ -21,6 +22,10 @@ export const appRoutes: Routes = [
     {
         path: 'register',
         component: UserRegisterComponent,
+    },
+    {
+        path: 'profile',
+        component: ProfileComponent,
     },
     {
         path: '**',

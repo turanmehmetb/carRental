@@ -1,9 +1,11 @@
 import { User } from "@carRental/models";
 import { Prop, Schema } from "@nestjs/mongoose";
 import { BaseSchema } from "../base/base.schema";
+const { nanoid } = require('nanoid');
+
 @Schema( { versionKey: false } )
 export class UserSchema extends BaseSchema implements User {
-    @Prop()
+    @Prop({default: () => nanoid(10)})
     userId: string;
     @Prop()
     email: string;

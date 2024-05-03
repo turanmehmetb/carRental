@@ -33,4 +33,14 @@ export class UserController extends BaseController<User> {
     countWithFilter(@Body() baseQuery: any): Promise<number> {
         return this.userService.countWithFilter(baseQuery);
     }
+    
+    @Get('/getUserByEmail')
+    getUserByEmail(@Query('email') email: string): Promise<User> {
+        return this.userService.getUserByEmail(email);
+    }
+
+    @Get('/getUserByUserId')
+    getUserByUserId(@Query('userId') userId: string): Promise<User> {
+        return this.userService.getUserByUserId(userId);
+    }
 }

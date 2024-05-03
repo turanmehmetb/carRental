@@ -30,7 +30,10 @@ export class NavbarService {
         ];
 
         this.items = [];
-        this.avatarItems = [{ label: this.languageMessagesService.msgjson.logout, url: '/logout' }];
+        this.avatarItems = [
+            { label: this.languageMessagesService.msgjson.profile, url: '/profile' },
+            { label: this.languageMessagesService.msgjson.logout, url: '/logout' }
+        ];
         this.userService.loginState.subscribe((val =>{ 
             this.loggedIn = val;
         }));
