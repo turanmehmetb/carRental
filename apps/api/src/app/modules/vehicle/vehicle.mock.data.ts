@@ -13,6 +13,7 @@ export class VehicleMockData {
             fuelType: FuelType.petrol,
             people: 5,
             imgPath: 'assets/images/rentimg3.png',
+            vehicleId: '4flXfzPLSJ',
         },
         {
             db: 1,
@@ -25,6 +26,7 @@ export class VehicleMockData {
             fuelType: FuelType.petrol,
             people: 5,
             imgPath: 'assets/images/rentimg.png',
+            vehicleId: 'yPU91jIqTZ',
         },
         {
             db: 1,
@@ -37,6 +39,7 @@ export class VehicleMockData {
             fuelType: FuelType.petrol,
             people: 5,
             imgPath: 'assets/images/rentimg2.png',
+            vehicleId: 't-vEUG8Lpa',
         },
         {
             db: 1,
@@ -49,6 +52,7 @@ export class VehicleMockData {
             fuelType: FuelType.petrol,
             people: 4,
             imgPath: 'assets/images/rentimg.png',
+            vehicleId: 'dGLlH4TUOG',
         },
         {
             db: 1,
@@ -61,6 +65,7 @@ export class VehicleMockData {
             fuelType: FuelType.petrol,
             people: 2,
             imgPath: 'assets/images/rentimg3.png',
+            vehicleId: '1H8sSNSVHy',
         },
         {
             db: 1,
@@ -73,6 +78,7 @@ export class VehicleMockData {
             fuelType: FuelType.electricity,
             people: 4,
             imgPath: 'assets/images/rentimg.png',
+            vehicleId: 'YgNQ8F-ys_',
         },
         {
             db: 1,
@@ -85,6 +91,7 @@ export class VehicleMockData {
             fuelType: FuelType.petrol,
             people: 5,
             imgPath: 'assets/images/rentimg2.png',
+            vehicleId: 'zTRstt0lEp',
         },
         {
             db: 1,
@@ -97,6 +104,7 @@ export class VehicleMockData {
             fuelType: FuelType.hybrid,
             people: 5,
             imgPath: 'assets/images/rentimg3.png',
+            vehicleId: 'sxzXYyejlc',
         },
         {
             db: 1,
@@ -109,6 +117,7 @@ export class VehicleMockData {
             fuelType: FuelType.diesel,
             people: 7,
             imgPath: 'assets/images/rentimg.png',
+            vehicleId: 'D59WHyKA7a',
         },
         {
             db: 1,
@@ -121,6 +130,7 @@ export class VehicleMockData {
             fuelType: FuelType.petrol,
             people: 2,
             imgPath: 'assets/images/rentimg2.png',
+            vehicleId: 'EuqKLciE5y',
         },
     ] as Vehicle[];
 }

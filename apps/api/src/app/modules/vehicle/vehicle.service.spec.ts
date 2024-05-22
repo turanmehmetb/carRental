@@ -29,7 +29,7 @@ describe('VehicleService', () => {
         mockVehicleModel = {
             find: jest.fn().mockReturnThis(),
             findOne: jest.fn().mockReturnThis(),
-            count: jest.fn(() => ({
+            count: jest.fn().mockImplementation(() => ({
                 where: jest.fn().mockReturnThis(),
                 exec: jest.fn().mockResolvedValue(1),
             })),

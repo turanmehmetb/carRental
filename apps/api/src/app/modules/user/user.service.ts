@@ -1,13 +1,13 @@
 import * as bcrypt from 'bcrypt';
-import { Model } from 'mongoose';
+import {Model} from 'mongoose';
 
-import { User } from '@carRental/models';
-import { Inject, Injectable, LoggerService } from '@nestjs/common';
-import { JwtService } from '@nestjs/jwt';
-import { InjectModel } from '@nestjs/mongoose';
+import {User} from '@carRental/models';
+import {Inject, Injectable, LoggerService} from '@nestjs/common';
+import {JwtService} from '@nestjs/jwt';
+import {InjectModel} from '@nestjs/mongoose';
 
-import { BaseService } from '../base/base.service';
-import { UserMockData } from './user.mock.data';
+import {BaseService} from '../base/base.service';
+import {UserMockData} from './user.mock.data';
 
 @Injectable()
 export class UserService extends BaseService<User> {
@@ -17,20 +17,8 @@ export class UserService extends BaseService<User> {
         private readonly jwtService: JwtService,
     ) {
         super(userModel);
-        this.populateMockData();
     }
 
-    async populateMockData() {
-        const count = await this.userModel.countDocuments().exec();
-        if (count === 0) {
-            try {
-                await this.userModel.insertMany(UserMockData.defaultUsers);
-                console.log('Default users inserted successfully.');
-            } catch (error) {
-                console.error('Error inserting default vehicles:', error);
-            }
-        }
-    }
     async login(
         credentials: User,
     ): Promise<{accessToken: string; userId: string}> {

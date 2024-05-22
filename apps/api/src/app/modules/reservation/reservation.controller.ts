@@ -11,12 +11,14 @@ export class ReservationController extends BaseController<Reservation> {
     }
 
     @Post('/findByUserId')
-    findByUserId(@Body() userId: string): Promise<Reservation[]> {
+    findByUserId(@Body('userId') userId: string): Promise<Reservation[]> {
         return this.reservationService.findByUserId(userId);
     }
 
     @Post('/findByVehicleId')
-    findByVehicleId(@Body() vehicleId: string): Promise<Reservation[]> {
+    findByVehicleId(
+        @Body('vehicleId') vehicleId: string,
+    ): Promise<Reservation[]> {
         return this.reservationService.findByVehicleId(vehicleId);
     }
 
@@ -31,19 +33,20 @@ export class ReservationController extends BaseController<Reservation> {
     }
 
     @Post('/findByStatus')
-    findByfindByReservationStatus(
-        @Body() reservationStatus: ReservationStatus,
+    findByReservationStatus(
+        @Body() statusObject: {reservationStatus: ReservationStatus},
     ): Promise<Reservation[]> {
-        return this.reservationService.findByReservationStatus(
-            reservationStatus,
-        );
+        const statusString = statusObject.reservationStatus;
+        return this.reservationService.findByReservationStatus(statusString);
     }
 
+    // Inside the controller:
     @Put('/updateStatus/:id')
     updateReservationStatus(
         @Param('id') reservationId: string,
-        @Body() reservationStatus: ReservationStatus,
+        @Body() statusObject: {reservationStatus: ReservationStatus},
     ): Promise<Reservation> {
+        const {reservationStatus} = statusObject;
         return this.reservationService.updateReservationStatus(
             reservationId,
             reservationStatus,

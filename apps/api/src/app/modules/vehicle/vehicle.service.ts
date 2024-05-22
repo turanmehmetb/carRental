@@ -16,21 +16,6 @@ export class VehicleService extends BaseService<Vehicle> {
         protected readonly configService: ConfigService,
     ) {
         super(vehicleModel);
-        this.populateMockData();
-    }
-
-    async populateMockData() {
-        const count = await this.vehicleModel.countDocuments().exec();
-        if (count === 0) {
-            try {
-                await this.vehicleModel.insertMany(
-                    VehicleMockData.defaultVehicles,
-                );
-                console.log('Default vehicles inserted successfully.');
-            } catch (error) {
-                console.error('Error inserting default vehicles:', error);
-            }
-        }
     }
 
     findByMakeAndModel(make: string, model: string): Promise<Vehicle[]> {

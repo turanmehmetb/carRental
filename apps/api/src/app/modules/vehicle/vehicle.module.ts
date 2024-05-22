@@ -2,12 +2,13 @@ import {WinstonModule} from 'nest-winston';
 
 import {Vehicle} from '@carRental/models';
 import {loggerConfig} from '@carRental/utils';
-import {Module} from '@nestjs/common';
+import {Module, OnModuleInit} from '@nestjs/common';
 import {ConfigModule} from '@nestjs/config';
 import {MongooseModule, SchemaFactory} from '@nestjs/mongoose';
 import {PassportModule} from '@nestjs/passport';
 
 import {VehicleController} from './vehicle.controller';
+import {VehicleMockData} from './vehicle.mock.data';
 import {VehicleSchema} from './vehicle.schema';
 import {VehicleService} from './vehicle.service';
 
@@ -35,4 +36,24 @@ import {VehicleService} from './vehicle.service';
     ],
     exports: [VehicleService],
 })
-export class VehicleModule {}
+export class VehicleModule implements OnModuleInit {
+    constructor(private readonly vehicleService: VehicleService) {}
+
+    async onModuleInit() {
+        await this.populateMockData();
+    }
+
+    async populateMockData() {
+        try {
+            const vehicles = await this.vehicleService.getAll();
+            if (vehicles.length === 0) {
+                await this.vehicleService.insertMany(
+                    VehicleMockData.defaultVehicles,
+                );
+                console.log('Default vehicles inserted successfully.');
+            }
+        } catch (error) {
+            console.error('Error inserting default vehicles:', error);
+        }
+    }
+}

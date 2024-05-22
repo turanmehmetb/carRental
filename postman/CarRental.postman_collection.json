@@ -26,6 +26,157 @@
 			"response": []
 		},
 		{
+			"name": "Reservation-FindByVehicleId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vehicleId\": \"4flXfzPLSJ\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reservation/findByVehicleId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reservation",
+						"findByVehicleId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reservation-FindByUserId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"J-UWNzia_8\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reservation/findByUserId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reservation",
+						"findByUserId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reservation-FindByDateRange",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startTimestamp\": 1716394340931,\n    \"endTimestamp\": 1716480740931\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reservation/findByDateRange",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reservation",
+						"findByDateRange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reservation-FindByStatus",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"reservationStatus\": \"pending\"\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reservation/findByStatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reservation",
+						"findByStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reservation-UpdateStatus",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"reservationStatus\": \"completed\"\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reservation/updateStatus/664e196515f00b1e0ca85d19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reservation",
+						"updateStatus",
+						"664e196515f00b1e0ca85d19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Reservation-All Reservations",
 			"request": {
 				"method": "GET",
@@ -51,7 +202,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/vehicle",
+					"raw": "http://localhost:8080/api/user",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -59,7 +210,7 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"vehicle"
+						"user"
 					]
 				}
 			},
