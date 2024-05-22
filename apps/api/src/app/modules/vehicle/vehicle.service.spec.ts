@@ -8,7 +8,7 @@ import {VehicleService} from './vehicle.service';
 describe('VehicleService', () => {
     let service: VehicleService;
     let mockVehicleModel;
-    let execMock; // Declare execMock at a higher scope
+    let execMock;
 
     beforeEach(async () => {
         execMock = jest.fn().mockResolvedValue([
@@ -24,7 +24,7 @@ describe('VehicleService', () => {
                 people: 5,
                 imgPath: 'assets/images/rentimg.png',
             },
-        ]); // Create a single consistent exec mock
+        ]);
 
         mockVehicleModel = {
             find: jest.fn().mockReturnThis(),
@@ -40,7 +40,7 @@ describe('VehicleService', () => {
             }),
         };
 
-        mockVehicleModel.find.mockImplementation(() => ({exec: execMock})); // Use execMock consistently
+        mockVehicleModel.find.mockImplementation(() => ({exec: execMock}));
 
         const module: TestingModule = await Test.createTestingModule({
             providers: [
@@ -61,7 +61,7 @@ describe('VehicleService', () => {
             const baseQuery = {brandName: 'Ford'};
             const result = await service.countWithFilter(baseQuery);
 
-            expect(result).toEqual(1); // Ensure the count matches the mocked response
+            expect(result).toEqual(1);
             expect(mockVehicleModel.count).toHaveBeenCalled();
         });
     });
@@ -72,10 +72,10 @@ describe('VehicleService', () => {
             const model = 'Kuga';
             const result = await service.findByMakeAndModel(make, model);
 
-            expect(result).toHaveLength(1); // Check if the result array length is correct
-            expect(result[0].brandName).toEqual(make); // More detailed checks can be added
+            expect(result).toHaveLength(1);
+            expect(result[0].brandName).toEqual(make);
             expect(mockVehicleModel.find).toHaveBeenCalledWith({make, model});
-            expect(execMock).toHaveBeenCalled(); // Check if exec was called using the consistent reference
+            expect(execMock).toHaveBeenCalled();
         });
     });
 });

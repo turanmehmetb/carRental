@@ -22,7 +22,6 @@ import {VehicleService} from './vehicle.service';
         ]),
         PassportModule,
         ConfigModule,
-        // Consider any other module imports required for Vehicle management
     ],
     controllers: [VehicleController],
     providers: [

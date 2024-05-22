@@ -10,7 +10,6 @@ export class VehicleController extends BaseController<Vehicle> {
         super(vehicleService);
     }
 
-    // Example custom method to find vehicles by make and model
     @Post('/findByMakeAndModel')
     findByMakeAndModel(@Body() baseQuery: any): Promise<Vehicle[]> {
         return this.vehicleService.findByMakeAndModel(
@@ -19,16 +18,14 @@ export class VehicleController extends BaseController<Vehicle> {
         );
     }
 
-    // Example method to count vehicles with a filter
     @Post('/countWithFilter')
     countWithFilter(@Body() baseQuery: any): Promise<number> {
-        // Assuming VehicleService has a countWithFilter method similar to UserService
         return this.vehicleService.countWithFilter(baseQuery);
     }
 
     @Delete('/:id')
     deleteVehicle(@Param('id') id: string): Promise<Vehicle> {
-        return this.vehicleService.delete(id); // Leveraging the 'delete' method from BaseService
+        return this.vehicleService.delete(id);
     }
 
     @Get('/vehicle')

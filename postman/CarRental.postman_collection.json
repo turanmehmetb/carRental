@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "27f120e2-331a-469b-b0f1-dc3dcd38e04f",
+		"name": "CarRental",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Vehicle-AllVehicles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reservation-All Reservations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/reservation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-AllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vehicle"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

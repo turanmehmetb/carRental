@@ -1,11 +1,13 @@
+import * as bcrypt from 'bcrypt';
 import { Model } from 'mongoose';
 
 import { User } from '@carRental/models';
 import { Inject, Injectable, LoggerService } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { InjectModel } from '@nestjs/mongoose';
-import * as bcrypt from 'bcrypt';
+
 import { BaseService } from '../base/base.service';
+import { UserMockData } from './user.mock.data';
 
 @Injectable()
 export class UserService extends BaseService<User> {
@@ -15,58 +17,80 @@ export class UserService extends BaseService<User> {
         private readonly jwtService: JwtService,
     ) {
         super(userModel);
+        this.populateMockData();
     }
 
-    async login(credentials: User): Promise<{ accessToken: string, userId: string }> {
-        return this.validate(credentials.email, credentials.password).then( async user => this.createToken(user));
+    async populateMockData() {
+        const count = await this.userModel.countDocuments().exec();
+        if (count === 0) {
+            try {
+                await this.userModel.insertMany(UserMockData.defaultUsers);
+                console.log('Default users inserted successfully.');
+            } catch (error) {
+                console.error('Error inserting default vehicles:', error);
+            }
+        }
+    }
+    async login(
+        credentials: User,
+    ): Promise<{accessToken: string; userId: string}> {
+        return this.validate(credentials.email, credentials.password).then(
+            async (user) => this.createToken(user),
+        );
     }
 
     async register(user: User): Promise<User> {
         try {
-            if(user.password) user.password = await bcrypt.hash(user.password, 10);
+            if (user.password)
+                user.password = await bcrypt.hash(user.password, 10);
             const savedUser = await this.save(user);
             return savedUser;
-        }
-        catch(error) {
+        } catch (error) {
             this.logger.error(`[${this.register.name}]: ${error}`);
             throw new Error(error.message);
         }
     }
 
     async validate(email, password): Promise<User> {
-        const user = await this.userModel.findOne().where({ email: email }).exec();
-        if(user) {
-            if(await bcrypt.compare(password, user.password)) 
-                return user;
+        const user = await this.userModel
+            .findOne()
+            .where({email: email})
+            .exec();
+        if (user) {
+            if (await bcrypt.compare(password, user.password)) return user;
             else throw new Error('InvalidCredentials');
-        }
-        else throw new Error('InvalidCredentials');
+        } else throw new Error('InvalidCredentials');
     }
 
     async changePassword(email: string, password: string): Promise<User> {
         try {
             password = await bcrypt.hash(password, 10);
-            return this.userModel.findOneAndUpdate({ email: email }, { $set: { password: password } }, { returnDocument: 'after' });       
-        }
-        catch(error) {
+            return this.userModel.findOneAndUpdate(
+                {email: email},
+                {$set: {password: password}},
+                {returnDocument: 'after'},
+            );
+        } catch (error) {
             this.logger.error(`[${this.changePassword.name}]: ${error}`);
             return null;
         }
     }
 
-    private async createToken(user: User): Promise<{ accessToken: string, userId: string }> {
-        const payload: { user: User; login_date: number; status: number } = {
-          user: user,
-          login_date: 0,
-          status: 0,
+    private async createToken(
+        user: User,
+    ): Promise<{accessToken: string; userId: string}> {
+        const payload: {user: User; login_date: number; status: number} = {
+            user: user,
+            login_date: 0,
+            status: 0,
         };
         payload.login_date = Date.now();
         payload.status = 200;
         const accessToken = this.jwtService.sign(payload);
         const userId = user.userId;
-        return { accessToken, userId };
+        return {accessToken, userId};
     }
-    
+
     countWithFilter(baseQuery: unknown): Promise<number> {
         let query = {db: 1};
 
@@ -113,10 +137,10 @@ export class UserService extends BaseService<User> {
     }
 
     getUserByEmail(email: string): Promise<User> {
-        return this.userModel.findOne().where({email: email, db:1}).exec();
+        return this.userModel.findOne().where({email: email, db: 1}).exec();
     }
 
     getUserByUserId(userId: string): Promise<User> {
-        return this.userModel.findOne().where({userId: userId, db:1}).exec();
+        return this.userModel.findOne().where({userId: userId, db: 1}).exec();
     }
 }

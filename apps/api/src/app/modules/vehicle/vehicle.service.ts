@@ -1,61 +1,38 @@
 import {Model} from 'mongoose';
 
-import {FuelType, Vehicle, VehicleType} from '@carRental/models'; // Ensure Vehicle is exported from your models
+import {FuelType, Vehicle, VehicleType} from '@carRental/models';
 import {Inject, Injectable, LoggerService} from '@nestjs/common';
 import {ConfigService} from '@nestjs/config';
 import {InjectModel} from '@nestjs/mongoose';
 
 import {BaseService} from '../base/base.service';
+import {VehicleMockData} from './vehicle.mock.data';
 
-const defaultVehicles = [
-    {
-        db: 1,
-        brandName: 'Ford',
-        modelName: 'Kuga',
-        modelYear: 2024,
-        transmissionType: 'auto',
-        type: VehicleType.car,
-        color: 'black',
-        fuelType: FuelType.diesel,
-        people: 5,
-        imgPath: 'assets/images/rentimg.png',
-    },
-    {
-        db: 1,
-        brandName: 'Peugeot',
-        modelName: '408',
-        modelYear: 2024,
-        transmissionType: 'auto',
-        type: VehicleType.car,
-        color: 'blue',
-        fuelType: FuelType.petrol,
-        people: 5,
-        imgPath: 'assets/images/rentimg2.png',
-    },
-    {
-        db: 1,
-        brandName: 'BMW',
-        modelName: 'X1',
-        modelYear: 2024,
-        transmissionType: 'auto',
-        type: VehicleType.car,
-        color: 'white',
-        fuelType: FuelType.diesel,
-        people: 5,
-        imgPath: 'assets/images/rentimg3.png',
-    },
-] as Vehicle[];
 @Injectable()
 export class VehicleService extends BaseService<Vehicle> {
     constructor(
-        @InjectModel(Vehicle.name)
+        @InjectModel('Vehicle')
         private readonly vehicleModel: Model<Vehicle>,
         protected readonly configService: ConfigService,
     ) {
         super(vehicleModel);
+        this.populateMockData();
     }
 
-    // Example of a Vehicle-specific method
+    async populateMockData() {
+        const count = await this.vehicleModel.countDocuments().exec();
+        if (count === 0) {
+            try {
+                await this.vehicleModel.insertMany(
+                    VehicleMockData.defaultVehicles,
+                );
+                console.log('Default vehicles inserted successfully.');
+            } catch (error) {
+                console.error('Error inserting default vehicles:', error);
+            }
+        }
+    }
+
     findByMakeAndModel(make: string, model: string): Promise<Vehicle[]> {
         return this.vehicleModel.find({make, model}).exec();
     }

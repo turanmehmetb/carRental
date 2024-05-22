@@ -1,7 +1,7 @@
-
-import { BaseModel } from '../base.model';
+import {BaseModel} from '../base.model';
 
 export class Vehicle extends BaseModel {
+    vehicleId: string;
     type: VehicleType;
     fuelType: FuelType;
     transmissionType: 'manual' | 'auto';
@@ -15,7 +15,7 @@ export class Vehicle extends BaseModel {
 
 export enum VehicleType {
     car = 'car',
-    motorcycle = 'motorcycle'
+    motorcycle = 'motorcycle',
 }
 
 export enum FuelType {
@@ -23,5 +23,5 @@ export enum FuelType {
     petrol = 'petrol',
     gasoline = 'gasoline',
     hybrid = 'hybrid',
-    electricity = 'electricity'
+    electricity = 'electricity',
 }
