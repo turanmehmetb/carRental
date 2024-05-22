@@ -1,0 +1,42 @@
+
+<div 
+class="
+    w-full h-fit
+    text-lighttext-100 dark:text-darktext-100
+    bg-lightbg-200 dark:bg-darkbg-200
+    2xl:p-10 xl:p-8 lg:p-6 md:p-4 p-2 
+    rounded-[3rem]
+"
+>
+
+<p-dataView #dv layout="list" [value]="vehicles">
+      <ng-template pTemplate="listItem" let-vehicle>
+        <div class="flex p-2 bg-lightbg-200 dark:bg-darkbg-200 hover:bg-lightbg-300 hover:dark:bg-darkbg-300 cursor-pointer">
+            <div class="flex-none self-center">
+              <img style="height: 30vh;;" class="m-auto rounded-full" alt="Vehicle Img" [src]="vehicle.imgPath" >
+            </div>
+            <div class="grow p-2">
+              <div class="flex justify-between">
+                <div>
+                    <div class="mb-1 flex flex-col">
+                        <span class="font-semibold text-lighttext-200 dark:text-darktext-200 text-2xl !p-0 !mr-2 !text-left"> {{ vehicle.brandName }} {{ vehicle.modelName }} </span>
+                        <span class="font-normal text-lighttext-200 dark:text-darktext-200"> {{'messages.' + vehicle.transmissionType | translate }} - {{'messages.' + vehicle.fuelType | translate }}</span>
+                    </div>
+                    <div class="mb-1">
+                        <span class="font-normal text-lighttext-200 dark:text-darktext-200">{{ vehicle.people }} {{ 'messages.people' | translate }} </span>
+                    </div>
+                </div>
+              </div>
+              <div class="flex justify-end">
+                <div class="mb-2">
+                  <p-button label="{{'messages.makeReservation' | translate}}"></p-button>
+                </div>
+              </div>
+            </div>                 
+        </div>
+
+      </ng-template>
+    </p-dataView>
+
+    
+  </div>

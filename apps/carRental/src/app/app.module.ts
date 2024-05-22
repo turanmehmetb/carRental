@@ -26,6 +26,7 @@ import { VehiclesComponent } from './packages/components/vehicles/vehicles.compo
 import { UserLoginComponent } from './packages/components/user/login/login.component';
 import { UserRegisterComponent } from './packages/components/user/register/register.component';
 import { ProfileComponent } from './packages/components/user/profile/profile.component';
+import { ReservationsComponent } from './packages/components/reservations/reservations.component';
 
 export function configurationServiceInitializerFactory(configurationService: ConfigService): Function {
   // a lambda is required here, otherwise `this` won't work inside ConfigurationService::load
@@ -44,6 +45,7 @@ export function LanguageFactory(): string {
     UserLoginComponent,
     UserRegisterComponent,
     ProfileComponent,
+    ReservationsComponent,
     _404Component,
   ],
   imports: [

@@ -18,6 +18,41 @@ export class VehicleService extends BaseService<Vehicle> {
         super(vehicleModel);
     }
 
+    async findAvailableVehiclesByDateRange(
+        startTimestamp: number,
+        endTimestamp: number,
+    ): Promise<Vehicle[]> {
+        return this.vehicleModel.aggregate([
+            {
+                $lookup: {
+                    from: 'Reservations',
+                    let: { 'id': '$vehicleId' },
+                    pipeline: [
+                        {
+                            $match: {
+                                $expr: {
+                                    $and: [
+                                        { $eq: ['$$id', '$vehicle.vehicleId'] },
+                                        { $gte: ['$startDate', startTimestamp] },
+                                        { $lte: ['$startDate', endTimestamp] },
+                                        { $gte: ['$endDate', startTimestamp] },
+                                        { $lte: ['$endDate', endTimestamp] }
+                                    ]
+                                }
+                            }
+                        }
+                    ],
+                    as: 'reservations'
+                }
+            },
+            {
+                $match: {
+                    'reservations': { $size: 0 }
+                }
+            }
+        ]).exec();
+    }
+
     findByMakeAndModel(make: string, model: string): Promise<Vehicle[]> {
         return this.vehicleModel.find({make, model}).exec();
     }

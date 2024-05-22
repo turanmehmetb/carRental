@@ -55,6 +55,7 @@
     "changePassword": "Change Password",
     "startDate": "Start Date",
     "endDate": "End Date",
-    "search": "Find the Best Car"
+    "search": "Find the Best Car",
+    "makeReservation": "Make Reservation"
   }
 }

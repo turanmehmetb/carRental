@@ -5,6 +5,7 @@ import { VehiclesComponent } from './packages/components/vehicles/vehicles.compo
 import { UserLoginComponent } from './packages/components/user/login/login.component'
 import { UserRegisterComponent } from './packages/components/user/register/register.component'
 import { ProfileComponent } from './packages/components/user/profile/profile.component'
+import { ReservationsComponent } from './packages/components/reservations/reservations.component'
 
 export const appRoutes: Routes = [
     {
@@ -26,6 +27,10 @@ export const appRoutes: Routes = [
     {
         path: 'profile',
         component: ProfileComponent,
+    },
+    {
+        path: 'reservations',
+        component: ReservationsComponent,
     },
     {
         path: '**',

@@ -10,6 +10,16 @@ export class VehicleController extends BaseController<Vehicle> {
         super(vehicleService);
     }
 
+    @Post('/findAvailableVehiclesByDateRange')
+    findByDateRange(
+        @Body() dates: {startTimestamp: number; endTimestamp: number},
+    ): Promise<Vehicle[]> {
+        return this.vehicleService.findAvailableVehiclesByDateRange(
+            dates.startTimestamp,
+            dates.endTimestamp,
+        );
+    }
+
     @Post('/findByMakeAndModel')
     findByMakeAndModel(@Body() baseQuery: any): Promise<Vehicle[]> {
         return this.vehicleService.findByMakeAndModel(

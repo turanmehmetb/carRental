@@ -55,6 +55,7 @@
     "changePassword": "Şifre Değiştir",
     "startDate": "Başlangıç Tarihi",
     "endDate": "Bitiş Tarihi",
-    "search": "En Uygun Aracı Bul"
+    "search": "En Uygun Aracı Bul",
+    "makeReservation": "Rezerve Et"
   }
 }

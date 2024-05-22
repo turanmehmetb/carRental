@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 import { LanguageMessagesService } from "../../util/languageMessagesService";
+import { VehicleService } from "../vehicles/service/vehicle.service";
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'app-home',
@@ -8,10 +10,11 @@ import { LanguageMessagesService } from "../../util/languageMessagesService";
 })
 export class HomeComponent implements OnInit {
 
-    startDate: number;
-    endDate: number;
+    startDate: Date;
+    endDate: Date;
 
     constructor(
+        private readonly router: Router,
         private readonly metaService: Meta, 
         private readonly titleService: Title, 
         private readonly languageMessagesService: LanguageMessagesService,
@@ -22,7 +25,7 @@ export class HomeComponent implements OnInit {
     }
 
     search() {
-        console.log(this.startDate);
+        this.router.navigate(['/reservations', { startDate: this.startDate.getTime(), endDate: this.endDate.getTime() }]); 
     }
 
 }
