@@ -33,7 +33,7 @@ describe('ReservationService', () => {
     describe('findByUserId', () => {
         it('should return reservations by user ID', async () => {
             const userId = '123';
-            const reservations: Reservation[] = []; // mock reservations
+            const reservations: Reservation[] = [];
             jest.spyOn(mockReservationModel, 'find').mockReturnValue({
                 exec: jest.fn().mockResolvedValue(reservations),
             } as any);
@@ -41,7 +41,7 @@ describe('ReservationService', () => {
             const result = await service.findByUserId(userId);
 
             expect(mockReservationModel.find).toHaveBeenCalledWith({
-                'user._id': userId,
+                'user.userId': userId,
             });
             expect(result).toEqual(reservations);
         });
@@ -49,9 +49,9 @@ describe('ReservationService', () => {
 
     describe('findByDateRange', () => {
         it('should return reservations within the specified date range', async () => {
-            const startTimestamp = 1621750862000; // example start timestamp
-            const endTimestamp = 1621754462000; // example end timestamp
-            const reservations: Reservation[] = []; // mock reservations
+            const startTimestamp = 1621750862000;
+            const endTimestamp = 1621754462000;
+            const reservations: Reservation[] = [];
             jest.spyOn(mockReservationModel, 'find').mockReturnValue({
                 exec: jest.fn().mockResolvedValue(reservations),
             } as any);
