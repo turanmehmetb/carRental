@@ -52,6 +52,9 @@
     "passwordChangeSuccesful": "Şifre değiştirme işlemi başarılı!",
     "passwordChangeFailed": "Şifre değiştirme işlemi hatalı!",
     "confirm": "Onayla",
-    "changePassword": "Şifre Değiştir"
+    "changePassword": "Şifre Değiştir",
+    "startDate": "Başlangıç Tarihi",
+    "endDate": "Bitiş Tarihi",
+    "search": "En Uygun Aracı Bul"
   }
 }

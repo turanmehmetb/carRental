@@ -8,6 +8,9 @@ import { LanguageMessagesService } from "../../util/languageMessagesService";
 })
 export class HomeComponent implements OnInit {
 
+    startDate: number;
+    endDate: number;
+
     constructor(
         private readonly metaService: Meta, 
         private readonly titleService: Title, 
@@ -16,6 +19,10 @@ export class HomeComponent implements OnInit {
 
     ngOnInit(): void {
         this.titleService.setTitle("CarRental - " + this.languageMessagesService.msgjson.home);
+    }
+
+    search() {
+        console.log(this.startDate);
     }
 
 }

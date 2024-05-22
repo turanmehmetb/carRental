@@ -52,6 +52,9 @@
     "passwordChangeSuccesful": "Password Change Successful!",
     "passwordChangeFailed": "Password Change Failed!",
     "confirm": "Confirm",
-    "changePassword": "Change Password"
+    "changePassword": "Change Password",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "search": "Find the Best Car"
   }
 }
