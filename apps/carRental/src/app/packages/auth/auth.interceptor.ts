@@ -15,7 +15,7 @@ export class AuthInterceptor implements HttpInterceptor {
         if (req.headers.get('noauth')) {
             return next.handle(req);
         } else {
-            const token = localStorage.getItem('studentToken') ? localStorage.getItem('studentToken') : localStorage.getItem('instructorToken'); 
+            const token = localStorage.getItem('token'); 
             if(token) {
                 const cloned = req.clone({
                     headers: req.headers.set("Authorization",

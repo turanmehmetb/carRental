@@ -6,6 +6,7 @@ import { lastValueFrom } from 'rxjs';
 import { LanguageMessagesService } from '../../../util/languageMessagesService';
 import { MessageType, SystemMessageService } from '../../../util/message.service';
 import { UserService } from '../service/user.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-profile',
@@ -23,9 +24,11 @@ export class ProfileComponent implements OnInit {
         private languageMessagesService: LanguageMessagesService,
         private userService: UserService,
         private messageService: SystemMessageService,
+        private titleService: Title, 
     ) { }
 
     async ngOnInit(): Promise<void> {
+        this.titleService.setTitle("CarRental - " + this.languageMessagesService.msgjson.profile);
 
         this.topMenuForNavigation = [
             { label: this.languageMessagesService.msgjson.settings, value: 'settings', icon: 'pi pi-cog' },

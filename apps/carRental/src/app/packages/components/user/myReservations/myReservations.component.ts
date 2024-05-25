@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { Meta } from '@angular/platform-browser';
 import { Reservation, User } from '@carRental/models';
 import { ConfirmationService, SelectItem } from 'primeng/api';
 import { LanguageMessagesService } from '../../../util/languageMessagesService';
 import { MessageType, SystemMessageService } from '../../../util/message.service';
 import { ReservationService } from '../../reservations/service/reservations.service';
 import { UserService } from '../service/user.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-myReservations',
@@ -21,16 +20,15 @@ export class MyReservationsComponent implements OnInit {
 
     constructor(
         private languageMessagesService: LanguageMessagesService,
-        private metaService: Meta,
         private userService: UserService,
         private reservationService: ReservationService,
         private messageService: SystemMessageService,
         private confirmationService: ConfirmationService,
+        private titleService: Title, 
     ) { }
 
     async ngOnInit(): Promise<void> {
-    
-        this.metaService.updateTag( { content:'Satın aldığınız dersleri görüntüleyin veya ayarlarınızı güncelleyin.'},"name='description'" );
+        this.titleService.setTitle("CarRental - " + this.languageMessagesService.msgjson.myReservations);
 
         this.topMenuForNavigation = [
             { label: this.languageMessagesService.msgjson.settings, value: 'settings', icon: 'pi pi-cog' },

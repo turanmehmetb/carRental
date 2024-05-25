@@ -36,7 +36,7 @@ export class ReservationsComponent implements OnInit {
     ) { }
 
     ngOnInit(): void {
-        this.titleService.setTitle("CarRental - " + this.languageMessagesService.msgjson.reservations);
+        this.titleService.setTitle("CarRental - " + this.languageMessagesService.msgjson.reservation);
         this.route.paramMap.subscribe(params => {
             const start = Number(params.get('startDate'));
             const end = Number(params.get('endDate'));

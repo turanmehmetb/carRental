@@ -69,8 +69,8 @@ class="
                     <div>
                         <span class="w-full p-float-label p-input-icon-left">
                             <i class="pi pi-at"></i>
-                            <input class="w-full bg-lightbg-300 dark:bg-darkbg-300" pInputText name="email" id="student-email" type="text" [(ngModel)]="user.email" required emailValidator>
-                            <label for="student-email">{{'messages.email' | translate}}</label>
+                            <input class="w-full bg-lightbg-300 dark:bg-darkbg-300" pInputText name="email" id="email" type="text" [(ngModel)]="user.email" required emailValidator>
+                            <label for="email">{{'messages.email' | translate}}</label>
                         </span>
                     </div>
                 </div>
@@ -79,8 +79,8 @@ class="
                     <div>
                         <span class="w-full p-float-label p-input-icon-left p-input-icon-right">
                             <i class="pi pi-lock"></i>
-                            <input #floatPassword class="w-full bg-lightbg-300 dark:bg-darkbg-300" pInputText name="password" id="student-password" type="password" [(ngModel)]="user.password" required>
-                            <label for="student-password">{{'messages.password' | translate}}</label>
+                            <input #floatPassword class="w-full bg-lightbg-300 dark:bg-darkbg-300" pInputText name="password" id="password" type="password" [(ngModel)]="user.password" required>
+                            <label for="password">{{'messages.password' | translate}}</label>
                             <i 
                                 class="pi cursor-pointer"
                                 [ngClass]="{

@@ -3216,12 +3216,7 @@ p-treeselect.ng-invalid.ng-dirty > .p-treeselect {
     border: none;
     border-radius: 0;
 }
-.p-dataview.instructors-dataview .p-dataview-header {
-    border-radius: 3rem 3rem 0 0;
-}
-.p-dataview.instructors-dataview .p-paginator {
-    border-radius: 0 0 3rem 3rem;
-}
+
 .p-dataview .p-dataview-header {
     /* background: #fafafa; */
     background: var(--dataview-header-bg-color);
@@ -3855,20 +3850,6 @@ p-treeselect.ng-invalid.ng-dirty > .p-treeselect {
     cursor: pointer;
 }
 
-.instructor-editable-calendar .fc-timegrid-slot:hover {
-    background-color: var(--fc-td-bg-color-hover) !important;
-    cursor: pointer;
-}
-
-.instructor-editable-calendar .fc-timegrid-slot:not(.not-allowed-slot):hover {
-    background-color: var(--fc-td-bg-color-hover) !important;
-    cursor: pointer;
-}
-
-.instructor-editable-calendar .fc-timegrid-slot.not-allowed-slot:hover {
-    cursor: not-allowed;
-}
-
 .fc-event.fc-event-draggable, .fc-event[href] {
     cursor: move !important;
 }
@@ -3908,26 +3889,10 @@ p-treeselect.ng-invalid.ng-dirty > .p-treeselect {
     border: 0 !important;
 }
 
-.fc-available-event.calendar-for-student {
-    cursor: default !important;
-}
-
-.fc-available-event:not(.calendar-for-student):not(.fc-non-interacted-event):hover {
-    background-color: var(--fc-available-event-bg-color-hover) !important;
-}
-
 .fc-break-event {
     background-color: var(--fc-break-event-bg-color) !important;
     color: var(--fc-break-event-text-color) !important;
     border: 0 !important;
-}
-
-.fc-break-event.calendar-for-student {
-    cursor: default !important;
-}
-
-.fc-break-event:not(.calendar-for-student):not(.fc-non-interacted-event):hover {
-    background-color: var(--fc-break-event-bg-color-hover) !important;
 }
 
 .fc-booked-you-event {

@@ -1,8 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { Meta, Title } from "@angular/platform-browser";
-import { LanguageMessagesService } from "../../util/languageMessagesService";
-import { VehicleService } from "../vehicles/service/vehicle.service";
+import { Title } from "@angular/platform-browser";
 import { Router } from "@angular/router";
+import { LanguageMessagesService } from "../../util/languageMessagesService";
 
 @Component({
     selector: 'app-home',
@@ -15,7 +14,6 @@ export class HomeComponent implements OnInit {
 
     constructor(
         private readonly router: Router,
-        private readonly metaService: Meta, 
         private readonly titleService: Title, 
         private readonly languageMessagesService: LanguageMessagesService,
     ) { }
