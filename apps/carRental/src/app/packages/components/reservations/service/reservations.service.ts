@@ -17,4 +17,10 @@ export class ReservationService extends BaseService<Reservation, string> {
     findAvailableVehiclesByDateRange(start: number, end: number): Observable<Vehicle[]> {
         return this.http.post<Vehicle[]>(this._base + '/findAvailableVehiclesByDateRange', { startTimestamp: start, endTimestamp: end });
     }
+
+    findByUserId(userId: string): Observable<Reservation[]> {
+        return this.http.post<Reservation[]>(this._base + '/findByUserId', { userId: userId });
+    }
+
+
 }

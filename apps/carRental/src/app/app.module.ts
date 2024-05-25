@@ -1,5 +1,5 @@
 // angular
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { APP_INITIALIZER, LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule, Meta } from '@angular/platform-browser';
@@ -27,6 +27,7 @@ import { UserLoginComponent } from './packages/components/user/login/login.compo
 import { UserRegisterComponent } from './packages/components/user/register/register.component';
 import { ProfileComponent } from './packages/components/user/profile/profile.component';
 import { ReservationsComponent } from './packages/components/reservations/reservations.component';
+import { MyReservationsComponent } from './packages/components/user/myReservations/myReservations.component';
 
 export function configurationServiceInitializerFactory(configurationService: ConfigService): Function {
   // a lambda is required here, otherwise `this` won't work inside ConfigurationService::load
@@ -46,6 +47,7 @@ export function LanguageFactory(): string {
     UserRegisterComponent,
     ProfileComponent,
     ReservationsComponent,
+    MyReservationsComponent,
     _404Component,
   ],
   imports: [
@@ -71,6 +73,7 @@ export function LanguageFactory(): string {
     { provide: LOCALE_ID, useFactory: LanguageFactory },
     Meta,
     ConfirmationService,
+    DatePipe,
   ],
   bootstrap: [AppComponent],
 })

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Meta } from '@angular/platform-browser';
 import { User } from '@carRental/models';
 import { SelectItem } from 'primeng/api';
 import { lastValueFrom } from 'rxjs';
@@ -22,14 +21,11 @@ export class ProfileComponent implements OnInit {
 
     constructor(
         private languageMessagesService: LanguageMessagesService,
-        private metaService: Meta,
         private userService: UserService,
         private messageService: SystemMessageService,
     ) { }
 
     async ngOnInit(): Promise<void> {
-    
-        this.metaService.updateTag( { content:'Satın aldığınız dersleri görüntüleyin veya ayarlarınızı güncelleyin.'},"name='description'" );
 
         this.topMenuForNavigation = [
             { label: this.languageMessagesService.msgjson.settings, value: 'settings', icon: 'pi pi-cog' },

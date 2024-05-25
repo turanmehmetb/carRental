@@ -17,4 +17,9 @@ export class VehicleService extends BaseService<Vehicle, string> {
     findAvailableVehiclesByDateRange(start: number, end: number): Observable<Vehicle[]> {
         return this.http.post<Vehicle[]>(this._base + '/findAvailableVehiclesByDateRange', { startTimestamp: start, endTimestamp: end });
     }
+
+    findAllWithGroup(): Observable<Vehicle[]> {
+        return this.http.get<Vehicle[]>(this._base + '/findAllWithGroup');
+    }
+
 }

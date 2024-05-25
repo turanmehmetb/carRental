@@ -18,6 +18,7 @@
     "invalidPassword": "Invalid Password!",
     "passwordsNotMatch": "Passwords does not match!",
     "vehicles": "Vehicles",
+    "vehicle": "Vehicle",
     "logout": "Logout",
     "homeTitle": "Rent a car quickly!",
     "homeDetail": "Fastest place to rent a car.",
@@ -56,6 +57,20 @@
     "startDate": "Start Date",
     "endDate": "End Date",
     "search": "Find the Best Car",
-    "makeReservation": "Make Reservation"
+    "makeReservation": "Make Reservation",
+    "reservation": "Reservation",
+    "yes": "Yes",
+    "no": "No",
+    "reservationInfo": "Are you sure to continue?",
+    "reservationCancel": "Are you sure to cancel your reservation?",
+    "date": "Date",
+    "loginToMakeReservation": "Login to Make Reservation!",
+    "myReservations": "My Reservations",
+    "cancelReservation": "Cancel Reservation",
+    "reservationSuccessful": "Reservation Successful!<br/>You will redirected to My Reservations page..",
+    "reservationFailed": "Reservation Failed!",
+    "reservationCancelSuccessful": "Reservation Cancel Successful!",
+    "reservationCancelFailed": "Reservation Cancel Failed!",
+    "searchAgain": "Search Again"
   }
 }

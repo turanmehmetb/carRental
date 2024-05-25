@@ -6,6 +6,7 @@ import { UserLoginComponent } from './packages/components/user/login/login.compo
 import { UserRegisterComponent } from './packages/components/user/register/register.component'
 import { ProfileComponent } from './packages/components/user/profile/profile.component'
 import { ReservationsComponent } from './packages/components/reservations/reservations.component'
+import { MyReservationsComponent } from './packages/components/user/myReservations/myReservations.component'
 
 export const appRoutes: Routes = [
     {
@@ -31,6 +32,10 @@ export const appRoutes: Routes = [
     {
         path: 'reservations',
         component: ReservationsComponent,
+    },
+    {
+        path: 'myReservations',
+        component: MyReservationsComponent,
     },
     {
         path: '**',

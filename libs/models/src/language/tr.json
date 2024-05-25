@@ -56,6 +56,21 @@
     "startDate": "Başlangıç Tarihi",
     "endDate": "Bitiş Tarihi",
     "search": "En Uygun Aracı Bul",
-    "makeReservation": "Rezerve Et"
+    "makeReservation": "Rezerve Et",
+    "no": "Hayır",
+    "reservation": "Rezervasyon",
+    "reservationInfo": "Devam etmek istediğinizden emin misiniz?",
+    "yes": "Evet",
+    "date": "Tarih",
+    "vehicle": "Araç",
+    "loginToMakeReservation": "Rezervasyon Yapmak İçin Giriş Yapın!",
+    "myReservations": "Rezervasyonlarım",
+    "cancelReservation": "Rezervasyon iptali",
+    "reservationCancel": "Rezervasyonunuzu iptal etmek istediğinizden emin misiniz?",
+    "reservationFailed": "Rezervasyon Başarısız!",
+    "reservationSuccessful": "Rezervasyon Başarılı! Rezervasyonlarım sayfasına yönlendirileceksiniz..",
+    "reservationCancelFailed": "Rezervasyon İptali Başarısız!",
+    "reservationCancelSuccessful": "Rezervasyon İptal Başarılı!",
+    "searchAgain": "Yeniden ara"
   }
 }

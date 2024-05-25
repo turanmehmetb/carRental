@@ -1,0 +1,102 @@
+<!-- 2xl:p-4 2xl:px-96 xl:p-4 xl:px-80 lg:p-4 lg:px-64 md:p-4 md:px-8 sm:p-4 sm:px-4 p-2 px-2  -->
+<div
+    class="p-4 lg:w-2/3 m-auto"
+    style="min-height: calc(100vh - 5rem)"
+>
+    <div class="grid gap-6 grid-cols-4">
+        <div class="col-span-4 h-fit">
+            <div>
+                <div 
+                    class="
+                        h-full w-full
+                        overflow-y-auto
+                        text-lighttext-100 dark:text-darktext-100
+                        bg-lightbg-200 dark:bg-darkbg-200
+                        rounded-t-[3rem]
+                    "
+                >
+                    <div class="pt-5 hidden lg:block">
+                        <ng-container *ngTemplateOutlet="selectbuttonnav"></ng-container>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="
+                    h-full w-full
+                    overflow-y-auto
+                    text-lighttext-100 dark:text-darktext-100
+                    bg-lightbg-200 dark:bg-darkbg-200
+                    mt-6
+                    block lg:hidden
+                    rounded-t-[3rem]
+                "   
+            >
+                <div class="pt-5">
+                    <ng-container *ngTemplateOutlet="selectbuttonnav"></ng-container>
+                </div>
+            </div>
+            <div 
+                class="
+                    w-full
+                    text-lighttext-100 dark:text-darktext-100
+                    bg-lightbg-200 dark:bg-darkbg-200
+                    mt-6 lg:p-10 md:p-4 p-2 
+                    md:rounded-b-[3rem] z-30
+                "
+            >
+                <ng-template [ngIf]="selectedTopMenuNavigation === 'settings'">
+                    <ng-container *ngTemplateOutlet="editProfileFormTemplate"></ng-container>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #selectbuttonnav>
+    <p-selectButton 
+        [options]="topMenuForNavigation" [(ngModel)]="selectedTopMenuNavigation" optionLabel="label" optionValue="value"
+        styleClass="p-selectbutton-with-auto-flex-buttons p-selectbutton-alternative"
+    ></p-selectButton>
+</ng-template>
+
+<ng-template #editProfileFormTemplate>
+    <div class="flex flex-col">
+
+            <div class="text-xl font-semibold">{{'messages.myReservations' | translate}}</div>
+            <div class="horizontal-empty-line w-full !border-gray-26 dark:!border-gray-16"></div>
+            <ng-container *ngFor="let reservation of reservations">
+                <div class="mt-4 mb-2">
+                    <ng-container>
+                        <input 
+                            id="name" name="name" class="bg-lightbg-300 dark:bg-darkbg-300 w-full" type="text" [readOnly]="true"
+                            pInputText placeholder="{{reservation.vehicle.brandName}} {{reservation.vehicle.modelName}}" [disabled]="true"
+                        />
+                    </ng-container>
+                </div>
+                <div class="mt-2 mb-2">
+                    <ng-container>
+                        <input 
+                            id="name" name="name" class="bg-lightbg-300 dark:bg-darkbg-300 w-full" type="text" [readOnly]="true"
+                            pInputText placeholder="{{'messages.' + reservation.vehicle.fuelType | translate}} {{'messages.' + reservation.vehicle.transmissionType | translate}}" [disabled]="true"
+                        />
+                    </ng-container>
+                </div>
+                <div class="mt-2 mb-2">
+                    <ng-container>
+                        <input 
+                            id="name" name="name" class="bg-lightbg-300 dark:bg-darkbg-300 w-full" type="text" [readOnly]="true"
+                            pInputText placeholder="{{reservation.startDate | date: 'dd/MM/YYYY HH:MM'}} - {{reservation.endDate | date: 'dd/MM/YYYY HH:MM'}}" [disabled]="true"
+                        />
+                    </ng-container>
+                </div>
+                <div class="flex w-full justify-center mb-2">
+                    <p-button class="short:mr-4" label="{{'messages.cancelReservation' | translate}}" (onClick)="cancelReservation(reservation)"></p-button>
+                </div>
+                <div class="horizontal-empty-line w-full !border-gray-26 dark:!border-gray-16"></div>
+            </ng-container>
+
+    </div>
+</ng-template>
+
+<p-confirmDialog>
+</p-confirmDialog>

@@ -18,6 +18,17 @@ export class VehicleService extends BaseService<Vehicle> {
         super(vehicleModel);
     }
 
+    findAllWithGroup(): Promise<Vehicle[]> {
+        return this.vehicleModel.aggregate([
+            {
+                $group: { _id: '$modelName', doc: { $last: '$$ROOT' } }
+            },
+            {
+                $replaceRoot: { newRoot: '$doc' }
+            }
+        ]).exec();
+    }
+
     async findAvailableVehiclesByDateRange(
         startTimestamp: number,
         endTimestamp: number,

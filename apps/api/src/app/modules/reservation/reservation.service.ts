@@ -17,7 +17,7 @@ export class ReservationService extends BaseService<Reservation> {
     }
 
     async findByUserId(userId: string): Promise<Reservation[]> {
-        return this.reservationModel.find({'user.userId': userId}).exec();
+        return this.reservationModel.find({'user.userId': userId}).sort({ _id: -1 }).exec();
     }
     async findByVehicleId(vehicleId: string): Promise<Reservation[]> {
         return this.reservationModel

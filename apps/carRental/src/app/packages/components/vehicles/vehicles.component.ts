@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Meta, Title } from "@angular/platform-browser";
+import { Title } from "@angular/platform-browser";
 import { Vehicle } from "@carRental/models";
 import { LanguageMessagesService } from "../../util/languageMessagesService";
 import { VehicleService } from "./service/vehicle.service";
@@ -14,7 +14,6 @@ export class VehiclesComponent implements OnInit {
 
     constructor(
         private readonly vehicleService: VehicleService,
-        private readonly metaService: Meta, 
         private readonly titleService: Title, 
         private readonly languageMessagesService: LanguageMessagesService,
     ) { }
@@ -22,7 +21,7 @@ export class VehiclesComponent implements OnInit {
     ngOnInit(): void {
         this.titleService.setTitle("CarRental - " + this.languageMessagesService.msgjson.vehicles);
 
-        this.vehicleService.findAll().subscribe(res => {
+        this.vehicleService.findAllWithGroup().subscribe(res => {
             this.vehicles = res;
         });
     }

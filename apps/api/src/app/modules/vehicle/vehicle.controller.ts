@@ -42,4 +42,9 @@ export class VehicleController extends BaseController<Vehicle> {
     getVehicle(@Body() baseQuery: any) {
         console.log('vehicle!!!');
     }
+
+    @Get('/findAllWithGroup')
+    findAllWithGroup(): Promise<Vehicle[]> {
+        return this.vehicleService.findAllWithGroup();
+    }
 }
