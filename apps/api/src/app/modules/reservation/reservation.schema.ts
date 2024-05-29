@@ -22,7 +22,7 @@ export class ReservationSchema extends BaseSchema implements Reservation {
     @Prop({
         type: String,
         enum: ReservationStatus,
-        default: ReservationStatus.Pending,
+        default: ReservationStatus.Confirmed,
     })
     reservationStatus: ReservationStatus;
 }

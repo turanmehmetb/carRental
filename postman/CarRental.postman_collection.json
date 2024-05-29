@@ -122,7 +122,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"reservationStatus\": \"pending\"\n}\n\n",
+					"raw": "{\n    \"reservationStatus\": \"cancelled\"\n}\n\n",
 					"options": {
 						"raw": {
 							"language": "json"

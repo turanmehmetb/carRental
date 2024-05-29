@@ -10,7 +10,7 @@ export class ReservationMockData {
             vehicle: VehicleMockData.defaultVehicles[0],
             startDate: Date.now(),
             endDate: Date.now() + 86400000, // Adding 24 hours to current date for endDate
-            reservationStatus: ReservationStatus.Pending,
+            reservationStatus: ReservationStatus.Cancelled,
         },
         {
             user: UserMockData.defaultUsers[1],

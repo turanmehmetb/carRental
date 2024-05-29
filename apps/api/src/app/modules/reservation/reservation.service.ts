@@ -17,7 +17,10 @@ export class ReservationService extends BaseService<Reservation> {
     }
 
     async findByUserId(userId: string): Promise<Reservation[]> {
-        return this.reservationModel.find({'user.userId': userId}).sort({ _id: -1 }).exec();
+        return this.reservationModel
+            .find({'user.userId': userId})
+            .sort({_id: -1})
+            .exec();
     }
     async findByVehicleId(vehicleId: string): Promise<Reservation[]> {
         return this.reservationModel
@@ -51,6 +54,14 @@ export class ReservationService extends BaseService<Reservation> {
     ): Promise<Reservation> {
         return this.reservationModel
             .findByIdAndUpdate(reservationId, {reservationStatus}, {new: true})
+            .exec();
+    }
+
+    async cancelReservation(reservationId: string): Promise<Reservation> {
+        return this.reservationModel
+            .findByIdAndUpdate(reservationId, {
+                reservationStatus: ReservationStatus.Cancelled,
+            })
             .exec();
     }
 }

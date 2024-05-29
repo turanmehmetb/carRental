@@ -57,4 +57,11 @@ export class ReservationController extends BaseController<Reservation> {
     deleteReservation(@Param('id') id: string): Promise<Reservation> {
         return this.reservationService.delete(id);
     }
+
+    @Post('/cancelReservation')
+    cancelReservation(
+        @Body('Reservation') reservation: Reservation,
+    ): Promise<Reservation> {
+        return this.reservationService.cancelReservation(reservation._id);
+    }
 }
