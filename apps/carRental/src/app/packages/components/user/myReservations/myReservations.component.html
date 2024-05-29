@@ -108,7 +108,21 @@
                     />
                 </ng-container>
             </div>
-            <div class="flex w-full justify-center mb-2">
+            <div class="mt-4 mb-2">
+                <ng-container>
+                    <input
+                        id="name"
+                        name="name"
+                        class="bg-lightbg-300 dark:bg-darkbg-300 w-full"
+                        type="text"
+                        [readOnly]="true"
+                        pInputText
+                        placeholder="{{ 'messages.' + reservation.reservationStatus | translate }}"
+                        [disabled]="true"
+                    />
+                </ng-container>
+            </div>
+            <div *ngIf="reservation.reservationStatus !== 'cancelled'" class="flex w-full justify-center mb-2">
                 <p-button
                     class="short:mr-4"
                     label="{{ 'messages.cancelReservation' | translate }}"

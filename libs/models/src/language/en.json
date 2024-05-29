@@ -71,6 +71,9 @@
     "reservationFailed": "Reservation Failed!",
     "reservationCancelSuccessful": "Reservation Cancel Successful!",
     "reservationCancelFailed": "Reservation Cancel Failed!",
-    "searchAgain": "Search Again"
+    "searchAgain": "Search Again",
+    "confirmed": "Confirmed",
+    "completed": "Completed",
+    "cancelled": "Cancelled"
   }
 }

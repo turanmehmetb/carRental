@@ -71,6 +71,9 @@
     "reservationSuccessful": "Rezervasyon Başarılı! Rezervasyonlarım sayfasına yönlendirileceksiniz..",
     "reservationCancelFailed": "Rezervasyon İptali Başarısız!",
     "reservationCancelSuccessful": "Rezervasyon İptal Başarılı!",
-    "searchAgain": "Yeniden ara"
+    "searchAgain": "Yeniden ara",
+    "cancelled": "İptal edildi",
+    "completed": "Tamamlanmış",
+    "confirmed": "Onaylanmış"
   }
 }

@@ -2,7 +2,7 @@ import {ConfirmationService, SelectItem} from 'primeng/api';
 
 import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
-import {Reservation, User} from '@carRental/models';
+import {Reservation, ReservationStatus, User} from '@carRental/models';
 
 import {LanguageMessagesService} from '../../../util/languageMessagesService';
 import {MessageType, SystemMessageService} from '../../../util/message.service';
@@ -63,12 +63,14 @@ export class MyReservationsComponent implements OnInit {
                 this.myReservationService
                     .cancelReservation(reservation)
                     .subscribe((result) => {
-                        if (result)
+                        if (result) {
+                            reservation.reservationStatus = ReservationStatus.Cancelled;
                             this.messageService.createMessage(
                                 MessageType.success,
                                 '',
                                 'reservationCancelSuccessful',
                             );
+                        }
                         else
                             this.messageService.createMessage(
                                 MessageType.error,
